@@ -1,3 +1,4 @@
 {
-  "$schema": "https://s.dev.y42.dev/integrations/recharge/0.0.0/source.json"
+  "$schema": "https://s.dev.y42.dev/integrations/recharge/0.0.0/source.json",
+  "start_date": "2022-01-03T23:00:00Z"
 }

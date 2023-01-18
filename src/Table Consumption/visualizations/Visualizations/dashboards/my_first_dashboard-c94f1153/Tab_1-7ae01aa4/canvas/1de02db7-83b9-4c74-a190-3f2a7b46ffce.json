@@ -13,7 +13,7 @@
   "layer": "default",
   "angle": 0,
   "typeSettings": {
-    "widgetPath": "src/table consumption/visualizations/widgets/my_first_widget-cdbe0226"
+    "widgetPath": "src/visualizations/widgets/my_first_widget-cdbe0226"
   },
   "styles": {
     "background-color": "#ffffff00",

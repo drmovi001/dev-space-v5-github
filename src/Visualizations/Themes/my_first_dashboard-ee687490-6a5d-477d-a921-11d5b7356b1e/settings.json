@@ -1,0 +1,7 @@
+{
+  "$schema": "https://s.dev.y42.dev/frontend/0.0.10/visualization/visualization-theme-settings.json",
+  "theme": {
+    "type": "BuiltIn",
+    "themeName": "wonderland"
+  }
+}

@@ -8,7 +8,7 @@ sources:
         type: intercom
         parent_id: "298528044" # also account
         start_date: "2021-07-11T12:00:00Z"
-        encrypted_secret: e15bb8cc-40d4-42fd-84b6-1b170040a3c2
+        secret: {{env.google_analytics}}
       asset_status: verified
       watchers: ["person_a@y42.com", "person_b@y42.com"]
     tables:
@@ -28,7 +28,7 @@ sources:
     meta:
       source_import_configs:
         type: postgres
-        encrypted_secret: 5ea112c0-60af-45d7-aff4-7fe22e7feff7
+        secret: 5ea112c0-60af-45d7-aff4-7fe22e7feff7
       asset_status: draft
     tables:
       - name: cdc1 # this is a readable name

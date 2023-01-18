@@ -1,0 +1,28 @@
+{
+  "$schema": "https://s.dev.y42.dev/frontend/0.0.11/orchestration/orchestration-settings.json",
+  "type": "dynamic",
+  "enabled": true,
+  "config": {
+    "assets": [
+      "src/Integrations/test_csv/export__2__csv"
+    ],
+    "incremental": true,
+    "dependencies": {
+      "upstream": false,
+      "downstream": false
+    },
+    "excludes": {
+      "integrations": false,
+      "exports": false
+    }
+  },
+  "cronExpression": "0/30 * 1/1 * *",
+  "forceSchedule": false,
+  "executionTimeout": {
+    "hours": 4
+  },
+  "retryConfig": {
+    "numberOfRetries": 0,
+    "timeBetweenRetries": 0
+  }
+}

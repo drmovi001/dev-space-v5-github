@@ -14,9 +14,14 @@ profile: "dbt_project"
 model-paths: ["models", "sources"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
-seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
+
+#Y42 specific folders
+orchestration-paths: ["orchestrations"]
+alert-paths: ["alerts"]
+visualization-paths: ["visualizations"]
+
 
 target-path: "target" # directory which will store compiled SQL files
 clean-targets: # directories to be removed by `dbt clean`

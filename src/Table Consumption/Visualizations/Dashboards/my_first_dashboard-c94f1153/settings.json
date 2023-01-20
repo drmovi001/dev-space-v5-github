@@ -1,9 +1,0 @@
-{
-  "$schema": "https://s.dev.y42.dev/frontend/0.0.10/visualization/visualization-dashboard-settings.json",
-  "theme": "src/Visualizations/Themes/my_first_dashboard-ee687490-6a5d-477d-a921-11d5b7356b1e",
-  "order": [
-    "src/Visualizations/Dashboards/my_first_dashboard-c94f1153/Tab_1-7ae01aa4"
-  ],
-  "last_used_datasource_table_path": "src/Integrations/test_csv/export__2__csv",
-  "enable_cross_filtering": true
-}

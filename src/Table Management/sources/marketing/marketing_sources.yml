@@ -4,7 +4,7 @@ sources:
   - name: Intercom Integration #this is a classic SaaS integration
     description: "some markdown description"
     meta:
-      source_import_configs:
+      config:
         type: intercom
         parent_id: "298528044" # also account
         start_date: "2021-07-11T12:00:00Z"
@@ -15,7 +15,7 @@ sources:
       - name: admins
         description: "some markdown description"
         meta:
-          table_import_configs:
+          source_config:
             columns: ["id", "type", "workspace_id", "name", "created_at"]
         columns:
           - name: "id"
@@ -26,7 +26,7 @@ sources:
   - name: prod postgres
     description: internal production postgres database
     meta:
-      source_import_configs:
+      import_config:
         type: postgres
         secret: 5ea112c0-60af-45d7-aff4-7fe22e7feff7
       asset_status: draft
@@ -55,3 +55,17 @@ sources:
           - name: Discount
             test:
               - not_null
+
+
+exports:
+  - name: my_salesforce_export
+    description: some description
+    source_table: ref('my_first_dbt_model')
+    meta:
+      export_config: 
+        type: Salesforce
+        target_table: Opportunity
+        secret: my_secret_1
+      asset_status: verified
+      watchers: ["person_a@company.com", "@team-a"]
+      

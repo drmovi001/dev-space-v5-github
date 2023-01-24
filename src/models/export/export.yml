@@ -1,0 +1,12 @@
+# this is how our export will look like - inspired by dbt's implementation https://www.getdbt.com/open-source-data-culture/reverse-etl-playbook/
+models:
+  - name: salesforce_export
+    description: some description
+    meta:
+      export_config: 
+        type: Salesforce
+        target_table: Opportunity
+        secret: my_secret_1
+      asset_status: verified
+      experts: ["person_a@company.com", "@team-a"]
+      

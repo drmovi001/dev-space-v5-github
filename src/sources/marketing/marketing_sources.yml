@@ -55,17 +55,3 @@ sources:
           - name: Discount
             test:
               - not_null
-
-
-exports:
-  - name: my_salesforce_export
-    description: some description
-    source_table: ref('my_first_dbt_model')
-    meta:
-      export_config: 
-        type: Salesforce
-        target_table: Opportunity
-        secret: my_secret_1
-      asset_status: verified
-      experts: ["person_a@company.com", "@team-a"]
-      

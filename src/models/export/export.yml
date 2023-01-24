@@ -1,10 +1,10 @@
 # this is how our export will look like - inspired by dbt's implementation https://www.getdbt.com/open-source-data-culture/reverse-etl-playbook/
 # basically we force the user to always create a sql model first > we execute that model and then we take the data to send it to the reverse ETL tool.
-# this is best practice according to dbt and also reflects the usage of v1 -> the user always creates a model first before sending data of that model to a reverse ETL tool
-# that way, we can benefit from the whole infrastructure of dbt without implementing our own export logic 
+# this is best practice according to dbt and also reflects the usage of v1 > the user always creates a model first before sending data of that model to a reverse ETL tool
+# that way, we can benefit from the whole infrastructure of dbt without implementing our own export parsing logic 
 models:
   - name: salesforce_export
-    description: some description
+    description: my first export to Salesforce
     meta:
       export_config: 
         type: Salesforce

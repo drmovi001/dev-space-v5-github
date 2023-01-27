@@ -1,0 +1,3 @@
+alerts:
+- name: my_first_source_alerts
+- name: my_second_source_alerts

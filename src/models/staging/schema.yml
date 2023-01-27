@@ -1,20 +1,22 @@
 version: 2
 
 models:
+  # This comment will be preserved during subsequent edits from the UI
   - name: my_first_dbt_model
-    description: "A starter dbt model"
-    tags: ["marketing"]
+    description: 'A starter dbt model'
+    tags: ['marketing']
     columns:
       - name: id
-        description: "The primary key for this table"
+        description: 'The primary key for this table'
         tests:
           - unique
           - not_null
   - name: my_second_dbt_model
-    description: "A starter dbt model"
+    # This one hopefully too 🙏🏼 unless I delete this model, then it shall vanish 🦹‍♂️
+    description: 'A starter dbt model'
     columns:
       - name: id
-        description: "The primary key for this table"
+        description: 'The primary key for this table'
         tests:
           - unique
           - not_null

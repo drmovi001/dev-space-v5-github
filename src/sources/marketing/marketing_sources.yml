@@ -1,4 +1,6 @@
+>
 version: 2
+
 
 sources:
   - name: Intercom Integration #this is a classic SaaS integration
@@ -34,7 +36,7 @@ sources:
       - name: cdc1 # this is a readable name
         identifer: postgres-public-cdc1 #this is the name of the "import" column before, if "identifer" doesn't exist, we take "name"
         meta:
-          table_import_configs:
+          source_config:
             columns:
               [
                 "id",

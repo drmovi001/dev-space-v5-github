@@ -28,7 +28,7 @@ sources:
   - name: prod postgres
     description: internal production postgres database
     meta:
-      import_config:
+      config:
         type: postgres
         secret: 5ea112c0-60af-45d7-aff4-7fe22e7feff7
       asset_status: draft

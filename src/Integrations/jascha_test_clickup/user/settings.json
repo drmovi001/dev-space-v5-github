@@ -1,0 +1,17 @@
+{
+  "$schema": "https://s.dev.y42.dev/integrations/clickup/0.0.0/table.json",
+  "columns": [
+    "id",
+    "username",
+    "email",
+    "color",
+    "profilePicture",
+    "initials",
+    "role",
+    "custom_role",
+    "last_active",
+    "date_joined",
+    "date_invited"
+  ],
+  "import": "user"
+}

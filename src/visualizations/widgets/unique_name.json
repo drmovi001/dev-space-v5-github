@@ -2,7 +2,7 @@
   "$schema": "https://s.dev.y42.dev/frontend/0.0.10/visualization/visualization-widget-settings.json",
   "chart_type": "bar_line_chart",
   "name": "my first widget",
-  "description": "",
+  "description": "some widgets",
   "tags": [],
   "meta": {
     "asset_status": "verified",

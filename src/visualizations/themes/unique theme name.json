@@ -1,0 +1,17 @@
+{
+  "$schema": "https://s.dev.y42.dev/frontend/0.0.10/visualization/visualization-theme-settings.json",
+  "name": "my first theme",
+  "description": "some theme",
+  "tags": [],
+  "meta": {
+    "asset_status": "verified",
+    "experts": [
+      "person_a@y42.com",
+      "person_b@y42.com"
+    ]
+  },
+  "theme": {
+    "type": "BuiltIn",
+    "themeName": "wonderland"
+  }
+}

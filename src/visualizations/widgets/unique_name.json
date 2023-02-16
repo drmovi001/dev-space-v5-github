@@ -1,6 +1,16 @@
 {
   "$schema": "https://s.dev.y42.dev/frontend/0.0.10/visualization/visualization-widget-settings.json",
   "chart_type": "bar_line_chart",
+  "name": "my first widget",
+  "description": "",
+  "tags": [],
+  "meta": {
+    "asset_status": "verified",
+    "experts": [
+      "person_a@y42.com",
+      "person_b@y42.com"
+    ]
+  },
   "settings": {
     "series": [
       {

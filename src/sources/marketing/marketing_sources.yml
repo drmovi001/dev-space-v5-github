@@ -57,3 +57,22 @@ sources:
           - name: Discount
             test:
               - not_null
+  - name: fivetran_facebook_ads
+    description: something
+    meta:
+     config:
+        fivetran_connector_id: sdfcj1-sdf-1xcsd-2wr23
+        type: facebook_ads #needed to display the logo
+    tables:
+      - name: ads
+        description: whatever
+        columns:
+          - name: Discount
+            test:
+              - not_null
+      - name: overview
+        description: whatever
+        columns:
+          - name: id
+            test:
+              - unique

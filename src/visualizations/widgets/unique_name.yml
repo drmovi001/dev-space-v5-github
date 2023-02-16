@@ -1,0 +1,279 @@
+chart_type: bar_line_chart
+name: my first widget
+description: some widgets
+tags: []
+meta:
+  asset_status: verified
+  experts:
+    - person_a@y42.com
+    - person_b@y42.com
+settings:
+  series:
+    - field_id: 320a9b3c_1bc4_41b3_aef3_17b6b4904256
+      mark: bar
+      stack_name: 1
+      label:
+        show: true
+        field_ids: []
+        rotate: 0
+        align: center
+        verticalAlign: top
+      tooltip:
+        show: true
+        field_ids: []
+      show_right_axis: false
+      format: inherit
+      cumulative: false
+      hidden: false
+      hideFalsyValues: true
+  show_legend: true
+  axisPointer:
+    show: false
+    type: line
+    lineStyle:
+      type: solid
+      opacity: 1
+  dimensions:
+    - eb7d2411_91c6_4b06_b847_c16b54f6831d
+  breakdowns: []
+  series_on_y: true
+  serieAxis:
+    min:
+    max:
+    show: true
+    type: value
+    axisName:
+      nameRotate: 0
+      nameGap: 10
+      nameLocation: middle
+      nameTextStyle:
+        backgroundColor: transparent
+        borderColor: '#f4f4fb'
+        borderWidth: 0
+        fontSize: 12
+        align: center
+        fontStyle: normal
+        fontWeight: normal
+        verticalAlign: middle
+        fontFamily: Arial
+        borderRadius: 0
+        padding:
+          - 2
+          - 2
+          - 2
+          - 2
+        color: '#a7a7a7'
+        colorTo: '#a7a7a7'
+    axisLine:
+      showLabel: true
+      symbol: none
+      lineStyle:
+        type: solid
+        opacity: 1
+    axisLabel:
+      backgroundColor: transparent
+      borderColor: '#f4f4fb'
+      borderWidth: 0
+      fontSize: 12
+      align: right
+      fontStyle: normal
+      fontWeight: normal
+      verticalAlign: middle
+      fontFamily: Arial
+      borderRadius: 0
+      padding:
+        - 2
+        - 2
+        - 2
+        - 2
+      show: true
+      rotate: 0
+      margin: 22
+      suffix: ''
+      max_characters:
+      value_conversion: Automatic
+      date_format: ''
+      value_format: inherit
+    splitLine:
+      showLabel: false
+      lineStyle:
+        type: solid
+        opacity: 1
+    dataZoom:
+      show: false
+      start: 0
+      end: 100
+  rightSerieAxis:
+    min:
+    max:
+    show: true
+    type: value
+    axisName:
+      nameRotate: 0
+      nameGap: 10
+      nameLocation: middle
+      nameTextStyle:
+        backgroundColor: transparent
+        borderColor: '#f4f4fb'
+        borderWidth: 0
+        fontSize: 12
+        align: center
+        fontStyle: normal
+        fontWeight: normal
+        verticalAlign: middle
+        fontFamily: Arial
+        borderRadius: 0
+        padding:
+          - 2
+          - 2
+          - 2
+          - 2
+        color: '#a7a7a7'
+        colorTo: '#a7a7a7'
+    axisLine:
+      showLabel: true
+      symbol: none
+      lineStyle:
+        type: solid
+        opacity: 1
+    axisLabel:
+      backgroundColor: transparent
+      borderColor: '#f4f4fb'
+      borderWidth: 0
+      fontSize: 12
+      align: left
+      fontStyle: normal
+      fontWeight: normal
+      verticalAlign: middle
+      fontFamily: Arial
+      borderRadius: 0
+      padding:
+        - 2
+        - 2
+        - 2
+        - 2
+      show: true
+      rotate: 0
+      margin: 22
+      suffix: ''
+      max_characters:
+      value_conversion: Automatic
+      date_format: ''
+      value_format: inherit
+    splitLine:
+      showLabel: false
+      lineStyle:
+        type: solid
+        opacity: 1
+    dataZoom:
+      show: false
+      start: 0
+      end: 100
+  dimensionAxis:
+    min:
+    max:
+    show: true
+    type: category
+    axisName:
+      nameRotate: 0
+      nameGap: 10
+      nameLocation: middle
+      nameTextStyle:
+        backgroundColor: transparent
+        borderColor: '#f4f4fb'
+        borderWidth: 0
+        fontSize: 12
+        align: center
+        fontStyle: normal
+        fontWeight: normal
+        verticalAlign: middle
+        fontFamily: Arial
+        borderRadius: 0
+        padding:
+          - 2
+          - 2
+          - 2
+          - 2
+        color: '#a7a7a7'
+        colorTo: '#a7a7a7'
+    axisLine:
+      showLabel: true
+      symbol: none
+      lineStyle:
+        type: solid
+        opacity: 1
+    axisLabel:
+      backgroundColor: transparent
+      borderColor: '#f4f4fb'
+      borderWidth: 0
+      fontSize: 12
+      align: center
+      fontStyle: normal
+      fontWeight: normal
+      verticalAlign: middle
+      fontFamily: Arial
+      borderRadius: 0
+      padding:
+        - 2
+        - 2
+        - 2
+        - 2
+      show: true
+      rotate: 0
+      margin: 22
+      suffix: ''
+      max_characters:
+      value_conversion: Automatic
+      date_format: ''
+      value_format: inherit
+    splitLine:
+      showLabel: false
+      lineStyle:
+        type: solid
+        opacity: 1
+    dataZoom:
+      show: false
+      start: 0
+      end: 100
+  show_stack_by: false
+  show_stack_by_100_percent: false
+  stackFormatConfig:
+    format: inherit
+    config:
+      customFormat: ''
+      decimalPlaces: 0
+      displayType: DISPLAY_UNITS
+      formatType: NUMBER
+      locale: ''
+      negativeSymbol:
+        show: true
+        type: symbol
+      numeralFormat: 0a
+      prefixOrSuffix: prefix
+      separator: NONE
+  sort:
+    order: NONE
+    sort_by: SERIES
+    sortByField: true
+    fieldSortKey:
+    stackNameSortKey:
+  show_total_for_stacks: []
+datasource_table_path: src/Integrations/test_csv/export__2__csv
+filters: []
+fields:
+  - field: department
+    aggregation: VALUE
+    type: STRING
+    alias: VALUE_department_eb7d2411_91c6_4b06_b847_c16b54f6831d
+    id: eb7d2411_91c6_4b06_b847_c16b54f6831d
+    lowCodeString:
+    show_in_percentage: false
+    filters: []
+  - field: district
+    aggregation: COUNT
+    type: STRING
+    alias: COUNT_district_320a9b3c_1bc4_41b3_aef3_17b6b4904256
+    id: 320a9b3c_1bc4_41b3_aef3_17b6b4904256
+    lowCodeString:
+    show_in_percentage: false
+    filters: []

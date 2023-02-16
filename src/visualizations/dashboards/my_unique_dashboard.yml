@@ -1,0 +1,42 @@
+name: my first dashboard
+description: some dashboard
+tags: []
+meta:
+  asset_status: verified
+  experts:
+    - person_a@y42.com
+    - person_b@y42.com
+settings:
+  theme: src/Visualizations/Themes/my_first_dashboard-ee687490-6a5d-477d-a921-11d5b7356b1e
+  last_used_datasource_table_path: src/Integrations/test_csv/export__2__csv
+  enable_cross_filtering: true
+  tabs:
+    - name: Tab 1
+      description: ''
+      canvas_elements:
+        - '$schema': https://s.dev.y42.dev/frontend/0.0.10/visualization/visualization-canvas-element.json
+          type: Widget
+          position:
+            x: -734.0907779868002
+            y: -71.93054293107298
+          size:
+            width: 400
+            height: 300
+          zIndex: 1
+          layer: default
+          angle: 0
+          typeSettings:
+            widgetPath: src/table consumption/visualizations/widgets/my_first_widget-cdbe0226
+          styles:
+            background-color: '#ffffff00'
+            border-color: '#ffffff00'
+            border-style: none
+            border-width: '0'
+            border-radius: '0'
+            filter: 'drop-shadow(0px 0px 0px #939393)'
+          locked: false
+          objectProperties:
+            resizable: true
+            movable: true
+            selectable: true
+            rotatable: true

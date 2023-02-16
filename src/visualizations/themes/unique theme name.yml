@@ -1,11 +1,12 @@
-name: my first theme
-description: some theme
-tags: []
-meta:
-  asset_status: verified
-  experts:
-    - person_a@y42.com
-    - person_b@y42.com
-settings:
-  type: BuiltIn
-  theme_name: wonderland
+dashboard_themes:
+  - name: my first theme
+    description: some theme
+    tags: []
+    meta:
+      asset_status: verified
+      experts:
+        - person_a@y42.com
+        - person_b@y42.com
+    settings:
+      type: BuiltIn
+      theme_name: wonderland

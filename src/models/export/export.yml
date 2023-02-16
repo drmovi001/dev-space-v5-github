@@ -6,11 +6,11 @@ version: 2
 
 models:
   - name: salesforce_export
-    description: my first export to Salesforce
+    description: my first export to Salesforceasdasdsasdd
     meta:
-      export_config: 
+      export_config:
         type: Salesforce
         target_table: Opportunity
         secret: my_secret_1
-      asset_status: verified
+      asset_status: issue
       experts: ["person_a@company.com", "@team-a"]

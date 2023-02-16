@@ -10,8 +10,8 @@
       "person_b@y42.com"
     ]
   },
-  "theme": {
+  "settings": {
     "type": "BuiltIn",
-    "themeName": "wonderland"
+    "theme_name": "wonderland"
   }
 }

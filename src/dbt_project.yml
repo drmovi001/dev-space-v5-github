@@ -20,8 +20,8 @@ snapshot-paths: ["snapshots"]
 #Y42 specific folders
 orchestration-paths: ["orchestrations"]
 widget-paths: ["models", "sources", "dashboards"]
-alerts-paths: ["alerts"]
 dashboard-paths: ["dashboards"]
+alerts-paths: ["alerts"]
 
 
 target-path: "target" # directory which will store compiled SQL files

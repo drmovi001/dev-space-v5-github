@@ -26,25 +26,25 @@ sources:
               - unique
               - not_null
   - name: Clickup test
-      description: "jaschas clickup test"
-      meta:
-        config:
-          type: clickup
-          secret: "992bbb55-a06e-4495-af24-7b987db47e77"
-        asset_status: verified
-        experts: [ "person_a@y42.com", "person_b@y42.com" ]
-      tables:
-        - name: user
-          description: "some markdown description"
-          meta:
-            source_config:
-              columns:  ["id", "username","email", "color", "profilePicture", "initials", "role", "custom_role", "last_active", "date_joined", "date_invited"]
-          columns:
-            - name: "id"
-              description: "unique id"
-              tests:
-                - unique
-                - not_null
+    description: "jaschas clickup test"
+    meta:
+      config:
+        type: clickup
+        secret: "992bbb55-a06e-4495-af24-7b987db47e77"
+      asset_status: verified
+      experts: [ "person_a@y42.com", "person_b@y42.com" ]
+    tables:
+      - name: user
+        description: "some markdown description"
+        meta:
+          source_config:
+            columns:  ["id", "username","email", "color", "profilePicture", "initials", "role", "custom_role", "last_active", "date_joined", "date_invited"]
+        columns:
+          - name: "id"
+            description: "unique id"
+            tests:
+              - unique
+              - not_null
   - name: prod postgres
     description: internal production postgres database
     meta:

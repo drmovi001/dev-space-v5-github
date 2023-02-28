@@ -5,7 +5,7 @@
 version: 2
 
 models:
-  - name: salesforce_export99991
+  - name: salesforce_expo
     description: my first export to Salesforceasdasdsasdd
     meta:
       export_config:

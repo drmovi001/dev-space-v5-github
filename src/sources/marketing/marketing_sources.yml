@@ -25,6 +25,13 @@ sources:
             tests:
               - unique
               - not_null
+  - name: Excel test
+    description: "excel test"
+    meta:
+      config:
+        type: file-upload
+      asset_status: verified
+      experts: ["person_a@y42.com", "person_b@y42.com"]
   - name: Clickup test
     description: "jaschas clickup test"
     meta:

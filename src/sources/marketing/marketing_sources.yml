@@ -38,14 +38,27 @@ sources:
       config:
         type: clickup
         secret: "992bbb55-a06e-4495-af24-7b987db47e77"
-      asset_status: verified
-      experts: [ "person_a@y42.com", "person_b@y42.com" ]
+      asset_status: deprecated
+      experts: ["person_a@y42.com", "person_b@y42.com"]
     tables:
       - name: user
         description: "some markdown description"
         meta:
           source_config:
-            columns:  ["id", "username","email", "color", "profilePicture", "initials", "role", "custom_role", "last_active", "date_joined", "date_invited"]
+            columns:
+              [
+                "id",
+                "username",
+                "email",
+                "color",
+                "profilePicture",
+                "initials",
+                "role",
+                "custom_role",
+                "last_active",
+                "date_joined",
+                "date_invited"
+              ]
         columns:
           - name: "id"
             description: "unique id"
@@ -72,7 +85,7 @@ sources:
                 "name",
                 "lowercase",
                 "uppercase",
-                "mixedcase",
+                "mixedcase"
               ]
   - name: dbt_playground #if there are no meta.type, then we treat this source as an internal source and create a view
     database: y42-playground-a0b345c7 #this is for cross referencing database https://docs.getdbt.com/reference/resource-properties/database
@@ -84,10 +97,12 @@ sources:
           - name: Discount
             test:
               - not_null
+    meta:
+      asset_status: no status
   - name: fivetran_facebook_ads
     description: something
     meta:
-     config:
+      config:
         fivetran_connector_id: sdfcj1-sdf-1xcsd-2wr23
         type: facebook_ads #needed to display the logo
     tables:

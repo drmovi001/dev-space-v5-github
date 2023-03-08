@@ -20,7 +20,7 @@ snapshot-paths: ["snapshots"]
 #Y42 specific folders
 orchestration-paths: ["orchestrations"]
 widget-paths: ["models", "sources", "dashboards"]
-dashboard-paths: ["dashboards"]
+dashboard-paths: ["🔌 dashboards"]
 alerts-paths: ["alerts"]
 
 

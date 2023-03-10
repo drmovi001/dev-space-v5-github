@@ -53,6 +53,7 @@ sources:
         description: some markdown description
         meta:
           source_config:
+            import: user
             columns:
               - id
               - username
@@ -83,6 +84,7 @@ sources:
         identifer: postgres-public-cdc1
         meta:
           source_config:
+            import: cdc1
             columns:
               - id
               - code
@@ -107,8 +109,12 @@ sources:
     description: something
     meta:
       config:
-        fivetran_connector_id: sdfcj1-sdf-1xcsd-2wr23
-        type: facebook_ads
+        type: facebook
+        secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
+        parent_id: ""
+        settings:
+          start_date: 2023-03-17T23:00:00Z
+          parent_id: 2869712333351891
     tables:
       - name: ads
         description: whatever

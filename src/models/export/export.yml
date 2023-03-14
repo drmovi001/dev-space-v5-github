@@ -14,4 +14,7 @@ models:
         target_table: Opportunity
         secret: my_secret_1
       asset_status: issue
-      experts: ["person_a@company.com", "@team-a"]
+      experts: {
+        users: ["gabriel.llamas@y42.com"],
+        teams: ["Impersonators (Don't remove)"],
+      }

@@ -10,6 +10,10 @@ models:
     tags:
       - gab1
       - gab2
+      - lol2
+      - lol3
+      - lol4
+      - lol5
     meta:
       export_config:
         type: Salesforce
@@ -17,7 +21,9 @@ models:
         secret: my_secret_1
       asset_status: issue
       experts:
-        {
-          users: ["gabriel.llamas@y42.com"],
-          teams: ["Impersonators (Don't remove)"]
-        }
+        users:
+          - gabriel.llamas@y42.com
+          - aliaksei.bahamazau@y42.com
+        teams:
+          - Impersonators (Don't remove)
+          - team_end_2

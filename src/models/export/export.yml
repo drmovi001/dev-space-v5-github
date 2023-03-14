@@ -7,14 +7,17 @@ version: 2
 models:
   - name: salesforce_export
     description: my first export to Salesforceasdasdsasdd
-    tags: ['gab1']
+    tags:
+      - gab1
+      - gab2
     meta:
       export_config:
         type: Salesforce
         target_table: Opportunity
         secret: my_secret_1
       asset_status: issue
-      experts: {
-        users: ["gabriel.llamas@y42.com"],
-        teams: ["Impersonators (Don't remove)"],
-      }
+      experts:
+        {
+          users: ["gabriel.llamas@y42.com"],
+          teams: ["Impersonators (Don't remove)"]
+        }

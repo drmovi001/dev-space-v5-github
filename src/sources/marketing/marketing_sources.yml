@@ -130,3 +130,142 @@ sources:
           - name: id
             test:
               - unique
+  - name: fivetran_google_analytics
+    description: This is a Fivetran managed integration.
+    meta:
+      config:
+        type: fivetran
+        secret: JNe1dmkHC3ke0McZ:R1mdZU7YcCOyI7eaJEzIdQz07jQaJE4a #FORMAT: API-KEY:API-SECRET
+        connector_id: dame_ulnar
+        fivetran_destination: bathien-us-playground
+        fivetran_schema: ga
+      asset_status: draft
+    tables:
+      - name: fivetran_audit
+        description: This is a Fivetran generated table.
+        columns: 
+          - name: id
+            test:
+              - not_null
+              - unique
+          - name: _fivetran_synced
+            test:
+              - not_null
+              - unique
+          - name: done
+            test:
+              - not_null
+          - name: message
+            test:
+              - not_null
+          - name: progress
+            test:
+              - not_null
+          - name: rows_updated_or_inserted
+            test:
+              - not_null
+          - name: schema
+            test:
+              - not_null
+          - name: start
+            test:
+              - not_null
+          - name: status
+            test:
+              - not_null
+          - name: table
+            test:
+              - not_null
+          - name: update_id
+            test:
+              - not_null
+              - unique
+          - name: update_started
+            test:
+              - not_null
+      - name: traffic
+        description: This is a Fivetran generated table.
+        columns: 
+            - name: date
+              test:
+                - unique
+            - name: profile
+              test:
+                - not_null
+            - name: _fivetran_synced
+              test:
+                - not_null
+            - name: avg_time_on_page
+              test:
+                - not_null
+            - name: bounce_rate
+              test:
+                - not_null
+            - name: entrances
+              test:
+                - not_null
+            - name: exit_rate
+              test:
+                - not_null
+            - name: page_title
+              test:
+                - not_null
+            - name: page_value
+              test:
+                - not_null
+            - name: pageviews
+              test:
+                - not_null
+            - name: unique_pageviews
+              test:
+                - not_null
+            - name: users
+              test:
+                - not_null
+      - name: campaign_performance
+        description: This is a Fivetran generated table.
+        columns:
+          - name: _fivetran_id
+            test:
+              - not_null
+              - unique
+          - name: date
+            test:
+              - not_null
+              - unique
+          - name: profile
+            test:
+              - not_null
+              - unique
+          - name: _fivetran_synced
+            test:
+              - not_null
+              - unique
+          - name: bounce_rate
+            test:
+              - not_null
+          - name: campaign
+            test:
+              - not_null
+          - name: goal_completions_all
+            test:
+              - not_null
+          - name: goal_conversion_rate_all
+            test:
+              - not_null
+          - name: goal_value_all
+            test:
+              - not_null
+          - name: new_users
+            test:
+              - not_null
+          - name: pageviews_per_session
+            test:
+              - not_null
+          - name: sessions
+            test:
+              - not_null
+          - name: users
+            test:
+              - not_null
+

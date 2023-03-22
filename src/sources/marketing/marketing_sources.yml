@@ -5,10 +5,9 @@ sources:
     meta:
       config:
         type: intercom
-        secret: ea08ffbf-f1db-4a96-8456-f3e852de39f7
+        secret: ad32e78d-4e75-48db-89c5-b69b959872bf
         parent_id: ""
-        settings:
-          start_date: ""
+        settings: {}
       asset_status: verified
       experts:
         - person_a@y42.com
@@ -20,11 +19,7 @@ sources:
           source_config:
             import: admins
             columns:
-              - id
-              - type
-              - workspace_id
-              - name
-              - created_at
+              - ""
         columns:
           - name: id
             description: unique id
@@ -46,34 +41,19 @@ sources:
       config:
         type: clickup
         secret: 992bbb55-a06e-4495-af24-7b987db47e77
+        parent_id: ""
+        settings: {}
       asset_status: deprecated
       experts:
         - person_a@y42.com
         - person_b@y42.com
     tables:
-      - name: user
-        description: some markdown description
+      - name: folders
         meta:
           source_config:
-            import: user
+            import: folders
             columns:
-              - id
-              - username
-              - email
-              - color
-              - profilePicture
-              - initials
-              - role
-              - custom_role
-              - last_active
-              - date_joined
-              - date_invited
-        columns:
-          - name: id
-            description: unique id
-            tests:
-              - unique
-              - not_null
+              - ""
   - name: prod postgres
     description: internal production postgres database
     meta:
@@ -88,13 +68,7 @@ sources:
           source_config:
             import: cdc1
             columns:
-              - id
-              - code
-              - article
-              - name
-              - lowercase
-              - uppercase
-              - mixedcase
+              - ""
   - name: dbt_playground
     database: y42-playground-a0b345c7
     description: something
@@ -115,8 +89,8 @@ sources:
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
         parent_id: ""
         settings:
-          start_date: "2023-03-17T23:00:00Z"
-          parent_id: 2869712333351891
+          start_date: 2023-03-17T23:00:00Z
+          parent_id: "2869712333351891"
     tables:
       - name: ads
         description: whatever
@@ -135,7 +109,7 @@ sources:
     meta:
       config:
         type: fivetran
-        secret: JNe1dmkHC3ke0McZ:R1mdZU7YcCOyI7eaJEzIdQz07jQaJE4a #FORMAT: API-KEY:API-SECRET
+        secret: JNe1dmkHC3ke0McZ:R1mdZU7YcCOyI7eaJEzIdQz07jQaJE4a
         connector_id: dame_ulnar
         fivetran_destination: bathien-us-playground
         fivetran_schema: ga
@@ -143,7 +117,7 @@ sources:
     tables:
       - name: fivetran_audit
         description: This is a Fivetran generated table.
-        columns: 
+        columns:
           - name: id
             test:
               - not_null
@@ -185,43 +159,43 @@ sources:
               - not_null
       - name: traffic
         description: This is a Fivetran generated table.
-        columns: 
-            - name: date
-              test:
-                - unique
-            - name: profile
-              test:
-                - not_null
-            - name: _fivetran_synced
-              test:
-                - not_null
-            - name: avg_time_on_page
-              test:
-                - not_null
-            - name: bounce_rate
-              test:
-                - not_null
-            - name: entrances
-              test:
-                - not_null
-            - name: exit_rate
-              test:
-                - not_null
-            - name: page_title
-              test:
-                - not_null
-            - name: page_value
-              test:
-                - not_null
-            - name: pageviews
-              test:
-                - not_null
-            - name: unique_pageviews
-              test:
-                - not_null
-            - name: users
-              test:
-                - not_null
+        columns:
+          - name: date
+            test:
+              - unique
+          - name: profile
+            test:
+              - not_null
+          - name: _fivetran_synced
+            test:
+              - not_null
+          - name: avg_time_on_page
+            test:
+              - not_null
+          - name: bounce_rate
+            test:
+              - not_null
+          - name: entrances
+            test:
+              - not_null
+          - name: exit_rate
+            test:
+              - not_null
+          - name: page_title
+            test:
+              - not_null
+          - name: page_value
+            test:
+              - not_null
+          - name: pageviews
+            test:
+              - not_null
+          - name: unique_pageviews
+            test:
+              - not_null
+          - name: users
+            test:
+              - not_null
       - name: campaign_performance
         description: This is a Fivetran generated table.
         columns:
@@ -268,4 +242,3 @@ sources:
           - name: users
             test:
               - not_null
-

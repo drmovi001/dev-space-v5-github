@@ -8,18 +8,15 @@ models:
   - name: salesforce_export
     description: my first export to Salesforceasdasdsasdd
     tags:
-      - gab1
       - gab2
     meta:
       export_config:
         type: Salesforce
         target_table: Opportunity
         secret: my_secret_1
-      asset_status: issue
+      asset_status: verified
       experts:
         users:
-          - gabriel.llamas@y42.com
-          - aliaksei.bahamazau@y42.com
-        teams:
-          - Impersonators (Don't remove)
-          - team_end_2
+          - can.solombaz@y42.com
+          - jascha.beste@y42.com
+        teams: []

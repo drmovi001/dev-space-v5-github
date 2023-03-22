@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: my_first_dbt_model
-    description: 'A starter dbt modeldfggdf'
+    description: 'A starter dbtssssss modeldfggdf'
     tags: ['marketing']
     columns:
       - name: id
@@ -20,3 +20,8 @@ models:
           - not_null
     meta:
       asset_status: deprecated
+      experts:
+        users:
+          - pawel.paulinski@y42.com
+          - vlgilfeqgble-pmqviepbsbak@y42.com
+        teams: []

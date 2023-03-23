@@ -109,7 +109,7 @@ sources:
     meta:
       config:
         type: fivetran
-        secret: JNe1dmkHC3ke0McZ:R1mdZU7YcCOyI7eaJEzIdQz07jQaJE4a
+        secret: JNe1dmkHC3ke0McZ:MQVFVtsDaOcRiJHuFGOE6r44Pl5Ashm5
         connector_id: dame_ulnar
         fivetran_destination: bathien-us-playground
         fivetran_schema: ga

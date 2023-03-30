@@ -55,7 +55,7 @@ sources:
             columns:
               - ""
   - name: prod postgres
-    description: internal production postgres database
+    description: internal production database
     meta:
       config:
         type: postgres

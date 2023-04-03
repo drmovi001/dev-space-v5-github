@@ -6,7 +6,7 @@ sources:
       config:
         type: intercom
         secret: ad32e78d-4e75-48db-89c5-b69b959872bf
-        parent_id: ''
+        parent_id: ""
         settings: {}
       asset_status: verified
       experts:
@@ -19,7 +19,7 @@ sources:
           source_config:
             import: admins
             columns:
-              - ''
+              - ""
         columns:
           - name: id
             description: unique id
@@ -41,7 +41,7 @@ sources:
       config:
         type: clickup
         secret: 992bbb55-a06e-4495-af24-7b987db47e77
-        parent_id: ''
+        parent_id: ""
         settings: {}
       asset_status: deprecated
       experts:
@@ -53,14 +53,14 @@ sources:
           source_config:
             import: folders
             columns:
-              - ''
+              - ""
   - name: prod postgres
     description: internal production database
     meta:
       config:
         type: postgres
         secret: 5ea112c0-60af-45d7-aff4-7fe22e7feff7
-      asset_status: draft
+      asset_status: deprecated
     tables:
       - name: cdc1
         identifer: postgres-public-cdc1
@@ -68,7 +68,7 @@ sources:
           source_config:
             import: cdc1
             columns:
-              - ''
+              - ""
   - name: dbt_playground
     database: y42-playground-a0b345c7
     description: something
@@ -87,10 +87,10 @@ sources:
       config:
         type: facebook
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
-        parent_id: ''
+        parent_id: ""
         settings:
-          start_date: '2023-03-17T23:00:00Z'
-          parent_id: '2869712333351891'
+          start_date: 2023-03-17T23:00:00Z
+          parent_id: "2869712333351891"
     tables:
       - name: ads
         description: whatever

@@ -1,3 +1,4 @@
+|
 version: 2
 sources:
   - name: Intercom Integration
@@ -19,7 +20,7 @@ sources:
           source_config:
             import: admins
             columns:
-              - ""
+              - id
         columns:
           - name: id
             description: unique id
@@ -66,14 +67,15 @@ sources:
         meta:
           source_config:
             import: cdc1
-            columns:
-              - ""
   - name: dbt_playground
     database: y42-playground-a0b345c7
     description: something
     tables:
       - name: some table
         description: whatever
+        meta:
+          source_config:
+            import: ads
         columns:
           - name: Discount
             test:
@@ -88,16 +90,24 @@ sources:
       config:
         type: facebook
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
-        settings: {}
+        settings:
+          start_date: 2022-04-03T22:00:00Z
+          parent_id: "2869712333351891"
     tables:
       - name: ads
         description: whatever
+        meta:
+          source_config:
+            import: ads
         columns:
           - name: Discount
             test:
               - not_null
       - name: overview
         description: whatever
+        meta:
+          source_config:
+            import: ads
         columns:
           - name: id
             test:
@@ -115,6 +125,13 @@ sources:
     tables:
       - name: traffic
         description: This is a Fivetran generated table.
+        meta:
+          source_config:
+            import: traffic
+            columns:
+              - date
+              - profile
+              - avg_time_on_page
         columns:
           - name: date
             test:
@@ -154,6 +171,12 @@ sources:
               - not_null
       - name: campaign_performance
         description: This is a Fivetran generated table.
+        meta:
+          source_config:
+            import: traffic
+            columns:
+              - date
+              - campaign
         columns:
           - name: _fivetran_id
             test:
@@ -198,5 +221,3 @@ sources:
           - name: users
             test:
               - not_null
-        meta:
-          asset_status: verified

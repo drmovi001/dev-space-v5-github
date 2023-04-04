@@ -11,7 +11,7 @@ orchestrations:
       command: "y42 build --select +my_first_dbt_model"
       cron: "0/30 * 1/1 * *"
       enabled: true
-      execution_timeout_in_seconds: 40223
+      timeout_in_seconds: 40223
       retries: 
-        number_of_retries: 4
-        time_between_retries_in_seconds: 10
+        max: 4
+        interval_in_seconds: 10

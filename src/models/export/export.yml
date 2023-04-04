@@ -15,4 +15,4 @@ models:
         type: Salesforce
         target_table: Opportunity
         secret: my_secret_1
-      asset_status: draft
+      asset_status: issue

@@ -47,83 +47,13 @@ sources:
         - person_a@y42.com
         - person_b@y42.com
     tables:
-      - "0":
-          name: goals
-          $path: src/sources/marketing/marketing_sources.yml
-          $propertyPath:
-            - sources
-            - key: name
-              value: Clickup test
-            - tables
-          meta:
-            source_config:
-              import: goals
-              columns:
-                - id
-                - name
-                - team_id
-                - date_created
-                - start_date
-                - due_date
-                - description
-                - private
-                - archived
-                - creator
-                - color
-                - pretty_id
-                - multiple_owners
-                - folder_id
-                - members
-                - owners
-                - key_results
-                - percent_completed
-                - history
-                - pretty_url
-              schema:
-                $schema: http://json-schema.org/draft-07/schema#
-                type: object
-                properties:
-                  id:
-                    type: string
-                  name:
-                    type: string
-                  team_id:
-                    type: string
-                  date_created:
-                    type: string
-                  start_date:
-                    type: string
-                  due_date:
-                    type: string
-                  description:
-                    type: string
-                  private:
-                    type: boolean
-                  archived:
-                    type: boolean
-                  creator:
-                    type: integer
-                  color:
-                    type: string
-                  pretty_id:
-                    type: string
-                  multiple_owners:
-                    type: boolean
-                  folder_id:
-                    type: string
-                  members:
-                    type: array
-                  owners:
-                    type: array
-                  key_results:
-                    type: string
-                  percent_completed:
-                    type: number
-                  history:
-                    type: string
-                  pretty_url:
-                    type: string
-        name: goals
+      - name: folders
+        meta:
+          source_config:
+            import: folders
+            columns:
+              - ""
+
   - name: prod postgres
     description: internal production database
     meta:

@@ -6,8 +6,8 @@ sources:
       config:
         type: intercom
         secret: ad32e78d-4e75-48db-89c5-b69b959872bf
-        parent_id: ""
-        settings: {}
+        settings:
+          start_date: 2022-04-02T22:00:00Z
       asset_status: verified
       experts:
         - person_a@y42.com
@@ -41,19 +41,89 @@ sources:
       config:
         type: clickup
         secret: 992bbb55-a06e-4495-af24-7b987db47e77
-        parent_id: ""
         settings: {}
       asset_status: deprecated
       experts:
         - person_a@y42.com
         - person_b@y42.com
     tables:
-      - name: folders
-        meta:
-          source_config:
-            import: folders
-            columns:
-              - ""
+      - "0":
+          name: goals
+          $path: src/sources/marketing/marketing_sources.yml
+          $propertyPath:
+            - sources
+            - key: name
+              value: Clickup test
+            - tables
+          meta:
+            source_config:
+              import: goals
+              columns:
+                - id
+                - name
+                - team_id
+                - date_created
+                - start_date
+                - due_date
+                - description
+                - private
+                - archived
+                - creator
+                - color
+                - pretty_id
+                - multiple_owners
+                - folder_id
+                - members
+                - owners
+                - key_results
+                - percent_completed
+                - history
+                - pretty_url
+              schema:
+                $schema: http://json-schema.org/draft-07/schema#
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  team_id:
+                    type: string
+                  date_created:
+                    type: string
+                  start_date:
+                    type: string
+                  due_date:
+                    type: string
+                  description:
+                    type: string
+                  private:
+                    type: boolean
+                  archived:
+                    type: boolean
+                  creator:
+                    type: integer
+                  color:
+                    type: string
+                  pretty_id:
+                    type: string
+                  multiple_owners:
+                    type: boolean
+                  folder_id:
+                    type: string
+                  members:
+                    type: array
+                  owners:
+                    type: array
+                  key_results:
+                    type: string
+                  percent_completed:
+                    type: number
+                  history:
+                    type: string
+                  pretty_url:
+                    type: string
+        name: goals
   - name: prod postgres
     description: internal production database
     meta:
@@ -87,10 +157,7 @@ sources:
       config:
         type: facebook
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
-        parent_id: ""
-        settings:
-          start_date: 2023-03-17T23:00:00Z
-          parent_id: "2869712333351891"
+        settings: {}
     tables:
       - name: ads
         description: whatever
@@ -115,48 +182,6 @@ sources:
         fivetran_schema: ga
       asset_status: draft
     tables:
-      - name: fivetran_audit
-        description: This is a Fivetran generated table.
-        columns:
-          - name: id
-            test:
-              - not_null
-              - unique
-          - name: _fivetran_synced
-            test:
-              - not_null
-              - unique
-          - name: done
-            test:
-              - not_null
-          - name: message
-            test:
-              - not_null
-          - name: progress
-            test:
-              - not_null
-          - name: rows_updated_or_inserted
-            test:
-              - not_null
-          - name: schema
-            test:
-              - not_null
-          - name: start
-            test:
-              - not_null
-          - name: status
-            test:
-              - not_null
-          - name: table
-            test:
-              - not_null
-          - name: update_id
-            test:
-              - not_null
-              - unique
-          - name: update_started
-            test:
-              - not_null
       - name: traffic
         description: This is a Fivetran generated table.
         columns:

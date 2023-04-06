@@ -13,19 +13,69 @@ sources:
         - person_a@y42.com
         - person_b@y42.com
     tables:
+      - name: notes
+        meta:
+          source_config:
+            import: notes
+            columns:
+              - type
+              - id
+              - created_at
+              - contact
+              - user
+              - author
+              - body
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                type:
+                  type: string
+                id:
+                  type: string
+                created_at:
+                  type: string
+                contact:
+                  type: object
+                user:
+                  type: object
+                author:
+                  type: object
+                body:
+                  type: string
       - name: admins
-        description: some markdown description
         meta:
           source_config:
             import: admins
             columns:
-              - ""
-        columns:
-          - name: id
-            description: unique id
-            tests:
-              - unique
-              - not_null
+              - type
+              - email
+              - id
+              - name
+              - away_mode_enabled
+              - away_mode_reassign
+              - has_inbox_seat
+              - team_ids
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                type:
+                  type: string
+                email:
+                  type: string
+                id:
+                  type: string
+                name:
+                  type: string
+                away_mode_enabled:
+                  type: boolean
+                away_mode_reassign:
+                  type: boolean
+                has_inbox_seat:
+                  type: boolean
+                team_ids:
+                  type: array
   - name: Excel test
     description: excel test
     meta:

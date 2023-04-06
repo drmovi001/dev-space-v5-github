@@ -330,20 +330,115 @@ sources:
       config:
         type: facebook
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
-        settings: {}
+        settings:
+          parent_id: "2869712333351891"
+          start_date: 2022-04-05T22:00:00Z
     tables:
-      - name: ads
-        description: whatever
-        columns:
-          - name: Discount
-            test:
-              - not_null
-      - name: overview
-        description: whatever
-        columns:
-          - name: id
-            test:
-              - unique
+      - name: campaigns
+        meta:
+          source_config:
+            import: campaigns
+            columns:
+              - name
+              - objective
+              - id
+              - account_id
+              - effective_status
+              - buying_type
+              - spend_cap
+              - start_time
+              - updated_time
+              - ads
+              - adlabels
+              - boosted_object_id
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                name:
+                  type: string
+                objective:
+                  type: string
+                id:
+                  type: string
+                account_id:
+                  type: string
+                effective_status:
+                  type: string
+                buying_type:
+                  type: string
+                spend_cap:
+                  type: number
+                start_time:
+                  type: string
+                updated_time:
+                  type: string
+                ads:
+                  type: object
+                adlabels:
+                  type: array
+                boosted_object_id:
+                  type: string
+      - name: custom_conversions
+        meta:
+          source_config:
+            import: custom_conversions
+            columns:
+              - id
+              - business
+              - creation_time
+              - custom_event_type
+              - data_sources
+              - default_conversion_value
+              - event_source_type
+              - last_fired_time
+              - name
+              - pixel
+              - retention_days
+              - rule
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                id:
+                  type: string
+                business:
+                  type: object
+                creation_time:
+                  type: string
+                custom_event_type:
+                  type: string
+                data_sources:
+                  type: array
+                default_conversion_value:
+                  type: integer
+                event_source_type:
+                  type: string
+                last_fired_time:
+                  type: string
+                name:
+                  type: string
+                pixel:
+                  type: object
+                retention_days:
+                  type: integer
+                rule:
+                  type: string
+      - name: ad_creative_preview
+        meta:
+          source_config:
+            import: ad_creative_preview
+            columns:
+              - ad_creative_id
+              - iframe
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                ad_creative_id:
+                  type: string
+                iframe:
+                  type: string
   - name: fivetran_google_analytics
     description: This is a Fivetran managed integration.
     meta:

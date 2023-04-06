@@ -13,6 +13,33 @@ sources:
         - person_a@y42.com
         - person_b@y42.com
     tables:
+      - name: segments
+        meta:
+          source_config:
+            import: segments
+            columns:
+              - type
+              - id
+              - name
+              - created_at
+              - updated_at
+              - person_type
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                type:
+                  type: string
+                id:
+                  type: string
+                name:
+                  type: string
+                created_at:
+                  type: string
+                updated_at:
+                  type: string
+                person_type:
+                  type: string
       - name: notes
         meta:
           source_config:
@@ -43,6 +70,93 @@ sources:
                   type: object
                 body:
                   type: string
+      - name: conversations
+        meta:
+          source_config:
+            import: conversations
+            columns:
+              - type
+              - id
+              - title
+              - channel_initiated
+              - created_at
+              - updated_at
+              - source
+              - contacts
+              - teammates
+              - admin_assignee_id
+              - team_assignee_id
+              - contact_ids
+              - teammate_ids
+              - tag_ids
+              - topics
+              - open
+              - state
+              - read
+              - waiting_since
+              - snoozed_until
+              - first_contact_reply
+              - priority
+              - sla_applied
+              - conversation_rating
+              - custom_attributes
+              - statistics
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                type:
+                  type: string
+                id:
+                  type: string
+                title:
+                  type: string
+                channel_initiated:
+                  type: string
+                created_at:
+                  type: string
+                updated_at:
+                  type: string
+                source:
+                  type: object
+                contacts:
+                  type: object
+                teammates:
+                  type: object
+                admin_assignee_id:
+                  type: string
+                team_assignee_id:
+                  type: string
+                contact_ids:
+                  type: string
+                teammate_ids:
+                  type: string
+                tag_ids:
+                  type: string
+                topics:
+                  type: object
+                open:
+                  type: boolean
+                state:
+                  type: string
+                read:
+                  type: boolean
+                waiting_since:
+                  type: string
+                snoozed_until:
+                  type: string
+                first_contact_reply:
+                  type: object
+                priority:
+                  type: string
+                sla_applied:
+                  type: object
+                conversation_rating:
+                  type: object
+                custom_attributes:
+                  type: string
+                statistics:
+                  type: object
       - name: admins
         meta:
           source_config:

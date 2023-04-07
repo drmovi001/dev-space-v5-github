@@ -164,7 +164,7 @@ sources:
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
         settings:
           parent_id: "2869712333351891"
-          start_date: 2022-04-05T22:00:00Z
+          start_date: "2022-04-05T22:00:00Z"
     tables:
       - name: campaigns
         meta:

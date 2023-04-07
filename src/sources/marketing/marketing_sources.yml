@@ -1,195 +1,5 @@
 version: 2
 sources:
-  - name: Intercom Integration
-    description: some markdown description
-    meta:
-      config:
-        type: intercom
-        secret: ad32e78d-4e75-48db-89c5-b69b959872bf
-        settings:
-          start_date: 2022-04-02T22:00:00Z
-      asset_status: verified
-      experts:
-        - person_a@y42.com
-        - person_b@y42.com
-    tables:
-      - name: segments
-        meta:
-          source_config:
-            import: segments
-            columns:
-              - type
-              - id
-              - name
-              - created_at
-              - updated_at
-              - person_type
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                type:
-                  type: string
-                id:
-                  type: string
-                name:
-                  type: string
-                created_at:
-                  type: string
-                updated_at:
-                  type: string
-                person_type:
-                  type: string
-      - name: notes
-        meta:
-          source_config:
-            import: notes
-            columns:
-              - type
-              - id
-              - created_at
-              - contact
-              - user
-              - author
-              - body
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                type:
-                  type: string
-                id:
-                  type: string
-                created_at:
-                  type: string
-                contact:
-                  type: object
-                user:
-                  type: object
-                author:
-                  type: object
-                body:
-                  type: string
-      - name: conversations
-        meta:
-          source_config:
-            import: conversations
-            columns:
-              - type
-              - id
-              - title
-              - channel_initiated
-              - created_at
-              - updated_at
-              - source
-              - contacts
-              - teammates
-              - admin_assignee_id
-              - team_assignee_id
-              - contact_ids
-              - teammate_ids
-              - tag_ids
-              - topics
-              - open
-              - state
-              - read
-              - waiting_since
-              - snoozed_until
-              - first_contact_reply
-              - priority
-              - sla_applied
-              - conversation_rating
-              - custom_attributes
-              - statistics
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                type:
-                  type: string
-                id:
-                  type: string
-                title:
-                  type: string
-                channel_initiated:
-                  type: string
-                created_at:
-                  type: string
-                updated_at:
-                  type: string
-                source:
-                  type: object
-                contacts:
-                  type: object
-                teammates:
-                  type: object
-                admin_assignee_id:
-                  type: string
-                team_assignee_id:
-                  type: string
-                contact_ids:
-                  type: string
-                teammate_ids:
-                  type: string
-                tag_ids:
-                  type: string
-                topics:
-                  type: object
-                open:
-                  type: boolean
-                state:
-                  type: string
-                read:
-                  type: boolean
-                waiting_since:
-                  type: string
-                snoozed_until:
-                  type: string
-                first_contact_reply:
-                  type: object
-                priority:
-                  type: string
-                sla_applied:
-                  type: object
-                conversation_rating:
-                  type: object
-                custom_attributes:
-                  type: string
-                statistics:
-                  type: object
-      - name: admins
-        meta:
-          source_config:
-            import: admins
-            columns:
-              - type
-              - email
-              - id
-              - name
-              - away_mode_enabled
-              - away_mode_reassign
-              - has_inbox_seat
-              - team_ids
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                type:
-                  type: string
-                email:
-                  type: string
-                id:
-                  type: string
-                name:
-                  type: string
-                away_mode_enabled:
-                  type: boolean
-                away_mode_reassign:
-                  type: boolean
-                has_inbox_seat:
-                  type: boolean
-                team_ids:
-                  type: array
   - name: Excel test
     description: excel test
     meta:
@@ -199,35 +9,6 @@ sources:
       experts:
         - person_a@y42.com
         - person_b@y42.com
-  - name: prod postgres
-    description: internal production database
-    meta:
-      config:
-        type: postgres
-        secret: 5ea112c0-60af-45d7-aff4-7fe22e7feff7
-      asset_status: deprecated
-    tables:
-      - name: cdc1
-        identifer: postgres-public-cdc1
-        meta:
-          source_config:
-            import: cdc1
-            columns:
-              - ""
-  - name: dbt_playground
-    database: y42-playground-a0b345c7
-    description: something
-    tables:
-      - name: some table
-        description: whatever
-        columns:
-          - name: Discount
-            test:
-              - not_null
-        meta:
-          asset_status: draft
-    meta:
-      asset_status: no status
   - name: fivetran_facebook_ads
     description: something
     meta:
@@ -588,201 +369,213 @@ sources:
               - not_null
         meta:
           asset_status: verified
-  - {
-      name: Clickup test,
-      description: jaschas clickup test,
-      meta:
-        {
-          config:
-            {
-              type: clickup,
-              secret: 992bbb55-a06e-4495-af24-7b987db47e77,
-              settings: {}
-            },
-          asset_status: deprecated,
-          experts: [person_a@y42.com, person_b@y42.com]
-        },
-      tables:
-        [
-          {
-              name: folders,
-              meta:
-                {
-                  source_config:
-                    {
-                      import: folders,
-                      columns:
-                        [
-                          id,
-                          name,
-                          orderindex,
-                          override_statuses,
-                          hidden,
-                          space,
-                          task_count,
-                          archived,
-                          statuses,
-                          lists,
-                          permission_level,
-                          space_id
-                        ],
-                      schema:
-                        {
-                          $schema: http://json-schema.org/draft-07/schema#,
-                          type: object,
-                          properties:
-                            {
-                              id: {type: string},
-                              name: {type: string},
-                              orderindex: {type: integer},
-                              override_statuses: {type: boolean},
-                              hidden: {type: integer},
-                              space: {type: object},
-                              task_count: {type: string},
-                              archived: {type: boolean},
-                              statuses: {type: array},
-                              lists: {type: array},
-                              permission_level: {type: string},
-                              space_id: {type: string}
-                            }
-                        }
-                    }
-                }
-            },
-          {
-              name: tasks,
-              meta:
-                {
-                  source_config:
-                    {
-                      import: tasks,
-                      columns:
-                        [
-                          id,
-                          custom_id,
-                          name,
-                          text_content,
-                          description,
-                          status,
-                          orderindex,
-                          date_created,
-                          date_updated,
-                          date_closed,
-                          archived,
-                          creator,
-                          assignees,
-                          watchers,
-                          checklists,
-                          tags,
-                          parent,
-                          priority,
-                          due_date,
-                          start_date,
-                          points,
-                          time_estimate,
-                          time_spent,
-                          custom_fields,
-                          dependencies,
-                          linked_tasks,
-                          team_id,
-                          url,
-                          permission_level,
-                          list,
-                          project,
-                          folder,
-                          space,
-                          list_id
-                        ],
-                      schema:
-                        {
-                          $schema: http://json-schema.org/draft-07/schema#,
-                          type: object,
-                          properties:
-                            {
-                              id: {type: string},
-                              custom_id: {type: string},
-                              name: {type: string},
-                              text_content: {type: string},
-                              description: {type: string},
-                              status: {type: object},
-                              orderindex: {type: string},
-                              date_created: {type: string},
-                              date_updated: {type: string},
-                              date_closed: {type: string},
-                              archived: {type: boolean},
-                              creator: {type: object},
-                              assignees: {type: array},
-                              watchers: {type: array},
-                              checklists: {type: array},
-                              tags: {type: array},
-                              parent: {type: string},
-                              priority: {type: object},
-                              due_date: {type: string},
-                              start_date: {type: string},
-                              points: {type: number},
-                              time_estimate: {type: number},
-                              time_spent: {type: number},
-                              custom_fields: {type: array},
-                              dependencies: {type: array},
-                              linked_tasks: {type: string},
-                              team_id: {type: string},
-                              url: {type: string},
-                              permission_level: {type: string},
-                              list: {type: object},
-                              project: {type: object},
-                              folder: {type: object},
-                              space: {type: object},
-                              list_id: {type: string}
-                            }
-                        }
-                    }
-                }
-            },
-          {
-              name: tasks_time,
-              meta:
-                {
-                  source_config:
-                    {
-                      import: tasks_time,
-                      columns: [id, current_status, status_history],
-                      schema:
-                        {
-                          $schema: http://json-schema.org/draft-07/schema#,
-                          type: object,
-                          properties:
-                            {
-                              id: {type: string},
-                              current_status: {type: object},
-                              status_history: {type: array}
-                            }
-                        }
-                    }
-                }
-            },
-          {
-              name: teams,
-              meta:
-                {
-                  source_config:
-                    {
-                      import: teams,
-                      columns: [id, name, color, avatar, members],
-                      schema:
-                        {
-                          $schema: http://json-schema.org/draft-07/schema#,
-                          type: object,
-                          properties:
-                            {
-                              id: {type: string},
-                              name: {type: string},
-                              color: {type: string},
-                              avatar: {type: string},
-                              members: {type: array}
-                            }
-                        }
-                    }
-                }
-            }
-        ]
-    }
+  - name: Clickup test
+    description: jaschas clickup test
+    meta:
+      config:
+        type: clickup
+        secret: 992bbb55-a06e-4495-af24-7b987db47e77
+        settings: {}
+      asset_status: deprecated
+      experts:
+        - person_a@y42.com
+        - person_b@y42.com
+    tables:
+      - name: folders
+        meta:
+          source_config:
+            import: folders
+            columns:
+              - id
+              - name
+              - orderindex
+              - override_statuses
+              - hidden
+              - space
+              - task_count
+              - archived
+              - statuses
+              - lists
+              - permission_level
+              - space_id
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+                orderindex:
+                  type: integer
+                override_statuses:
+                  type: boolean
+                hidden:
+                  type: integer
+                space:
+                  type: object
+                task_count:
+                  type: string
+                archived:
+                  type: boolean
+                statuses:
+                  type: array
+                lists:
+                  type: array
+                permission_level:
+                  type: string
+                space_id:
+                  type: string
+      - name: tasks
+        meta:
+          source_config:
+            import: tasks
+            columns:
+              - id
+              - custom_id
+              - name
+              - text_content
+              - description
+              - status
+              - orderindex
+              - date_created
+              - date_updated
+              - date_closed
+              - archived
+              - creator
+              - assignees
+              - watchers
+              - checklists
+              - tags
+              - parent
+              - priority
+              - due_date
+              - start_date
+              - points
+              - time_estimate
+              - time_spent
+              - custom_fields
+              - dependencies
+              - linked_tasks
+              - team_id
+              - url
+              - permission_level
+              - list
+              - project
+              - folder
+              - space
+              - list_id
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                id:
+                  type: string
+                custom_id:
+                  type: string
+                name:
+                  type: string
+                text_content:
+                  type: string
+                description:
+                  type: string
+                status:
+                  type: object
+                orderindex:
+                  type: string
+                date_created:
+                  type: string
+                date_updated:
+                  type: string
+                date_closed:
+                  type: string
+                archived:
+                  type: boolean
+                creator:
+                  type: object
+                assignees:
+                  type: array
+                watchers:
+                  type: array
+                checklists:
+                  type: array
+                tags:
+                  type: array
+                parent:
+                  type: string
+                priority:
+                  type: object
+                due_date:
+                  type: string
+                start_date:
+                  type: string
+                points:
+                  type: number
+                time_estimate:
+                  type: number
+                time_spent:
+                  type: number
+                custom_fields:
+                  type: array
+                dependencies:
+                  type: array
+                linked_tasks:
+                  type: string
+                team_id:
+                  type: string
+                url:
+                  type: string
+                permission_level:
+                  type: string
+                list:
+                  type: object
+                project:
+                  type: object
+                folder:
+                  type: object
+                space:
+                  type: object
+                list_id:
+                  type: string
+      - name: tasks_time
+        meta:
+          source_config:
+            import: tasks_time
+            columns:
+              - id
+              - current_status
+              - status_history
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                id:
+                  type: string
+                current_status:
+                  type: object
+                status_history:
+                  type: array
+      - name: teams
+        meta:
+          source_config:
+            import: teams
+            columns:
+              - id
+              - name
+              - color
+              - avatar
+              - members
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+                color:
+                  type: string
+                avatar:
+                  type: string
+                members:
+                  type: array

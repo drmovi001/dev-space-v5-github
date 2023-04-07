@@ -1,5 +1,0 @@
-sources:
-  - name: lkl;.
-    meta:
-      config:
-        type: agency-analytics

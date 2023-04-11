@@ -8,7 +8,7 @@ sources:
         parent_id: "298528044" # also account
         start_date: "2021-07-11T12:00:00Z"
         secret: "google_analytics"
-        connection: "test_conn_1"
+        connection: "test_connection_1"
       asset_status: verified
       experts: ["person_a@y42.com", "person_b@y42.com"]
     tables:

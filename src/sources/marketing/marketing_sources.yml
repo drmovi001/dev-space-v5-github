@@ -1,25 +1,32 @@
 version: 2
 sources:
-  - name: Intercom Integration #this is a classic SaaS integration
-    description: "some markdown description"
+  - name: Intercom Integration
+    description: some markdown description
     meta:
       config:
         type: intercom
-        parent_id: "298528044" # also account
-        start_date: "2021-07-11T12:00:00Z"
-        secret: "google_analytics"
-        connection: "test_connection_1"
+        parent_id: "298528044"
+        start_date: 2021-07-11T12:00:00Z
+        secret: google_analytics
+        connection: test_connection_1
       asset_status: verified
-      experts: ["person_a@y42.com", "person_b@y42.com"]
+      experts:
+        - person_a@y42.com
+        - person_b@y42.com
     tables:
       - name: admins
-        description: "some markdown description"
+        description: some markdown description
         meta:
           source_config:
-            columns: ["id", "type", "workspace_id", "name", "created_at"]
+            columns:
+              - id
+              - type
+              - workspace_id
+              - name
+              - created_at
         columns:
-          - name: "id"
-            description: "unique id"
+          - name: id
+            description: unique id
             tests:
               - unique
               - not_null
@@ -69,7 +76,7 @@ sources:
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
         settings:
           parent_id: "2869712333351891"
-          start_date: "2022-04-05T22:00:00Z"
+          start_date: 2022-04-05T22:00:00Z
     tables:
       - name: ad_creative_preview
         meta:

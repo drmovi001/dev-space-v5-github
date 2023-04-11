@@ -1,5 +1,28 @@
 version: 2
 sources:
+  - name: Intercom Integration #this is a classic SaaS integration
+    description: "some markdown description"
+    meta:
+      config:
+        type: intercom
+        parent_id: "298528044" # also account
+        start_date: "2021-07-11T12:00:00Z"
+        secret: "google_analytics"
+        connection: "test_conn_1"
+      asset_status: verified
+      experts: ["person_a@y42.com", "person_b@y42.com"]
+    tables:
+      - name: admins
+        description: "some markdown description"
+        meta:
+          source_config:
+            columns: ["id", "type", "workspace_id", "name", "created_at"]
+        columns:
+          - name: "id"
+            description: "unique id"
+            tests:
+              - unique
+              - not_null
   - name: Excel test
     description: excel test
     meta:

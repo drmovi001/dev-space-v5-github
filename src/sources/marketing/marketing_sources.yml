@@ -32,26 +32,6 @@ sources:
       experts:
         - person_a@y42.com
         - person_b@y42.com
-  - name: fivetran_facebook_ads
-    description: something
-    meta:
-      config:
-        type: facebook
-        secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
-        settings: {}
-    tables:
-      - name: ads
-        description: whatever
-        columns:
-          - name: Discount
-            test:
-              - not_null
-      - name: overview
-        description: whatever
-        columns:
-          - name: id
-            test:
-              - unique
   - name: fivetran_google_analytics
     description: This is a Fivetran managed integration.
     meta:
@@ -189,51 +169,78 @@ sources:
           parent_id: "2869712333351891"
           start_date: "2022-04-05T22:00:00Z"
     tables:
-      - name: campaigns
+      - name: ad_creative_preview
         meta:
           source_config:
-            import: campaigns
+            import: ad_creative_preview
+            columns:
+              - ad_creative_id
+              - iframe
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                ad_creative_id:
+                  type: string
+                iframe:
+                  type: string
+      - name: adsets
+        meta:
+          source_config:
+            import: adsets
             columns:
               - name
-              - objective
+              - end_time
+              - promoted_object
               - id
               - account_id
-              - effective_status
-              - buying_type
-              - spend_cap
-              - start_time
               - updated_time
-              - ads
+              - daily_budget
+              - budget_remaining
+              - effective_status
+              - campaign_id
+              - created_time
+              - start_time
+              - lifetime_budget
+              - targeting
+              - bid_info
               - adlabels
-              - boosted_object_id
             schema:
               $schema: http://json-schema.org/draft-07/schema#
               type: object
               properties:
                 name:
                   type: string
-                objective:
+                end_time:
                   type: string
+                promoted_object:
+                  type: object
                 id:
                   type: string
                 account_id:
                   type: string
-                effective_status:
-                  type: string
-                buying_type:
-                  type: string
-                spend_cap:
-                  type: number
-                start_time:
-                  type: string
                 updated_time:
                   type: string
-                ads:
+                daily_budget:
+                  type: number
+                budget_remaining:
+                  type: number
+                effective_status:
+                  type: string
+                campaign_id:
+                  type: string
+                created_time:
+                  type: string
+                start_time:
+                  type: string
+                lifetime_budget:
+                  type: number
+                targeting:
+                  type: object
+                bid_info:
                   type: object
                 adlabels:
                   type: array
-                boosted_object_id:
-                  type: string
       - name: custom_conversions
         meta:
           source_config:
@@ -278,21 +285,6 @@ sources:
                 retention_days:
                   type: integer
                 rule:
-                  type: string
-      - name: ad_creative_preview
-        meta:
-          source_config:
-            import: ad_creative_preview
-            columns:
-              - ad_creative_id
-              - iframe
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                ad_creative_id:
-                  type: string
-                iframe:
                   type: string
   - name: fivetran_google_analytics
     description: This is a Fivetran managed integration.

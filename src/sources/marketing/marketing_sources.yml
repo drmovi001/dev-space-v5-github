@@ -32,104 +32,6 @@ sources:
       experts:
         - person_a@y42.com
         - person_b@y42.com
-  - name: fivetran_google_analytics
-    description: This is a Fivetran managed integration.
-    meta:
-      config:
-        type: fivetran
-        secret: JNe1dmkHC3ke0McZ:MQVFVtsDaOcRiJHuFGOE6r44Pl5Ashm5
-        connector_id: dame_ulnar
-        fivetran_destination: bathien-us-playground
-        fivetran_schema: ga
-      asset_status: draft
-    tables:
-      - name: traffic
-        description: This is a Fivetran generated table.
-        columns:
-          - name: date
-            test:
-              - unique
-          - name: profile
-            test:
-              - not_null
-          - name: _fivetran_synced
-            test:
-              - not_null
-          - name: avg_time_on_page
-            test:
-              - not_null
-          - name: bounce_rate
-            test:
-              - not_null
-          - name: entrances
-            test:
-              - not_null
-          - name: exit_rate
-            test:
-              - not_null
-          - name: page_title
-            test:
-              - not_null
-          - name: page_value
-            test:
-              - not_null
-          - name: pageviews
-            test:
-              - not_null
-          - name: unique_pageviews
-            test:
-              - not_null
-          - name: users
-            test:
-              - not_null
-      - name: campaign_performance
-        description: This is a Fivetran generated table.
-        columns:
-          - name: _fivetran_id
-            test:
-              - not_null
-              - unique
-          - name: date
-            test:
-              - not_null
-              - unique
-          - name: profile
-            test:
-              - not_null
-              - unique
-          - name: _fivetran_synced
-            test:
-              - not_null
-              - unique
-          - name: bounce_rate
-            test:
-              - not_null
-          - name: campaign
-            test:
-              - not_null
-          - name: goal_completions_all
-            test:
-              - not_null
-          - name: goal_conversion_rate_all
-            test:
-              - not_null
-          - name: goal_value_all
-            test:
-              - not_null
-          - name: new_users
-            test:
-              - not_null
-          - name: pageviews_per_session
-            test:
-              - not_null
-          - name: sessions
-            test:
-              - not_null
-          - name: users
-            test:
-              - not_null
-        meta:
-          asset_status: verified
   - name: prod postgres
     description: internal production database
     meta:
@@ -286,6 +188,180 @@ sources:
                   type: integer
                 rule:
                   type: string
+      - name: adcreative
+        meta:
+          source_config:
+            import: adcreative
+            columns:
+              - body
+              - object_story_id
+              - image_url
+              - id
+              - account_id
+              - actor_id
+              - adlabels
+              - applink_treatment
+              - call_to_action_type
+              - effective_instagram_story_id
+              - effective_object_story_id
+              - title
+              - name
+              - image_crops
+              - instagram_actor_id
+              - instagram_permalink_url
+              - instagram_story_id
+              - link_og_id
+              - object_id
+              - object_story_spec
+              - object_type
+              - object_url
+              - product_set_id
+              - source_instagram_media_id
+              - status
+              - template_url
+              - template_url_spec
+              - thumbnail_url
+              - image_hash
+              - url_tags
+              - video_id
+              - link_url
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                body:
+                  type: string
+                object_story_id:
+                  type: string
+                image_url:
+                  type: string
+                id:
+                  type: string
+                account_id:
+                  type: string
+                actor_id:
+                  type: string
+                adlabels:
+                  type: array
+                applink_treatment:
+                  type: string
+                call_to_action_type:
+                  type: string
+                effective_instagram_story_id:
+                  type: string
+                effective_object_story_id:
+                  type: string
+                title:
+                  type: string
+                name:
+                  type: string
+                image_crops:
+                  type: object
+                instagram_actor_id:
+                  type: string
+                instagram_permalink_url:
+                  type: string
+                instagram_story_id:
+                  type: string
+                link_og_id:
+                  type: string
+                object_id:
+                  type: string
+                object_story_spec:
+                  type: object
+                object_type:
+                  type: string
+                object_url:
+                  type: string
+                product_set_id:
+                  type: string
+                source_instagram_media_id:
+                  type: string
+                status:
+                  type: string
+                template_url:
+                  type: string
+                template_url_spec:
+                  type: object
+                thumbnail_url:
+                  type: string
+                image_hash:
+                  type: string
+                url_tags:
+                  type: string
+                video_id:
+                  type: string
+                link_url:
+                  type: string
+      - name: ads
+        meta:
+          source_config:
+            import: ads
+            columns:
+              - bid_type
+              - account_id
+              - campaign_id
+              - adset_id
+              - adlabels
+              - bid_amount
+              - bid_info
+              - status
+              - creative
+              - id
+              - updated_time
+              - created_time
+              - name
+              - targeting
+              - effective_status
+              - last_updated_by_app_id
+              - recommendations
+              - source_ad_id
+              - tracking_specs
+              - conversion_specs
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                bid_type:
+                  type: string
+                account_id:
+                  type: string
+                campaign_id:
+                  type: string
+                adset_id:
+                  type: string
+                adlabels:
+                  type: array
+                bid_amount:
+                  type: integer
+                bid_info:
+                  type: object
+                status:
+                  type: string
+                creative:
+                  type: object
+                id:
+                  type: string
+                updated_time:
+                  type: string
+                created_time:
+                  type: string
+                name:
+                  type: string
+                targeting:
+                  type: object
+                effective_status:
+                  type: string
+                last_updated_by_app_id:
+                  type: string
+                recommendations:
+                  type: array
+                source_ad_id:
+                  type: string
+                tracking_specs:
+                  type: array
+                conversion_specs:
+                  type: array
   - name: fivetran_google_analytics
     description: This is a Fivetran managed integration.
     meta:

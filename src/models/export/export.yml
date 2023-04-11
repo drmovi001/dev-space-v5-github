@@ -1,4 +1,5 @@
 version: 2
+
 models:
   - name: salesforce_export
     description: my first export to Salesforceasdasdsasdd
@@ -11,3 +12,19 @@ models:
         target_table: Opportunity
         secret: my_secret_1
       asset_status: verified
+
+exports:
+  - name: salesforce_export
+    description: my first export to Salesforceasdasdsasdd
+    tags:
+      - tag1
+      - tag2
+    meta:
+      asset_status: verified
+      experts:
+        - person_a@y42.com
+        - person_b@y42.com
+    config:
+      type: Salesforce
+      target_table: Opportunity
+      secret: my_secret_1

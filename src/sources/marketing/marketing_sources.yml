@@ -54,20 +54,6 @@ sources:
             import: cdc1
             columns:
               - ""
-  - name: dbt_playground
-    database: y42-playground-a0b345c7
-    description: something
-    tables:
-      - name: some table
-        description: whatever
-        columns:
-          - name: Discount
-            test:
-              - not_null
-        meta:
-          asset_status: draft
-    meta:
-      asset_status: no status
   - name: fivetran_facebook_ads
     description: something
     meta:

@@ -594,16 +594,44 @@ sources:
                   type: object
                 status_history:
                   type: array
-      - name: teams
+      - name: spaces
         meta:
           source_config:
-            import: teams
+            import: spaces
+            columns:
+              - archived
+              - name
+              - private
+              - statuses
+              - features
+              - team_id
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                archived:
+                  type: boolean
+                name:
+                  type: string
+                private:
+                  type: boolean
+                statuses:
+                  type: array
+                features:
+                  type: object
+                team_id:
+                  type: string
+      - name: lists
+        meta:
+          source_config:
+            import: lists
             columns:
               - id
               - name
-              - color
-              - avatar
-              - members
+              - orderindex
+              - status
+              - folder_id
+              - space_id
             schema:
               $schema: http://json-schema.org/draft-07/schema#
               type: object
@@ -612,9 +640,11 @@ sources:
                   type: string
                 name:
                   type: string
-                color:
+                orderindex:
+                  type: integer
+                status:
+                  type: object
+                folder_id:
                   type: string
-                avatar:
+                space_id:
                   type: string
-                members:
-                  type: array

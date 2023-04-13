@@ -15,7 +15,9 @@ models:
         users:
           - pawel.paulinski@y42.com
         teams: []
+
 sources: []
+
 metrics:
   - name: rolling_new_customers
     label: New Customers

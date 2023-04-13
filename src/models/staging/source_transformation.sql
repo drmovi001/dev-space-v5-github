@@ -1,3 +1,3 @@
-select * from {{ source('dbt_playground', 'some table') }}
+select * from {{ source('Clickup test', 'lists') }}
 where Department = 'Paper'
     

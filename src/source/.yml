@@ -1,0 +1,5 @@
+sources:
+  - name: test
+    tags: []
+    meta:
+      asset_status: draft

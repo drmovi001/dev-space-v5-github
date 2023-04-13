@@ -6,7 +6,7 @@ sources:
       config:
         type: intercom
         parent_id: "298528044"
-        start_date: "2021-07-11T12:00:00Z"
+        start_date: 2021-07-11T12:00:00Z
         secret: google_analytics
         connection: test_connection_1_1
       asset_status: verified

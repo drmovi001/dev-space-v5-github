@@ -61,7 +61,7 @@ sources:
       asset_status: deprecated
     tables:
       - name: cdc1
-        identifer: postgres-public-cdc1
+        identifier: postgres-public-cdc1
         meta:
           source_config:
             import: cdc1

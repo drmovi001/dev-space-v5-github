@@ -273,6 +273,14 @@ sources:
                   type: string
                 link_url:
                   type: string
+          experts:
+            users:
+              - simon.jornet@y42.com
+            teams: []
+        tags:
+          - tag 1
+          - amasd
+          - gab1
       - name: ads
         meta:
           source_config:

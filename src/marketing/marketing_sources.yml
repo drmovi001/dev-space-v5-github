@@ -25,8 +25,8 @@ sources:
             tests:
               - unique
               - not_null
-  - name: Excel test
-    description: excel test
+  - name: Excel tests
+    description: excel tests
     meta:
       config:
         type: file-upload
@@ -34,8 +34,8 @@ sources:
       experts:
         - person_a@y42.com
         - person_b@y42.com
-  - name: Clickup test
-    description: jaschas clickup test
+  - name: Clickup tests
+    description: jaschas clickup tests
     meta:
       config:
         type: clickup
@@ -75,7 +75,7 @@ sources:
         description: whatever
         columns:
           - name: Discount
-            test:
+            tests:
               - not_null
         meta:
           asset_status: draft
@@ -93,13 +93,13 @@ sources:
         description: whatever
         columns:
           - name: Discount
-            test:
+            tests:
               - not_null
       - name: overview
         description: whatever
         columns:
           - name: id
-            test:
+            tests:
               - unique
   - name: fivetran_google_analytics
     description: This is a Fivetran managed integration.
@@ -116,86 +116,86 @@ sources:
         description: This is a Fivetran generated table.
         columns:
           - name: date
-            test:
+            tests:
               - unique
           - name: profile
-            test:
+            tests:
               - not_null
           - name: _fivetran_synced
-            test:
+            tests:
               - not_null
           - name: avg_time_on_page
-            test:
+            tests:
               - not_null
           - name: bounce_rate
-            test:
+            tests:
               - not_null
           - name: entrances
-            test:
+            tests:
               - not_null
           - name: exit_rate
-            test:
+            tests:
               - not_null
           - name: page_title
-            test:
+            tests:
               - not_null
           - name: page_value
-            test:
+            tests:
               - not_null
           - name: pageviews
-            test:
+            tests:
               - not_null
           - name: unique_pageviews
-            test:
+            tests:
               - not_null
           - name: users
-            test:
+            tests:
               - not_null
       - name: campaign_performance
         description: This is a Fivetran generated table.
         columns:
           - name: _fivetran_id
-            test:
+            tests:
               - not_null
               - unique
           - name: date
-            test:
+            tests:
               - not_null
               - unique
           - name: profile
-            test:
+            tests:
               - not_null
               - unique
           - name: _fivetran_synced
-            test:
+            tests:
               - not_null
               - unique
           - name: bounce_rate
-            test:
+            tests:
               - not_null
           - name: campaign
-            test:
+            tests:
               - not_null
           - name: goal_completions_all
-            test:
+            tests:
               - not_null
           - name: goal_conversion_rate_all
-            test:
+            tests:
               - not_null
           - name: goal_value_all
-            test:
+            tests:
               - not_null
           - name: new_users
-            test:
+            tests:
               - not_null
           - name: pageviews_per_session
-            test:
+            tests:
               - not_null
           - name: sessions
-            test:
+            tests:
               - not_null
           - name: users
-            test:
+            tests:
               - not_null
         meta:
           asset_status: verified

@@ -2,7 +2,8 @@ version: 2
 models:
   - name: my_second_dbt_model
     description: A starter dbt model
-    tags: ['test']
+    tags:
+      - test
     columns:
       - name: id
         description: The primary key for this table
@@ -15,9 +16,7 @@ models:
         users:
           - pawel.paulinski@y42.com
         teams: []
-
 sources: []
-
 metrics:
   - name: rolling_new_customers
     label: New Customers

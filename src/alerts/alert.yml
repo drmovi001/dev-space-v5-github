@@ -1,10 +1,9 @@
 alerts:
-- name: my first alert
-  tags:
-    - tag 1
-    - tag 2
-  description: some markdown description
-  meta:
+  - name: my first alert
+    tags:
+      - tag 1
+      - tag 2
+    description: some markdown description
     config:
       feature_type: Source #rename to new Y42FeatureType
       alert_on: 
@@ -22,7 +21,8 @@ alerts:
             - person_b@y42.com
           teams:
             - some time
-    asset_status: verified
-    experts:
-      - person_a@y42.com
-      - person_b@y42.com
+    meta:
+      asset_status: verified
+      experts:
+        - person_a@y42.com
+        - person_b@y42.com

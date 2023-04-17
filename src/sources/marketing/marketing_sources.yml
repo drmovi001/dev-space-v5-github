@@ -32,8 +32,8 @@ sources:
               - unique
               - not_null
   - name: jaffle_shop # when there are no configs, we treat it as a Nata Data Warehouse integration
-    database: raw  
-    schema: jaffle_shop  
+    database: raw
+    schema: jaffle_shop
     tables:
       - name: orders
       - name: customers
@@ -54,7 +54,7 @@ sources:
         secret: 5ea112c0-60af-45d7-aff4-7fe22e7feff7
       asset_status: deprecated
     tables:
-      - name: cdc1
+      - name: cdc12
         identifier: postgres-public-cdc1
         meta:
           source_config:

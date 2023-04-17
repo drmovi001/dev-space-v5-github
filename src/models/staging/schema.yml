@@ -2,8 +2,9 @@ version: 2
 models:
   - name: my_second_dbt_model
     description: A starter dbt model
-    tags:
-      - test
+    config:
+      tags:
+        - test
     columns:
       - name: id
         description: The primary key for this table

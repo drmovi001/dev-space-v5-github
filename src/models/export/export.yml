@@ -4,8 +4,9 @@ version: 2
 models:
   - name: salesforce_export
     description: my first export to Salesforceasdasdsasdd
-    tags:
-      - gab1
+    config:
+      tags:
+        - gab1
     meta:
       export_config:
         type: Salesforce

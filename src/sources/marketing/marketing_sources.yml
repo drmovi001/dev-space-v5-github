@@ -54,7 +54,7 @@ sources:
         secret: 5ea112c0-60af-45d7-aff4-7fe22e7feff7
       asset_status: deprecated
     tables:
-      - name: cdc12
+      - name: cdc1
         identifier: postgres-public-cdc1
         meta:
           source_config:

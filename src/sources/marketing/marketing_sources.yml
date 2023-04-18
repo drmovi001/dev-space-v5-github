@@ -1,6 +1,6 @@
 version: 2
 sources:
-  - name: Intercom Integration
+  - name: intercom_integration
     description: some markdown description
     meta:
       config:
@@ -37,7 +37,7 @@ sources:
     tables:
       - name: orders
       - name: customers
-  - name: Excel tests
+  - name: excelt_tests
     description: excel tests
     meta:
       config:
@@ -46,7 +46,7 @@ sources:
       experts:
         - person_a@y42.com
         - person_b@y42.com
-  - name: prod postgres
+  - name: prod_postgres
     description: internal production database
     meta:
       config:
@@ -460,7 +460,7 @@ sources:
               - not_null
         meta:
           asset_status: verified
-  - name: Clickup tests
+  - name: clickup_tests
     description: jaschas clickup tests
     meta:
       config:

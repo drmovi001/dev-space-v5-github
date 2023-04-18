@@ -5,33 +5,16 @@ sources:
     meta:
       config:
         type: intercom
-        parent_id: '298528044'
-        start_date: '2021-07-11T12:00:00Z'
+        parent_id: "298528044"
+        start_date: 2021-07-11T12:00:00Z
         secret: google_analytics
         connection: test_connection_1_1
       asset_status: verified
       experts:
         - person_a@y42.com
         - person_b@y42.com
-    tables:
-      - name: admins
-        description: some markdown description
-        meta:
-          source_config:
-            import: admins
-            columns:
-              - id
-              - type
-              - workspace_id
-              - name
-              - created_at
-        columns:
-          - name: id
-            description: unique id
-            tests:
-              - unique
-              - not_null
-  - name: jaffle_shop # when there are no configs, we treat it as a Nata Data Warehouse integration
+    tables: []
+  - name: jaffle_shop
     database: raw
     schema: jaffle_shop
     tables:
@@ -60,7 +43,7 @@ sources:
           source_config:
             import: cdc1
             columns:
-              - ''
+              - ""
   - name: fivetran_facebook_ads
     description: something
     meta:
@@ -68,8 +51,8 @@ sources:
         type: facebook
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
         settings:
-          parent_id: '2869712333351891'
-          start_date: '2022-04-05T22:00:00Z'
+          parent_id: "2869712333351891"
+          start_date: 2022-04-05T22:00:00Z
     tables:
       - name: ad_creative_preview
         meta:
@@ -583,51 +566,6 @@ sources:
                   type: object
                 list_id:
                   type: string
-      - name: tasks_time
-        meta:
-          source_config:
-            import: tasks_time
-            columns:
-              - id
-              - current_status
-              - status_history
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                id:
-                  type: string
-                current_status:
-                  type: object
-                status_history:
-                  type: array
-      - name: spaces
-        meta:
-          source_config:
-            import: spaces
-            columns:
-              - archived
-              - name
-              - private
-              - statuses
-              - features
-              - team_id
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                archived:
-                  type: boolean
-                name:
-                  type: string
-                private:
-                  type: boolean
-                statuses:
-                  type: array
-                features:
-                  type: object
-                team_id:
-                  type: string
       - name: lists
         meta:
           source_config:
@@ -655,3 +593,48 @@ sources:
                   type: string
                 space_id:
                   type: string
+      - name: spaces
+        meta:
+          source_config:
+            import: spaces
+            columns:
+              - archived
+              - name
+              - private
+              - statuses
+              - features
+              - team_id
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                archived:
+                  type: boolean
+                name:
+                  type: string
+                private:
+                  type: boolean
+                statuses:
+                  type: array
+                features:
+                  type: object
+                team_id:
+                  type: string
+      - name: tasks_time
+        meta:
+          source_config:
+            import: tasks_time
+            columns:
+              - id
+              - current_status
+              - status_history
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                id:
+                  type: string
+                current_status:
+                  type: object
+                status_history:
+                  type: array

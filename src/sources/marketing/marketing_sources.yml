@@ -5,7 +5,7 @@ sources:
     meta:
       config:
         type: intercom
-        parent_id: "298528044"
+        parent_id: '298528044'
         start_date: 2021-07-11T12:00:00Z
         secret: google_analytics
         connection: test_connection_1_1
@@ -60,7 +60,7 @@ sources:
           source_config:
             import: cdc1
             columns:
-              - ""
+              - ''
   - name: fivetran_facebook_ads
     description: something
     meta:
@@ -68,8 +68,8 @@ sources:
         type: facebook
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
         settings:
-          parent_id: "2869712333351891"
-          start_date: 2022-04-05T22:00:00Z
+          parent_id: '2869712333351891'
+          start_date: '2022-04-05T22:00:00Z'
     tables:
       - name: ad_creative_preview
         meta:

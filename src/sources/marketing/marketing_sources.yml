@@ -37,7 +37,7 @@ sources:
     tables:
       - name: orders
       - name: customers
-  - name: excelt_tests
+  - name: excel_tests
     description: excel tests
     meta:
       config:

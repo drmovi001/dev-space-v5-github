@@ -1,15 +1,20 @@
 version: 2
+
+## this is old and deprecated
 models:
   - name: salesforce_export
     description: my first export to Salesforceasdasdsasdd
-    tags:
-      - gab1
+    config:
+      tags:
+        - gab1
     meta:
       export_config:
         type: Salesforce
         target_table: Opportunity
         secret: my_secret_1
       asset_status: verified
+    columns:
+      - name: my first column
 
 exports:
   - name: salesforce_export

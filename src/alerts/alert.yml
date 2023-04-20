@@ -1,10 +1,10 @@
 alerts:
   - name: my first alert
-    tags:
-      - tag 1
-      - tag 2
     description: some markdown description
     config:
+      tags:
+        - tag 1
+        - tag 2
       feature_type: Source #rename to new Y42FeatureType
       alert_on: 
         - failure

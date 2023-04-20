@@ -1,2 +1,2 @@
-select * from {{ source('Clickup tests', 'lists') }}
+select * from {{ source('clickup_tests', 'goals') }}
 where Department = 'Paper'

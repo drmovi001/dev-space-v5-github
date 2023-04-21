@@ -2,4 +2,3 @@
 select *
 from {{ ref('my_first_dbt_mo') }}
 where id = 2
-piesek

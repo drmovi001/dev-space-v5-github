@@ -1,22 +1,23 @@
 version: 2
 models:
-  - name: my_second_dbt_model
-    description: A starter dbt model
-    config:
-      tags:
-        - test
-    columns:
-      - name: id
-        description: The primary key for this table
-        tests:
-          - unique
-          - not_null
-    meta:
-      asset_status: deprecated
-      experts:
-        users:
-          - pawel.paulinski@y42.com
-        teams: []
+  [
+    {
+        name: salesforce_export,
+        description: my first export to Salesforceasdasdsasdd,
+        config: {tags: [gab1]},
+        meta:
+          {
+            export_config:
+              {
+                type: Salesforce,
+                target_table: Opportunity,
+                secret: my_secret_1
+              },
+            asset_status: verified
+          },
+        columns: [{name: my first column}]
+      }
+  ]
 sources: []
 metrics:
   - name: rolling_new_customers

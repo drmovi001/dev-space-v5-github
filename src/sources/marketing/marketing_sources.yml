@@ -45,15 +45,6 @@ sources:
     tables:
       - name: orders
       - name: customers
-  - name: excel_tests
-    description: excel tests
-    meta:
-      config:
-        type: file-upload
-      asset_status: verified
-      experts:
-        - person_a@y42.com
-        - person_b@y42.com
   - name: prod_postgres
     description: internal production database
     meta:
@@ -705,3 +696,15 @@ sources:
                   type: string
                 pretty_url:
                   type: string
+          asset_status: verified
+  - name: excel_tests
+    description: excel tests
+    meta:
+      config:
+        type: file-upload
+      asset_status: verified
+      experts:
+        users:
+          - aliaksei.bahamazau@y42.com
+          - alexander.ciesielski@y42.com
+        teams: []

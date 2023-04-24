@@ -6,7 +6,7 @@ sources:
       config:
         type: intercom
         parent_id: "298528044"
-        start_date: "2021-07-11T12:00:00Z"
+        start_date: 2021-07-11T12:00:00Z
         secret: google_analytics
         connection: test_connection_1_1
       asset_status: verified
@@ -68,7 +68,7 @@ sources:
         secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
         settings:
           parent_id: "2869712333351891"
-          start_date: "2022-04-05T22:00:00Z"
+          start_date: 2022-04-05T22:00:00Z
     tables:
       - name: ad_creative_preview
         meta:

@@ -1,0 +1,23 @@
+sources:
+  - name: clickup_tests
+    description: docs.dbt_project.clickup_tests_1edbffe5-3721-426d-b103-206c26fc6734
+    meta:
+      config:
+        type: clickup
+        secret: 992bbb55-a06e-4495-af24-7b987db47e77
+        settings: {}
+      asset_status: deprecated
+      experts:
+        - person_a@y42.com
+        - person_b@y42.com
+    tables:
+      - source.dbt_project.clickup_tests.tasks
+      - source.dbt_project.clickup_tests.tasks_time
+      - source.dbt_project.clickup_tests.spaces
+      - source.dbt_project.clickup_tests.goals
+    $lastModified: 1682074288478
+    $children:
+      - source.dbt_project.clickup_tests.tasks
+      - source.dbt_project.clickup_tests.tasks_time
+      - source.dbt_project.clickup_tests.spaces
+      - source.dbt_project.clickup_tests.goals

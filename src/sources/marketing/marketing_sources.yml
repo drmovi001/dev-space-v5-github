@@ -459,6 +459,9 @@ sources:
               - not_null
         meta:
           asset_status: verified
+          experts:
+            users: []
+            teams: []
   - name: clickup_tests
     description: jaschas clickup tests
     meta:

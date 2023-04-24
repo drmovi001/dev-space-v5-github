@@ -1,27 +1,23 @@
 version: 2
 models:
-  - sqlPath: src/models/staging/my_second_dbt_model.sql
-    name: my_second_dbt_model
-    $depends_on: []
-    $lastModified: 1682077921265
-    description: docs.dbt_project.my_second_dbt_model_3ba0a9e2-1044-478a-8750-925020b17cc7
-    config:
-      tags:
-        - test
-    columns:
-      - name: id
-        description: The primary key for this table
-        tests:
-          - unique
-          - not_null
-    meta:
-      asset_status: deprecated
-      experts:
-        users:
-          - pawel.paulinski@y42.com
-          - simon.jornet@y42.com
-        teams: []
-    tests: []
+  name: my_second_dbt_model
+  config:
+    tags:
+      - test
+  columns:
+    - name: id
+      description: The primary key for this table
+      tests:
+        - unique
+        - not_null
+  meta:
+    asset_status: deprecated
+    experts:
+      users:
+        - pawel.paulinski@y42.com
+        - simon.jornet@y42.com
+      teams: []
+  tests: []
 sources: []
 metrics:
   - name: rolling_new_customers
@@ -46,15 +42,15 @@ metrics:
     filters:
       - field: is_paying
         operator: is
-        value: "true"
+        value: 'true'
       - field: lifetime_value
-        operator: ">="
-        value: "100"
+        operator: '>='
+        value: '100'
       - field: company_name
-        operator: "!="
+        operator: '!='
         value: "'Acme, Inc'"
       - field: signup_date
-        operator: ">="
+        operator: '>='
         value: "'2020-01-01'"
     config:
       enabled: true

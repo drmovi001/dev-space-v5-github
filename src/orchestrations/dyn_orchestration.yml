@@ -1,6 +1,6 @@
 orchestrations:
   - name: my_first_build_orchestration
-    description: my first orchestration yo
+    description: heyya
     meta:
       asset_status: deprecated
       experts:

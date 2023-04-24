@@ -1,5 +1,24 @@
 version: 2
-models: []
+models:
+  - name: my_second_dbt_model
+    description: docs.dbt_project.my_second_dbt_model_274bd294-0542-48c3-a836-20adaaa60f51
+    config:
+      tags:
+        - test
+    columns:
+      - name: id
+        description: The primary key for this table
+        tests:
+          - unique
+          - not_null
+    meta:
+      asset_status: deprecated
+      experts:
+        users:
+          - pawel.paulinski@y42.com
+          - simon.jornet@y42.com
+        teams: []
+    tests: []
 sources: []
 metrics:
   - name: rolling_new_customers

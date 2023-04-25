@@ -5,8 +5,7 @@ orchestrations:
       cron: "0/30 * 1/1 * *"
       enabled: true
       force_schedule: true
-      timeout:
-        hours: 10
+      timeout_in_seconds: 1000
       retries: 
         max: 4
         interval_in_seconds: 300

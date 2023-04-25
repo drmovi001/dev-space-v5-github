@@ -18,8 +18,8 @@ macro-paths: ['macros']
 snapshot-paths: ['snapshots']
 
 #Y42 specific folders
-orchestration-paths: ['orchestrations']
 alert-paths: ['alerts']
+orchestration-paths: ['orchestrations']
 
 target-path: 'target' # directory which will store compiled SQL files
 clean-targets: # directories to be removed by `dbt clean`

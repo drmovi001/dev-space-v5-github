@@ -1,8 +1,5 @@
 models:
-  - sqlPath: src/models/staging/my_second_dbt_model.sql
-    name: my_second_dbt_model
-    $depends_on: []
-    $lastModified: 1682405405942
+  - name: my_second_dbt_model
     description: docs.dbt_project.my_second_dbt_model_2ce47a11-6c09-4aaa-a5d4-13f6f5513225
     config:
       tags:

@@ -398,7 +398,7 @@ sources:
                   type: string
                 pretty_url:
                   type: string
-          asset_status: verified
+          asset_status: deprecated
   - name: excel_tests
     description: excel tests
     meta:

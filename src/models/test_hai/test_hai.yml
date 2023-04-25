@@ -1,0 +1,6 @@
+models:
+  - name: hai_test
+    tags:
+      - test_hai
+    meta:
+      asset_status: draft

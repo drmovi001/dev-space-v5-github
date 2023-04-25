@@ -1,3 +1,5 @@
+version: 2
+
 metrics:
   - name: rolling_new_customers
     label: New Customers

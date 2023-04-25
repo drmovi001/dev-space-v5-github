@@ -168,7 +168,7 @@ sources:
         type: clickup
         secret: 992bbb55-a06e-4495-af24-7b987db47e77
         settings: {}
-      asset_status: deprecated
+      asset_status: verified
       experts:
         - person_a@y42.com
         - person_b@y42.com

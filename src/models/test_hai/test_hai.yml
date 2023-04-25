@@ -1,7 +1,10 @@
+version: 2
+
 models:
   - name: hai_test
-    tags:
-      - test_hai
+    config:
+      tags:
+        - test_hai
     meta:
       asset_status: draft
   - name: test_dont_run

@@ -1,2 +1,2 @@
-select * from {{ source('clickup_tests', 'goals') }}
+select * from {{ source('fivetran_google_analytics', 'campaign_performance') }}
 where Department = 'Paper'

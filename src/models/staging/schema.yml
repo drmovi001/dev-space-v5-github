@@ -1,7 +1,7 @@
 version: 2
 models:
   - name: my_second_dbt_model
-    description: "blalba"
+    description: 'blalba'
     config:
       tags:
         - test
@@ -13,23 +13,5 @@ models:
         users:
           - pawel.paulinski@y42.com
           - simon.jornet@y42.com
-        teams: []
-    tests: []
-  - name: my_second_dbt_model
-    description: docs.dbt_project.my_second_dbt_model_2ce47a11-6c09-4aaa-a5d4-13f6f5513225
-    config:
-      tags:
-        - test
-    columns:
-      - name: id
-        description: The primary key for this table
-        tests:
-          - unique
-          - not_null
-    meta:
-      asset_status: deprecated
-      experts:
-        users:
-          - pawel.paulinski@y42.com
         teams: []
     tests: []

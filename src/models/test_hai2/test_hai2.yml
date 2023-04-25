@@ -1,2 +1,4 @@
 models:
   - name: test_test
+    tags:
+      - test_run

@@ -2,3 +2,4 @@ models:
   - name: test_test
     tags:
       - test_run
+  - name: test_that_should_run

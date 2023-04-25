@@ -1,6 +1,3 @@
----
-version: 2
-
 selectors:
   - name: nightly_diet_snowplow
     description: "this selector works with the existing assets in v5"

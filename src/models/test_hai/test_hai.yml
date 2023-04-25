@@ -4,3 +4,4 @@ models:
       - test_hai
     meta:
       asset_status: draft
+  - name: test_dont_run

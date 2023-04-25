@@ -1,17 +1,11 @@
 orchestrations:
   - name: my_first_build_orchestration
-    description: my first orchestration yo
-    meta:
-      asset_status: deprecated
-      experts:
-        users:
-          - pawel.paulinski@y42.com
-        teams: []
     config:
       command: "y42 build --select +my_first_dbt_model"
       cron: "0/30 * 1/1 * *"
       enabled: true
-      timeout_in_seconds: 40223
+      force_schedule: true
+      timeout_in_seconds: 1000
       retries: 
         max: 4
-        interval_in_seconds: 10
+        interval_in_seconds: 300

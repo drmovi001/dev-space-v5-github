@@ -16,5 +16,6 @@ models:
         teams: []
     tests: []
   - name: source_transformation
-    tags:
-      - test_dont_run
+    config:
+      tags:
+        - test_dont_run

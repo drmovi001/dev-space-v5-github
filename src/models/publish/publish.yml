@@ -38,7 +38,8 @@ metrics:
       treat_null_values_as_zero: true
     meta:
       team: Finance
-      
+      asset_status: draft
+
 exposures:
   - name: weekly_jaffle_metrics
     label: Jaffles by the Week

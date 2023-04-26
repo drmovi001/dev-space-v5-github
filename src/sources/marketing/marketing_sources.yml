@@ -33,6 +33,7 @@ sources:
                   type: string
                 name:
                   type: string
+          asset_status: draft
         columns:
           - name: id
             description: unique id
@@ -69,7 +70,7 @@ sources:
         connector_id: dame_ulnar
         fivetran_destination: bathien-us-playground
         fivetran_schema: ga
-      asset_status: draft
+      asset_status: no status
     tables:
       - name: traffic
         description: This is a Fivetran generated table.

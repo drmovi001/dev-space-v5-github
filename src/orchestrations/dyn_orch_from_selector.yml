@@ -4,12 +4,12 @@ version: 2
 orchestrations:
   - name: second_orch
     config:
-      command: "y42 build --select +my_first_dbt_model"
-      cron: "0/30 * 1/1 * *"
-      enabled: false
+      command: y42 build --select +my_first_dbt_model
+      cron: 0/30 * 1/1 * *
+      enabled: true
       force_schedule: false
       timeout_in_seconds: 2000
-      retries: 
+      retries:
         max: 5
         interval_in_seconds: 200
   - name: third_orch
@@ -19,6 +19,6 @@ orchestrations:
       enabled: true
       force_schedule: false
       timeout_in_seconds: 10000
-      retries: 
+      retries:
         max: 3
         interval_in_seconds: 800

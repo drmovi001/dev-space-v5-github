@@ -4,7 +4,7 @@ metrics:
   - name: rolling_new_customers
     label: New Customers
     model: ref('my_first_dbt_model')
-    description: The 14 day rolling count of paying customers using the product
+    description: The 14 day rolling count of paying customers using the product testinfg
     calculation_method: count_distinct
     expression: user_id
     timestamp: signup_date

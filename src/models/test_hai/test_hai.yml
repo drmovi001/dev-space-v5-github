@@ -7,22 +7,3 @@ models:
     meta:
       asset_status: draft
   - name: test_dont_run
-  - name: my_second_dbt_model
-    description: blalba
-    config:
-      tags:
-        - test
-    columns:
-      - name: id
-    meta:
-      asset_status: deprecated
-      experts:
-        users:
-          - pawel.paulinski@y42.com
-          - simon.jornet@y42.com
-        teams: []
-    tests: []
-  - name: source_transformation
-    config:
-      tags:
-        - test_dont_run

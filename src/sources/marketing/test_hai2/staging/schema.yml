@@ -1,14 +1,6 @@
-version: 2
 models:
-  - name: hai_test
-    config:
-      tags:
-        - test_hai
-    meta:
-      asset_status: draft
-  - name: test_dont_run
   - name: my_second_dbt_model
-    description: blalba
+    description: 'blalba'
     config:
       tags:
         - test
@@ -23,6 +15,5 @@ models:
         teams: []
     tests: []
   - name: source_transformation
-    config:
-      tags:
-        - test_dont_run
+    tags:
+      - test_dont_run

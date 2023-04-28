@@ -2,19 +2,23 @@
 version: 2
 
 orchestrations:
-  - name: "nightly_diet_snowplow"
-    description: "This orch runs a selector yaml config"
-    tags: []
-    meta:
-      experts:
-        user_ids: []
-        team_ids: []
-      asset_status: no status
+  - name: second_orch
     config:
-      command: "y42 build --selector nightly_diet_snowplow"
-      cron: 0 0/1 1/1 * *
-      enabled: true
-      timeout_in_seconds: 45664
+      command: y42 build --select +my_first_dbt_model
+      cron: 0/30 * 1/1 * *
+      enabled: false
+      force_schedule: false
+      timeout_in_seconds: 2000
       retries:
-        max: 2
-        interval_in_seconds: 10
+        max: 5
+        interval_in_seconds: 200
+  - name: third_orch
+    config:
+      command: y42 build --select +my_first_dbt_model
+      cron: 0/30 * 1/1 * *
+      enabled: false
+      force_schedule: false
+      timeout_in_seconds: 10000
+      retries:
+        max: 3
+        interval_in_seconds: 800

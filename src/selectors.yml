@@ -1,28 +1,22 @@
----
-version: 2
-
 selectors:
   - name: nightly_diet_snowplow
-    description: "Non-incremental Snowplow models that power nightly exports"
+    description: "this selector works with the existing assets in v5"
     definition:
-      # Optional `union` and `intersection` keywords map to the ` ` and `,` set operators:
       union:
-        - intersection:
-            - method: source
-              value: snowplow
-              childrens_parents: true
-            - method: tag
-              value: nightly
+        - method: tag
+          value: test_hai
         - method: path
-          value: models/export
+          value: models/staging
+        - method: path
+          value: models/test_hai2
         - exclude:
-            - intersection:
-                - method: package
-                  value: snowplow
-                - method: config.materialized
-                  value: incremental
-            - method: fqn
-              value: export_performance_timing
+            - union:
+                - method: tag
+                  value: test_dont_run
+                - method: source
+                  value: jaffle_shop
+                  children: true
+            
   - name: hai
     definition:
       'tag:nightly'

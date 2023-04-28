@@ -6,9 +6,9 @@ sources:
       config:
         type: intercom
         parent_id: "298528044"
-        start_date: "2021-07-11T12:00:00Z"
+        start_date: 2021-07-11T12:00:00Z
         secret: google_analytics
-        connection: test_connection_1_1
+        connection: test_connection_2_2
       asset_status: verified
       experts:
         - person_a@y42.com
@@ -33,6 +33,7 @@ sources:
                   type: string
                 name:
                   type: string
+          asset_status: draft
         columns:
           - name: id
             description: unique id
@@ -60,307 +61,6 @@ sources:
             import: cdc1
             columns:
               - ""
-  - name: fivetran_facebook_ads
-    description: something
-    meta:
-      config:
-        type: facebook
-        secret: ddcfdf03-4ef3-4d74-9ce3-61c794d55bc5
-        settings:
-          parent_id: "2869712333351891"
-          start_date: "2022-04-05T22:00:00Z"
-    tables:
-      - name: ad_creative_preview
-        meta:
-          source_config:
-            import: ad_creative_preview
-            columns:
-              - ad_creative_id
-              - iframe
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                ad_creative_id:
-                  type: string
-                iframe:
-                  type: string
-      - name: adsets
-        meta:
-          source_config:
-            import: adsets
-            columns:
-              - name
-              - end_time
-              - promoted_object
-              - id
-              - account_id
-              - updated_time
-              - daily_budget
-              - budget_remaining
-              - effective_status
-              - campaign_id
-              - created_time
-              - start_time
-              - lifetime_budget
-              - targeting
-              - bid_info
-              - adlabels
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                name:
-                  type: string
-                end_time:
-                  type: string
-                promoted_object:
-                  type: object
-                id:
-                  type: string
-                account_id:
-                  type: string
-                updated_time:
-                  type: string
-                daily_budget:
-                  type: number
-                budget_remaining:
-                  type: number
-                effective_status:
-                  type: string
-                campaign_id:
-                  type: string
-                created_time:
-                  type: string
-                start_time:
-                  type: string
-                lifetime_budget:
-                  type: number
-                targeting:
-                  type: object
-                bid_info:
-                  type: object
-                adlabels:
-                  type: array
-      - name: custom_conversions
-        meta:
-          source_config:
-            import: custom_conversions
-            columns:
-              - id
-              - business
-              - creation_time
-              - custom_event_type
-              - data_sources
-              - default_conversion_value
-              - event_source_type
-              - last_fired_time
-              - name
-              - pixel
-              - retention_days
-              - rule
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                id:
-                  type: string
-                business:
-                  type: object
-                creation_time:
-                  type: string
-                custom_event_type:
-                  type: string
-                data_sources:
-                  type: array
-                default_conversion_value:
-                  type: integer
-                event_source_type:
-                  type: string
-                last_fired_time:
-                  type: string
-                name:
-                  type: string
-                pixel:
-                  type: object
-                retention_days:
-                  type: integer
-                rule:
-                  type: string
-      - name: adcreative
-        meta:
-          source_config:
-            import: adcreative
-            columns:
-              - body
-              - object_story_id
-              - image_url
-              - id
-              - account_id
-              - actor_id
-              - adlabels
-              - applink_treatment
-              - call_to_action_type
-              - effective_instagram_story_id
-              - effective_object_story_id
-              - title
-              - name
-              - image_crops
-              - instagram_actor_id
-              - instagram_permalink_url
-              - instagram_story_id
-              - link_og_id
-              - object_id
-              - object_story_spec
-              - object_type
-              - object_url
-              - product_set_id
-              - source_instagram_media_id
-              - status
-              - template_url
-              - template_url_spec
-              - thumbnail_url
-              - image_hash
-              - url_tags
-              - video_id
-              - link_url
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                body:
-                  type: string
-                object_story_id:
-                  type: string
-                image_url:
-                  type: string
-                id:
-                  type: string
-                account_id:
-                  type: string
-                actor_id:
-                  type: string
-                adlabels:
-                  type: array
-                applink_treatment:
-                  type: string
-                call_to_action_type:
-                  type: string
-                effective_instagram_story_id:
-                  type: string
-                effective_object_story_id:
-                  type: string
-                title:
-                  type: string
-                name:
-                  type: string
-                image_crops:
-                  type: object
-                instagram_actor_id:
-                  type: string
-                instagram_permalink_url:
-                  type: string
-                instagram_story_id:
-                  type: string
-                link_og_id:
-                  type: string
-                object_id:
-                  type: string
-                object_story_spec:
-                  type: object
-                object_type:
-                  type: string
-                object_url:
-                  type: string
-                product_set_id:
-                  type: string
-                source_instagram_media_id:
-                  type: string
-                status:
-                  type: string
-                template_url:
-                  type: string
-                template_url_spec:
-                  type: object
-                thumbnail_url:
-                  type: string
-                image_hash:
-                  type: string
-                url_tags:
-                  type: string
-                video_id:
-                  type: string
-                link_url:
-                  type: string
-      - name: ads
-        meta:
-          source_config:
-            import: ads
-            columns:
-              - bid_type
-              - account_id
-              - campaign_id
-              - adset_id
-              - adlabels
-              - bid_amount
-              - bid_info
-              - status
-              - creative
-              - id
-              - updated_time
-              - created_time
-              - name
-              - targeting
-              - effective_status
-              - last_updated_by_app_id
-              - recommendations
-              - source_ad_id
-              - tracking_specs
-              - conversion_specs
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                bid_type:
-                  type: string
-                account_id:
-                  type: string
-                campaign_id:
-                  type: string
-                adset_id:
-                  type: string
-                adlabels:
-                  type: array
-                bid_amount:
-                  type: integer
-                bid_info:
-                  type: object
-                status:
-                  type: string
-                creative:
-                  type: object
-                id:
-                  type: string
-                updated_time:
-                  type: string
-                created_time:
-                  type: string
-                name:
-                  type: string
-                targeting:
-                  type: object
-                effective_status:
-                  type: string
-                last_updated_by_app_id:
-                  type: string
-                recommendations:
-                  type: array
-                source_ad_id:
-                  type: string
-                tracking_specs:
-                  type: array
-                conversion_specs:
-                  type: array
   - name: fivetran_google_analytics
     description: This is a Fivetran managed integration.
     meta:
@@ -370,7 +70,7 @@ sources:
         connector_id: dame_ulnar
         fivetran_destination: bathien-us-playground
         fivetran_schema: ga
-      asset_status: draft
+      asset_status: no status
     tables:
       - name: traffic
         description: This is a Fivetran generated table.
@@ -462,244 +162,6 @@ sources:
           experts:
             users: []
             teams: []
-  - name: clickup_tests
-    description: jaschas clickup tests
-    meta:
-      config:
-        type: clickup
-        secret: 992bbb55-a06e-4495-af24-7b987db47e77
-        settings: {}
-      asset_status: deprecated
-      experts:
-        - person_a@y42.com
-        - person_b@y42.com
-    tables:
-      - name: tasks
-        meta:
-          source_config:
-            import: tasks
-            columns:
-              - id
-              - custom_id
-              - name
-              - text_content
-              - description
-              - status
-              - orderindex
-              - date_created
-              - date_updated
-              - date_closed
-              - archived
-              - creator
-              - assignees
-              - watchers
-              - checklists
-              - tags
-              - parent
-              - priority
-              - due_date
-              - start_date
-              - points
-              - time_estimate
-              - time_spent
-              - custom_fields
-              - dependencies
-              - linked_tasks
-              - team_id
-              - url
-              - permission_level
-              - list
-              - project
-              - folder
-              - space
-              - list_id
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                id:
-                  type: string
-                custom_id:
-                  type: string
-                name:
-                  type: string
-                text_content:
-                  type: string
-                description:
-                  type: string
-                status:
-                  type: object
-                orderindex:
-                  type: string
-                date_created:
-                  type: string
-                date_updated:
-                  type: string
-                date_closed:
-                  type: string
-                archived:
-                  type: boolean
-                creator:
-                  type: object
-                assignees:
-                  type: array
-                watchers:
-                  type: array
-                checklists:
-                  type: array
-                tags:
-                  type: array
-                parent:
-                  type: string
-                priority:
-                  type: object
-                due_date:
-                  type: string
-                start_date:
-                  type: string
-                points:
-                  type: number
-                time_estimate:
-                  type: number
-                time_spent:
-                  type: number
-                custom_fields:
-                  type: array
-                dependencies:
-                  type: array
-                linked_tasks:
-                  type: string
-                team_id:
-                  type: string
-                url:
-                  type: string
-                permission_level:
-                  type: string
-                list:
-                  type: object
-                project:
-                  type: object
-                folder:
-                  type: object
-                space:
-                  type: object
-                list_id:
-                  type: string
-      - name: tasks_time
-        meta:
-          source_config:
-            import: tasks_time
-            columns:
-              - id
-              - current_status
-              - status_history
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                id:
-                  type: string
-                current_status:
-                  type: object
-                status_history:
-                  type: array
-      - name: spaces
-        meta:
-          source_config:
-            import: spaces
-            columns:
-              - archived
-              - name
-              - private
-              - statuses
-              - features
-              - team_id
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                archived:
-                  type: boolean
-                name:
-                  type: string
-                private:
-                  type: boolean
-                statuses:
-                  type: array
-                features:
-                  type: object
-                team_id:
-                  type: string
-      - name: goals
-        meta:
-          source_config:
-            import: goals
-            columns:
-              - id
-              - name
-              - team_id
-              - date_created
-              - start_date
-              - due_date
-              - description
-              - private
-              - archived
-              - creator
-              - color
-              - pretty_id
-              - multiple_owners
-              - folder_id
-              - members
-              - owners
-              - key_results
-              - percent_completed
-              - history
-              - pretty_url
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                id:
-                  type: string
-                name:
-                  type: string
-                team_id:
-                  type: string
-                date_created:
-                  type: string
-                start_date:
-                  type: string
-                due_date:
-                  type: string
-                description:
-                  type: string
-                private:
-                  type: boolean
-                archived:
-                  type: boolean
-                creator:
-                  type: integer
-                color:
-                  type: string
-                pretty_id:
-                  type: string
-                multiple_owners:
-                  type: boolean
-                folder_id:
-                  type: string
-                members:
-                  type: array
-                owners:
-                  type: array
-                key_results:
-                  type: string
-                percent_completed:
-                  type: number
-                history:
-                  type: string
-                pretty_url:
-                  type: string
-          asset_status: verified
   - name: excel_tests
     description: excel tests
     meta:
@@ -711,3 +173,42 @@ sources:
           - aliaksei.bahamazau@y42.com
           - alexander.ciesielski@y42.com
         teams: []
+  - name: intercom_integration
+    description: some markdown description
+    meta:
+      config:
+        type: intercom
+        parent_id: "298528044"
+        start_date: 2021-07-11T12:00:00Z
+        secret: google_analytics
+        connection: test_connection_1_1
+      asset_status: verified
+      experts:
+        - person_a@y42.com
+        - person_b@y42.com
+    tables:
+      - name: admins
+        description: some markdown description
+        meta:
+          source_config:
+            import: admins
+            columns:
+              - type
+              - id
+              - name
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                type:
+                  type: string
+                id:
+                  type: string
+                name:
+                  type: string
+        columns:
+          - name: id
+            description: unique id
+            tests:
+              - unique
+              - not_null

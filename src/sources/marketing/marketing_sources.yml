@@ -8,7 +8,9 @@ sources:
         parent_id: "298528044"
         start_date: 2021-07-11T12:00:00Z
         secret: google_analytics
-        connection: test_connection_2_2
+        connection: test_connection_1_1
+        settings:
+          start_date: 2023-04-05T21:00:00Z
       asset_status: verified
       experts:
         - person_a@y42.com

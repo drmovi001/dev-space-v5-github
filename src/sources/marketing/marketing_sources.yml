@@ -13,6 +13,7 @@ sources:
       experts:
         - person_a@y42.com
         - person_b@y42.com
+        - person_c@y42.com
     tables:
       - name: admins
         description: some markdown description

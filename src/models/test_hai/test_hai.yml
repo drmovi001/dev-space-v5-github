@@ -7,9 +7,5 @@ models:
     meta:
       asset_status: draft
   - name: test_dont_run
-  - name: test_test_test
-    config:
-      tags:
-        - test_run
   - name: test_that_should_run
     description: Test

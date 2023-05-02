@@ -19,7 +19,7 @@ models:
           - simon.jornet@y42.com
         teams: []
     tests: []
-  - name: my_second_dbt_model
+  - name: my_third_dbt_model
     description: 'blalba'
     config:
       tags:

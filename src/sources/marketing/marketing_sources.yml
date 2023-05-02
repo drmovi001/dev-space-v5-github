@@ -175,7 +175,7 @@ sources:
           - aliaksei.bahamazau@y42.com
           - alexander.ciesielski@y42.com
         teams: []
-  - name: intercom_integration
+  - name: intercom_integration_2
     description: some markdown description
     meta:
       config:

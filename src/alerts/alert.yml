@@ -1,5 +1,5 @@
 alerts:
-  - name: my first alert
+  - name: my_first_alert
     config:
       asset_type: Source #rename to new Y42FeatureType
       triggered_on:

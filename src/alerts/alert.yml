@@ -1,32 +1,29 @@
 alerts:
   - name: my first alert
-    description: some markdown description
     config:
-      tags:
-        - tag 1
-        - tag 2
-      feature_type: Source #rename to new Y42FeatureType
-      alert_on:
+      asset_type: Source #rename to new Y42FeatureType
+      triggered_on:
         - failure
       triggered_by:
         - user
-      alert_on_tags:
+      match_tags:
         - some tag
-      alert_on_patterns: []
-      message_body: "<p>Hi this is an export message of success
+      match_patterns: []
+      message: "<p>Hi this is an export message of success
         27,</p><p><br></p><p>The {{feature_type}}: {{object_name}} was a
         {{status}} at {{completed_at}}.</p><p>Here is the link to your
         {{feature_type}}: {{url}}</p><p><br></p><p>Have a nice
         day,</p><p>Y42</p>"
       destination:
-        - type: internal_notification # or "email"
-          users:
-            - person_a@y42.com
-            - person_b@y42.com
-          teams:
-            - some time
-    meta:
-      asset_status: verified
-      experts:
-        users: []
-        teams: []
+        - internal_notification:
+            users:
+              - person_a@y42.com
+              - person_b@y42.com
+            teams:
+              - some time
+        - email:
+            users:
+              - person_a@y42.com
+              - person_b@y42.com
+            teams:
+              - some teams

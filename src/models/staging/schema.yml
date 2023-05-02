@@ -19,6 +19,3 @@ models:
           - simon.jornet@y42.com
         teams: []
     tests: []
-  - name: source_transformation
-    tags:
-      - test_dont_run

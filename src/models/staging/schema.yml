@@ -19,21 +19,3 @@ models:
           - simon.jornet@y42.com
         teams: []
     tests: []
-  - name: my_second_dbt_model
-    description: 'blalba'
-    config:
-      tags:
-        - test
-    columns:
-      - name: id
-    meta:
-      asset_status: deprecated
-      experts:
-        users:
-          - pawel.paulinski@y42.com
-          - simon.jornet@y42.com
-        teams: []
-    tests: []
-  - name: source_transformation
-    tags:
-      - test_dont_run

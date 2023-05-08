@@ -1,6 +1,0 @@
-models:
-  - name: test_test
-    config:
-      tags:
-        - test_run
-  - name: test_that_should_run

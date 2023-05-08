@@ -4,5 +4,4 @@ models:
     config:
       tags:
         - test_run
-  - name: test_that_should_run
-    description: Test
+sources: []

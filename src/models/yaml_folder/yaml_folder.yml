@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: test_yaml
+    config:  
+      tags:
+        - yaml_file

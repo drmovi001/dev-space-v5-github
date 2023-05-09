@@ -14,10 +14,9 @@ orchestrations:
           minutes: 10
   - name: third_orch
     config:
+      enabled: false
       command: y42 build --select +my_first_dbt_model
       cron: 40 * 3 * *
-      enabled: false
-      force_schedule: false
       timeout:
         hours: 10
       retries:
@@ -26,9 +25,9 @@ orchestrations:
           minutes: 10
   - name: fourth_orch
     config:
+      enabled: true
       command: y42 build --select +my_first_dbt_model
       cron: 15 * 2 * *
-      enabled: true
       timeout:
         hours: 4
       retries:

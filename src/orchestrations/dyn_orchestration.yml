@@ -1,9 +1,9 @@
 orchestrations:
   - name: my_first_build_orchestration
     config:
+      enabled: false
       command: y42 build --select +my_first_dbt_model
       cron: 7 5-22 * * 1-5
-      enabled: false
       timeout:
         hours: 4
       retries:

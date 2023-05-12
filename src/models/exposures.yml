@@ -12,7 +12,3 @@ sources:
     tags:
       - test_hai
     description: ""
-  - name: mostafacsv
-    meta:
-      config:
-        type: csv

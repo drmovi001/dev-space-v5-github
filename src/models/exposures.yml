@@ -12,3 +12,7 @@ sources:
     tags:
       - test_hai
     description: ""
+  - name: csv
+    meta:
+      config:
+        type: csv

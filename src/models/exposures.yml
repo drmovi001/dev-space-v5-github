@@ -1,7 +1,8 @@
 version: 2
 
 exposures: []
-models: []
+models:
+  - name: mostafamodel
 sources:
   - name: test_hai
     meta:

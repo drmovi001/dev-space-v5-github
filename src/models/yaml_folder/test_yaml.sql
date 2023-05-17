@@ -1,1 +1,2 @@
-SELECT * FROM {{ ref('hai_test') }}
+SELECT *
+FROM {{ ref('hai_test') }}

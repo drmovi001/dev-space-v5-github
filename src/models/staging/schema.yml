@@ -1,9 +1,5 @@
 version: 2
 models:
-  - name: source_transformation
-    config:
-      tags:
-        - test_dont_run
   - name: my_second_dbt_model
     description: 'blalba'
     config:

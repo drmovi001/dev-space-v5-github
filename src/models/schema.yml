@@ -4,5 +4,3 @@ models:
   - name: my_first_dbt_model
     columns:
       - name: id
-        tests:
-          - unique

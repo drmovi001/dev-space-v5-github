@@ -1,4 +1,6 @@
 version: 2
 exposures: []
-models: []
+models:
+  - name: my_first_dbt_model
+  - name: my_second_dbt_model
 sources: []

@@ -1,1 +1,6 @@
-sources: []
+sources:
+  - name: bigquery_airbyte
+    meta:
+      config:
+        type: source-bigquery
+        connection: btt_bigquery

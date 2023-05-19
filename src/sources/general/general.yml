@@ -5,15 +5,21 @@ sources:
         type: source-bigquery
         connection: btt_bigquery
     tables:
-      - name: repeated_record
+      - name: 20230314_gads
         meta:
           source_config:
-            import: repeated_record
+            import: 20230314_gads
             columns:
-              - repeated_record
+              - campaign
+              - metrics
+              - segments
             schema:
               $schema: http://json-schema.org/draft-07/schema#
               type: object
               properties:
-                repeated_record:
+                campaign:
+                  type: object
+                metrics:
+                  type: object
+                segments:
                   type: object

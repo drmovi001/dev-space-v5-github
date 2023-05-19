@@ -1,7 +1,1 @@
-sources:
-  - name: bq
-    meta:
-      config:
-        type: source-bigquery
-        connection: btt_bigquery
-    tables: []
+sources: []

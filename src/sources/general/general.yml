@@ -1,0 +1,19 @@
+sources:
+  - name: bq
+    meta:
+      config:
+        type: source-bigquery
+        connection: btt_bigquery
+    tables:
+      - name: repeated_record
+        meta:
+          source_config:
+            import: repeated_record
+            columns:
+              - repeated_record
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                repeated_record:
+                  type: object

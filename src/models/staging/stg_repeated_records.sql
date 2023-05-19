@@ -1,15 +1,15 @@
 {{ config(materialized = 'table') }}
 
-with source_data as (
-  select 1 as id
-  union all
-  select null as id
+-- Query to deconstruct JSON into rows
+WITH json_rows AS (
+  SELECT jsonb_array_elements(data) AS json_row
+  FROM my_table
 )
 
-select *
-from source_data
-  /*
-   Uncomment the line below to remove records with null `id` values
-   */
-  where id is not null
-  -- test comment
+-- Select specific fields from the JSON object
+SELECT
+  id,
+  json_row->>'field1' AS field1,
+  json_row->>'field2' AS field2,
+  ...
+FROM json_rows

@@ -1,5 +1,0 @@
-version: 2
-models:
-  - name: test_dont_run
-  - name: test_that_should_run
-    description: Test

@@ -1,7 +1,3 @@
 version: 2
-models:
-  - name: test_test
-    config:
-      tags:
-        - test_run
+models: []
 sources: []

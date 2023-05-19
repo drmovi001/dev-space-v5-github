@@ -1,12 +1,4 @@
 version: 2
 
-models:
-  - name: test_yaml
-    config:
-      tags:
-        - yaml_file
-sources:
-  - name: adsasads
-    meta:
-      config:
-        type: source-bigquery
+models: []
+sources: []

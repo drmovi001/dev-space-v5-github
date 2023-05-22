@@ -9,6 +9,7 @@ sources:
         type: singer-google-sheets
         secret: f7a335af-e9e9-40f0-bcc4-5584bee8e23e
         settings: {}
+      asset_status: deprecated
     tags:
       - test_hai
     description: ""

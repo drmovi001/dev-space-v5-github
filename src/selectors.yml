@@ -17,6 +17,16 @@ selectors:
                   value: jaffle_shop
                   children: true
             
-  - name: hai
+  - name: test
     definition:
       'tag:nightly'
+  - name: "hello"
+    definition:
+      union:
+      - method: tag
+        value: something
+      - exclude:
+          - method: tag
+            value: fdd
+
+

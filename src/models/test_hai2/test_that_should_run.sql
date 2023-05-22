@@ -1,1 +1,1 @@
-SELECT * FROM {{ ref('my_second_dbt_model') }}
+SELECT * FROM {{ source('prod_postgres', 'cdc1') }}

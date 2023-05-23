@@ -1,5 +1,7 @@
+version: 2
+
 alerts:
-  - name: my first alert
+  - name: my_first_alert
     config:
       triggers:
          -  type: orchestration_status

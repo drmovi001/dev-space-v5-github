@@ -5,4 +5,4 @@ orchestrations:
     config:
       command: y42 build -s my_first_dbt_model
       cron: 0 * * * *
-      enabled: true
+      enabled: false

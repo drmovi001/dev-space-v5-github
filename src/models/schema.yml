@@ -2,6 +2,5 @@ version: 2
 
 models:
   - name: my_first_dbt_model
-    tags: ['exposure_tag']
     columns:
       - name: id

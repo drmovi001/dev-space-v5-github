@@ -4,5 +4,5 @@ orchestrations:
   - name: my_first_dbt_orchestration
     config:
       command: y42 build -s my_first_dbt_model
-      cron: 0 * * * *
-      enabled: false
+      cron: */30 * * * *
+      enabled: true

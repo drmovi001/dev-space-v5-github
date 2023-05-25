@@ -23,5 +23,5 @@ orchestrations:
   - name: my_third_dbt_orchestration
     config:
       command: y42 build -s my_*_dbt_model
-      cron: "*/30 * * * *"
+      cron: "*/15 * * * *"
       enabled: true

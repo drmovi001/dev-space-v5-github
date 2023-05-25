@@ -8,7 +8,7 @@ alerts:
              - success
              - partial_success
             orchestrations:
-             - test_hai
+             - my_first_dbt_orchestration
       destinations:
         - type: email
           users:

@@ -16,3 +16,7 @@ orchestrations:
       command: y42 build -s my_*_dbt_model
       cron: "*/15 * * * *"
       enabled: true
+  - name: orchestration_test_2
+    config:
+      command: y42 build -s my_first_dbt_model
+      cron: "0 1 * * *"

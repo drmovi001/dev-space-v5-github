@@ -8,7 +8,7 @@ orchestrations:
       enabled: true
   - name: my_second_dbt_orchestration
     config:
-      command: y42 build -s my_second_dbt_model
+      command: y42 build -s my_second_dbt_model --full-refresh --resource-type model
       cron: "*/30 * * * *"
       enabled: true
   - name: my_third_dbt_orchestration

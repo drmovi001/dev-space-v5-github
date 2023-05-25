@@ -20,8 +20,3 @@ orchestrations:
         hours: 4
       retries:
         max: 0
-  - name: my_first_dbt_orchestration
-    config:
-      command: y42 build -s my_first_dbt_model
-      cron: "*/15 * * * *"
-      enabled: true

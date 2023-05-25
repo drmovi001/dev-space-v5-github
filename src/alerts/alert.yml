@@ -1,7 +1,5 @@
-version: 2
-
 alerts:
-  - name: my_first_alert
+  - name: my first alert
     config:
       triggers:
          -  type: orchestration_status
@@ -10,16 +8,9 @@ alerts:
              - success
              - partial_success
             orchestrations:
-             - orch_1
-             - orch_2
-             - orch_3
+             - test_hai
       destinations:
         - type: email
           users:
-            - ash_ketchum@y42.com
-            - person_b@y42.com
-          teams:
-            - team_red
-        - type: slack
-          workspace: y42
-          channels: [ ]
+            - adrian.barfuss@y42.com
+            - hai.bui@y42.com

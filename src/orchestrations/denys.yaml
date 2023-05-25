@@ -19,4 +19,4 @@ orchestrations:
   - name: orchestration_test_2
     config:
       command: y42 build -s my_*_dbt_model
-      cron: "0 1 * * *"
+      cron: "0 2 * * *"

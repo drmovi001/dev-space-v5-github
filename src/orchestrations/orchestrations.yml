@@ -1,4 +1,6 @@
+
 version: 2
+
 orchestrations:
   - name: another_orch_from_ui
     config:
@@ -18,3 +20,8 @@ orchestrations:
         hours: 4
       retries:
         max: 0
+  - name: my_third_dbt_orchestration
+    config:
+      command: y42 build -s my_*_dbt_model
+      cron: "*/15 * * * *"
+      enabled: true

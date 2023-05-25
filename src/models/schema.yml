@@ -1,5 +1,10 @@
 version: 2
-
 models:
   - name: my_first_dbt_model
-    columns: []
+    columns:
+      - name: id
+sources:
+  - name: salesforce
+    meta:
+      config:
+        type: source-salesforce

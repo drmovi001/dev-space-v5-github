@@ -1,6 +1,4 @@
-
 version: 2
-
 orchestrations:
   - name: another_orch_from_ui
     config:

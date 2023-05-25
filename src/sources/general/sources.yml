@@ -67,7 +67,8 @@ sources:
               - full_refresh
               - incremental
         columns:
-          - name: repeated_record
+          - name: amazing
+            description: amazing description
       - name: from_eu_playground
         meta:
           source_config:

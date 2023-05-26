@@ -3,6 +3,9 @@ models:
   - name: my_first_dbt_model
     columns:
       - name: id
+    config:
+      tags:
+        - hai_test
 sources:
   - name: salesforce
     meta:

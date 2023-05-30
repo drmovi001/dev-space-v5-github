@@ -1,24 +1,24 @@
-# models:
-#   - name: hai_customers
-#     columns:
-#       columns:
-#       - name: customerid
-#         tests:
-#           - not_null
-#           - unique
-#           - dbt_utils.sequential_values
-#       - name: country
-#         tests:
-#           - accepted_values:
-#               values: 
-#                 - 'A'
-#                 - 'B'
-#                 - 'C'
-#   - name: hai_orders
+models:
+  - name: hai_customers
+    columns:
+      columns:
+      - name: customerid
+        tests:
+          - not_null
+          - unique
+          - dbt_utils.sequential_values
+      - name: country
+        # tests:
+        #   - accepted_values:
+        #       values: 
+        #         - "A"
+        #         - ""
+        #         - 'C'
+  - name: hai_orders
 
-#   - name: hai_employees
-#     tests:
-#     - dbt_utils.unique_combination_of_columns:
-#         combination_of_columns:
-#           - name
-#           - birthdate
+  - name: hai_employees
+    tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns:
+          - name
+          - birthdate

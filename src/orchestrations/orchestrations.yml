@@ -20,3 +20,8 @@ orchestrations:
         hours: 4
       retries:
         max: 0
+  - name: test_every_five_minute
+    config:
+      enabled: true
+      command: y42 build -s my_first_dbt_model
+      cron: */5 * * * *

@@ -10,7 +10,10 @@ models:
       - name: country
         tests:
           - accepted_values:
-              values: ['A', 'B', 'C']
+              values: 
+                - 'A'
+                - 'B'
+                - 'C'
   - name: hai_orders
 
   - name: hai_employees

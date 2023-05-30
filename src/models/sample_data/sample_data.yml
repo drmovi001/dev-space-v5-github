@@ -7,14 +7,14 @@ models:
         tests:
           - not_null
           - unique
-          # - dbt_utils.sequential_values
-      # - name: country
-        # tests:
-        #   - accepted_values:
-        #       values: 
-        #         - "A"
-        #         - ""
-        #         - 'C'
+          - dbt_utils.sequential_values
+      - name: country
+        tests:
+          - accepted_values:
+              values: 
+                - "A"
+                - "B"
+                - "C"
   - name: hai_orders
 
   - name: hai_employees

@@ -1,0 +1,4 @@
+models:
+  - name: hai_customers
+  - name: hai_orders
+  - name: hai_employees

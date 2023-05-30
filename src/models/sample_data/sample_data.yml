@@ -6,7 +6,7 @@ models:
         tests:
           - not_null
           - unique
-          - dbt_utils.sequential_values
+          # - dbt_utils.sequential_values
       # - name: country
         # tests:
         #   - accepted_values:

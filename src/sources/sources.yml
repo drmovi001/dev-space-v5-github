@@ -23,15 +23,15 @@ sources:
         type: source-bigquery
         connection: btt_bigquery
     tables:
-      - name: 20230314_gads
+      - name: from_eu_playground
         meta:
           source_config:
-            import: 20230314_gads
+            import: from_eu_playground
             columns:
-              - segments
+              - id
             schema:
               $schema: http://json-schema.org/draft-07/schema#
               type: object
               properties:
-                segments:
-                  type: object
+                id:
+                  type: string

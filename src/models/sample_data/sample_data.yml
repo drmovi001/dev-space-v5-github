@@ -3,7 +3,6 @@ version: 2
 models:
   - name: hai_customers
     columns:
-      columns:
       - name: customerid
         tests:
           - not_null

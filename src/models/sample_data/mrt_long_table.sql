@@ -1,8 +1,8 @@
-with orders as (select * from {{ ref('orders') }}),
+with orders as (select * from {{ ref('hai_orders') }}),
 
-customers as (select * from {{ ref('customers')}}),
+customers as (select * from {{ ref('hai_customers')}}),
 
-employees as (SELECT * from {{ ref('employees') }})
+employees as (SELECT * from {{ ref('hai_employees') }})
 
 select 
 customers.customerid as customerid,

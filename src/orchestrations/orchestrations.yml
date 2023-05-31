@@ -6,20 +6,12 @@ orchestrations:
     config:
       enabled: true
       command: y42 build -s my_first_dbt_model
-      cron: 0/30 * 1/1 * *
-      timeout:
-        hours: 4
-      retries:
-        max: 0
+      cron: "0/30 * 1/1 * *"
   - name: test_hai
     config:
       enabled: true
       command: y42 build -s my_first_dbt_model+
-      cron: 0/30 * 1/1 * *
-      timeout:
-        hours: 4
-      retries:
-        max: 0
+      cron: "0/30 * 1/1 * *"
   - name: test_every_five_minute
     config:
       enabled: true

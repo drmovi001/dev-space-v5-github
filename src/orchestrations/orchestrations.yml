@@ -17,3 +17,8 @@ orchestrations:
       enabled: true
       command: y42 build -s my_first_dbt_model
       cron: "*/5 * * * *"
+  - name: test_every_one_hour
+    config:
+      enabled: true
+      command: y42 build --exclude date_spine --exclude hai_customers
+      cron: "0 * * * *"

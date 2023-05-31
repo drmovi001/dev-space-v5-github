@@ -87,6 +87,7 @@ sources:
       config:
         type: source-mysql
         connection: MySQL
+      asset_status: verified
     tables:
       - name: products
         meta:
@@ -132,6 +133,7 @@ sources:
       config:
         type: source-file
         connection: Files_Cereal
+      asset_status: verified
     tables:
       - name: cereal
         meta:

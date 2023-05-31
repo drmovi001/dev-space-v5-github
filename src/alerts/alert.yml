@@ -11,7 +11,7 @@ alerts:
           - ready
           - partially_ready
         orchestrations:
-            - my_first_dbt_orchestration
+            - another_orch_from_ui
       destinations:
         email:
           email_addresses:

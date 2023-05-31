@@ -19,3 +19,66 @@ sources:
               properties:
                 repeated_record:
                   type: object
+  - name: postgres
+    meta:
+      config:
+        type: source-postgres
+        connection: Postgres BTT
+    tables:
+      - name: cereal
+        meta:
+          source_config:
+            import: cereal
+            columns:
+              - carbo
+              - fiber
+              - sugars
+              - rating
+              - weight
+              - calories
+              - type
+              - shelf
+              - sodium
+              - vitamins
+              - protein
+              - name
+              - mfr
+              - fat
+              - cups
+              - potass
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                carbo:
+                  type: number
+                fiber:
+                  type: number
+                sugars:
+                  type: number
+                rating:
+                  type: number
+                weight:
+                  type: number
+                calories:
+                  type: number
+                type:
+                  type: string
+                shelf:
+                  type: number
+                sodium:
+                  type: number
+                vitamins:
+                  type: number
+                protein:
+                  type: number
+                name:
+                  type: string
+                mfr:
+                  type: string
+                fat:
+                  type: number
+                cups:
+                  type: number
+                potass:
+                  type: number

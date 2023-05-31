@@ -24,6 +24,7 @@ sources:
       config:
         type: source-postgres
         connection: Postgres BTT
+      asset_status: verified
     tables:
       - name: cereal
         meta:

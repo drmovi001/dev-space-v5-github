@@ -3,15 +3,16 @@ version: 2
 alerts:
   - name: my_first_alert
     config:
-      triggers:
-         -  type: orchestration_status
-            triggered_on:
-             - failure
-             - success
-             - partial_success
-            orchestrations:
-             - my_first_dbt_orchestration
+      enabled: true
+      trigger:
+        type: orchestration_status
+        triggered_on:
+          - failure
+          - success
+          - partial_success
+        orchestrations:
+            - my_first_dbt_orchestration
       destinations:
-        - type: email
-          users:
+        email:
+          email_addresses:
             - adrian.barfuss@y42.com

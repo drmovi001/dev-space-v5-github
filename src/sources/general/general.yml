@@ -86,3 +86,44 @@ sources:
     meta:
       config:
         type: source-mysql
+        connection: MySQL
+    tables:
+      - name: products
+        meta:
+          source_config:
+            import: products
+            columns:
+              - _airbyte_ab_id
+              - year
+              - price
+              - _airbyte_normalized_at
+              - created_at
+              - model
+              - id
+              - _airbyte_products_hashid
+              - make
+              - _airbyte_emitted_at
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                _airbyte_ab_id:
+                  type: string
+                year:
+                  type: number
+                price:
+                  type: number
+                _airbyte_normalized_at:
+                  type: string
+                created_at:
+                  type: string
+                model:
+                  type: string
+                id:
+                  type: number
+                _airbyte_products_hashid:
+                  type: string
+                make:
+                  type: string
+                _airbyte_emitted_at:
+                  type: string

@@ -127,3 +127,63 @@ sources:
                   type: string
                 _airbyte_emitted_at:
                   type: string
+  - name: airbyte_file_import
+    meta:
+      config:
+        type: source-file
+        connection: Files_Cereal
+    tables:
+      - name: cereal
+        meta:
+          source_config:
+            import: cereal
+            columns:
+              - Cereal Name
+              - Manufacturer
+              - Type
+              - Calories
+              - Protein (g)
+              - Fat
+              - Sodium
+              - Dietary Fiber
+              - Carbs
+              - Sugars
+              - Display Shelf
+              - Potassium
+              - Vitamins and Minerals
+              - Serving Size Weight
+              - Cups per Serving
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                Cereal Name:
+                  type: string
+                Manufacturer:
+                  type: string
+                Type:
+                  type: string
+                Calories:
+                  type: number
+                Protein (g):
+                  type: number
+                Fat:
+                  type: number
+                Sodium:
+                  type: number
+                Dietary Fiber:
+                  type: number
+                Carbs:
+                  type: number
+                Sugars:
+                  type: number
+                Display Shelf:
+                  type: number
+                Potassium:
+                  type: number
+                Vitamins and Minerals:
+                  type: number
+                Serving Size Weight:
+                  type: number
+                Cups per Serving:
+                  type: number

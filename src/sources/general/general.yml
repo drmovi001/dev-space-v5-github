@@ -190,3 +190,9 @@ sources:
                   type: number
                 Cups per Serving:
                   type: number
+  - name: airbyte_jira
+    meta:
+      config:
+        type: source-jira
+        connection: Jira BTT
+      asset_status: issue

@@ -7,9 +7,9 @@ alerts:
       trigger:
         type: orchestration_status
         triggered_on:
-          - failure
-          - success
-          - partial_success
+          - invalid
+          - ready
+          - partially_ready
         orchestrations:
             - my_first_dbt_orchestration
       destinations:

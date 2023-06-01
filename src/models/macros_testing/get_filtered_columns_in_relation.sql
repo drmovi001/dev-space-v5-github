@@ -1,6 +1,6 @@
 
 {% set
-    columns=dbt_utils.get_filtered_columns_in_relation(
+    columns = dbt_utils.get_filtered_columns_in_relation(
       from=ref('customers'),
       except=['CUSTOMERID']
     )

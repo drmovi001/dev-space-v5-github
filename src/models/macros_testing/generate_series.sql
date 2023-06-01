@@ -1,1 +1,4 @@
-{{ dbt_utils.generate_series(upper_bound=1000) }}
+select 
+{{ dbt_utils.generate_surrogate_key(['customerid', 'name']) }}
+from {{ref("hai_customers")}}
+

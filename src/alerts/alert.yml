@@ -11,14 +11,14 @@ alerts:
           - ready
           - partially_ready
         orchestrations:
-            - another_orch_from_ui
+          - another_orch_from_ui
       destinations:
         email:
           email_addresses:
             - adrian.barfuss@y42.com
   - name: my_second_alert
     config:
-      enabled: true
+      enabled: false
       trigger:
         type: orchestration_status
         triggered_on:
@@ -26,7 +26,7 @@ alerts:
           - ready
           - partially_ready
         orchestrations:
-            - test_hai
+          - test_hai
       destinations:
         email:
           email_addresses:

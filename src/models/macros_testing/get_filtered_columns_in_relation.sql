@@ -1,7 +1,7 @@
 
 {% set
     columns = dbt_utils.get_filtered_columns_in_relation(
-      from=ref('customers'),
+      from=ref('hai_customers'),
       except=['CUSTOMERID']
     )
     %}

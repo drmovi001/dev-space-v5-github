@@ -16,3 +16,18 @@ alerts:
         email:
           email_addresses:
             - adrian.barfuss@y42.com
+  - name: my_second_alert
+    config:
+      enabled: true
+      trigger:
+        type: orchestration_status
+        triggered_on:
+          - invalid
+          - ready
+          - partially_ready
+        orchestrations:
+            - test_hai
+      destinations:
+        email:
+          email_addresses:
+            - hai.bui@y42.com

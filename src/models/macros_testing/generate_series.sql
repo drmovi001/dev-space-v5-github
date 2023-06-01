@@ -1,4 +1,5 @@
 select 
-{{ dbt_utils.generate_surrogate_key(["customerid", "name"]) }}
+{{ dbt_utils.safe_add(["customerid"]) }}
+
 from {{ref("hai_customers")}}
 

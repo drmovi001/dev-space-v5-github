@@ -2,7 +2,7 @@ select
   customerid,
   {{ dbt_utils.pivot(
       'name',
-      dbt_utils.get_column_values(ref('hai_customers'), 'name')
+      "Customer A"
   ) }}
 from {{ ref('hai_customers') }}
 group by customerid

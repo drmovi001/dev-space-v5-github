@@ -4,4 +4,13 @@
 
 {%- set newest_processed_order = dbt_utils.get_single_value(sql_statement, default="'2020-01-01'") -%}
 
-select {{newest_processed_order}} as order
+with
+    source_data as (
+
+        select {{newest_processed_order}} as id
+        union all
+        select null as id
+
+    )
+
+select * from source_data

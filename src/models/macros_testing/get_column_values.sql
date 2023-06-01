@@ -1,4 +1,4 @@
-{% set payment_methods = dbt_utils.get_column_values(table=ref('hai_customers'), column='address', where="address = 'Address A'") %}
+{% set payment_methods = dbt_utils.get_column_values(table=ref('hai_customers'), column='ADDRESS', where="ADDRESS = 'Address A'") %}
 
 
 with source_data as (

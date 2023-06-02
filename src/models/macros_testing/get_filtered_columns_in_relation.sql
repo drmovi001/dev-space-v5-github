@@ -1,14 +1,13 @@
 
 {% set
     columns = dbt_utils.get_filtered_columns_in_relation(
-      from=ref('hai_customers'),
-      except=['customerid']
+      from=ref('hai_customers')
     )
     %}
 
 
 with source_data as (
-    select '{{columns}}' as id
+    select "{{columns}}" as id
 )
 
 

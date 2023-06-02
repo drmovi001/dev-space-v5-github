@@ -7,10 +7,14 @@
 
 
 with source_data as (
-  select 
   {% for payment_method in column_names %}
-    '{{payment_method}}' as id{{loop.index}},
-{% endfor %})
+   select '{{payment_method}}' as id
+  {% if not loop.last%}
+  union ALL
+  {% endif %}
+  
+  {% endfor %}
+)
 
 
 SELECT

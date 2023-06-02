@@ -6,8 +6,4 @@ models:
     config:
       tags:
         - hai_test
-sources:
-  - name: salesforce
-    meta:
-      config:
-        type: source-salesforce
+sources: []

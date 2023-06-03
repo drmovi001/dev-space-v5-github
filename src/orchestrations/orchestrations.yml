@@ -3,21 +3,21 @@ version: 2
 orchestrations:
   - name: another_orch_from_ui
     config:
-      enabled: true
+      enabled: false
       command: y42 build -s my_first_dbt_model
-      cron: "0/30 * 1/1 * *"
+      cron: 0/30 * 1/1 * *
   - name: test_hai
     config:
-      enabled: true
+      enabled: false
       command: y42 build -s my_first_dbt_model+
-      cron: "0/30 * 1/1 * *"
+      cron: 0/30 * 1/1 * *
   - name: test_every_five_minute
     config:
-      enabled: true
+      enabled: false
       command: y42 build -s my_first_dbt_model
       cron: "*/5 * * * *"
   - name: test_every_one_hour
     config:
-      enabled: true
+      enabled: false
       command: y42 build --exclude date_spine --exclude hai_customers
-      cron: "0 * * * *"
+      cron: 0 * * * *

@@ -17,5 +17,5 @@
 {% set audit_results = run_query(audit_query) %}
 
 {% if execute %}
-{% do audit_results.print_table() %}
+select * from {{audit_results}}
 {% endif %}

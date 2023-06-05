@@ -1,4 +1,4 @@
-{% set old_etl_relation=ref("hai_orders") %}
+{% set old_etl_relation=ref('hai_orders') %}
 
 {% set dbt_relation=ref('hai_orders_refactored') %}
 

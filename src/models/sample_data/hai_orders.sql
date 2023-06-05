@@ -1,3 +1,12 @@
+{{ config(
+    materialized='table',
+    partition_by={
+      "field": "orderdate",
+      "data_type": "timestamp",
+      "granularity": "day"
+    }
+)}}
+
 with orders AS (
   SELECT 1 AS orderid, 1 AS customerid, 1 AS employeeid, '2022-01-01' orderdate, 5.99 as price UNION ALL
   SELECT 2 AS orderid, 2 AS customerid, 2 AS employeeid, '2022-02-02' orderdate, 5.99 as price UNION ALL

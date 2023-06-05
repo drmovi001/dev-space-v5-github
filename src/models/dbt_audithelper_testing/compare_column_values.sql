@@ -17,5 +17,8 @@
 {% set audit_results = run_query(audit_query) %}
 
 {% if execute %}
-select * from {{audit_results}}
+select
+{% for payment in audit_results%}
+"{{ dbt_utils.slugify(payment) }}" as id
+{% endfor %}
 {% endif %}

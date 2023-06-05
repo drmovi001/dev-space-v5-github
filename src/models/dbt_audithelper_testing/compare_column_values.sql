@@ -21,7 +21,7 @@ with source as (
 {% if execute %}
 select
 {% for payment in audit_results%}
-"{{ dbt_utils.slugify(payment) }}" as id
+'{{ dbt_utils.slugify(payment) }}' as id
 {% endfor %}
 {% endif %}
 )

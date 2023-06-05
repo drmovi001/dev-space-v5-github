@@ -6,4 +6,3 @@
     primary_key='customerid'
   ) 
 }}
-where conflicting_values

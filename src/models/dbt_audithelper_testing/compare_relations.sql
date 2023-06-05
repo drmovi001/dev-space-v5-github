@@ -4,6 +4,5 @@
 
 {{ audit_helper.compare_relations(
     a_relation=a_relation,
-    b_relation=b_relation,
-    summarize=true
+    b_relation=b_relation
 ) }}

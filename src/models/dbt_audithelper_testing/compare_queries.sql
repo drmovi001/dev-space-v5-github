@@ -1,17 +1,17 @@
 
 {% set old_fct_orders_query %}
   select
-    id as order_id,
-    amount,
-    customer_id
+    orderid,
+    price,
+    customerid
   from {{ref('hai_orders_refactored')}}
 {% endset %}
 
 {% set new_fct_orders_query %}
   select
-    order_id,
-    amount,
-    customer_id
+    orderid,
+    price,
+    customerid
   from {{ ref('hai_orders') }}
 {% endset %}
 

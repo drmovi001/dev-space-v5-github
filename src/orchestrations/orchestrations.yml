@@ -19,5 +19,5 @@ orchestrations:
   - name: test_every_one_hour
     config:
       enabled: true
-      command: y42 build --exclude date_spine --exclude hai_customers
+      command: y42 build --exclude date_spine --exclude hai_customers --exclude dbt_audithelper_testing*
       cron: 0 * * * *

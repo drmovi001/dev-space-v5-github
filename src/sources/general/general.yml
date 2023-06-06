@@ -194,35 +194,71 @@ sources:
               type: object
               properties:
                 Cereal Name:
-                  type: string
+                  type:
+                    - string
+                    - "null"
                 Manufacturer:
-                  type: string
+                  type:
+                    - string
+                    - "null"
                 Type:
-                  type: string
+                  type:
+                    - string
+                    - "null"
                 Calories:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Protein (g):
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Fat:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Sodium:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Dietary Fiber:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Carbs:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Sugars:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Display Shelf:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Potassium:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Vitamins and Minerals:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Serving Size Weight:
-                  type: number
+                  type:
+                    - number
+                    - "null"
                 Cups per Serving:
-                  type: number
+                  type:
+                    - number
+                    - "null"
+            group: null
+            supported_sync_modes:
+              - full_refresh
+            default_cursor_field: null
+            source_defined_cursor: null
+            source_defined_primary_key: null
   - name: airbyte_jira
     meta:
       config:

@@ -20,6 +20,8 @@ models:
     tests:
       - dbt_utils.equal_rowcount:
           compare_model: ref('hai_orders_refactored')
+      - dbt_utils.fewer_rows_than:
+          compare_model: ref('hai_orders_refactored')
 
   - name: hai_employees
     tests:

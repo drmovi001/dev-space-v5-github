@@ -19,6 +19,13 @@ sources:
               properties:
                 repeated_record:
                   type: object
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
   - name: viewmanagertestbranch0001
     meta:
       config:
@@ -37,3 +44,10 @@ sources:
               properties:
                 id:
                   type: string
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []

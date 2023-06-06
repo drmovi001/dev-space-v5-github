@@ -19,6 +19,13 @@ sources:
               properties:
                 repeated_record:
                   type: object
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
   - name: airbyte_postgres
     meta:
       config:
@@ -57,32 +64,47 @@ sources:
                   type: number
                 sugars:
                   type: number
+                  airbyte_type: integer
                 rating:
                   type: number
                 weight:
                   type: number
                 calories:
                   type: number
+                  airbyte_type: integer
                 type:
                   type: string
                 shelf:
                   type: number
+                  airbyte_type: integer
                 sodium:
                   type: number
+                  airbyte_type: integer
                 vitamins:
                   type: number
+                  airbyte_type: integer
                 protein:
                   type: number
+                  airbyte_type: integer
                 name:
                   type: string
                 mfr:
                   type: string
                 fat:
                   type: number
+                  airbyte_type: integer
                 cups:
                   type: number
                 potass:
                   type: number
+                  airbyte_type: integer
+            group: public
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
   - name: airbyte_mysql
     meta:
       config:
@@ -117,6 +139,8 @@ sources:
                   type: number
                 _airbyte_normalized_at:
                   type: string
+                  format: date-time
+                  airbyte_type: timestamp_without_timezone
                 created_at:
                   type: string
                 model:
@@ -129,6 +153,15 @@ sources:
                   type: string
                 _airbyte_emitted_at:
                   type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+            group: public
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
   - name: airbyte_file_import
     meta:
       config:

@@ -17,6 +17,9 @@ models:
                 - "B"
                 - "C"
   - name: hai_orders
+    tests:
+      - dbt_utils.equal_rowcount:
+          compare_model: ref('hai_orders_refactored')
 
   - name: hai_employees
     tests:

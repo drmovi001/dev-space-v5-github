@@ -19,5 +19,5 @@ orchestrations:
   - name: test_every_one_hour
     config:
       enabled: true
-      command: y42 build --exclude date_spine --exclude hai_customers --exclude dbt_audithelper_testing*
+      command: y42 build --resource-type source --full-refresh --fail-fast
       cron: 0 * * * *

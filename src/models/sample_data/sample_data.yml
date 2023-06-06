@@ -22,6 +22,8 @@ models:
           compare_model: ref('hai_orders_refactored')
       - dbt_utils.fewer_rows_than:
           compare_model: ref('hai_orders_refactored')
+      - dbt_utils.equality:
+          compare_model: ref('hai_customers')
 
   - name: hai_employees
     tests:

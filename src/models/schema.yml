@@ -31,7 +31,7 @@ models:
         - static
   - name: my_second_dbt_model
     columns:
-      - name: test
+      - name: id
         tests:
           - unique
     config:

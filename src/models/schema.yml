@@ -5,7 +5,7 @@ models:
       - name: id
         data_type: NUMBER
         tests:
-          - unique
+          - not_null
     config:
       tags:
         - hai_test
@@ -29,4 +29,15 @@ models:
     config:
       tags:
         - static
+  - name: my_second_dbt_model
+    columns:
+      - name: test
+        tests:
+          - unique
+    config:
+      tags:
+        - hai_test
+        - static
+        - sadfsd
+  - name: staging_cereal
 sources: []

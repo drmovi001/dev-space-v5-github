@@ -1,0 +1,8 @@
+version: 2
+
+orchestrations:
+  - name: import_intercom_every_hour
+    config:
+      enabled: true
+      command: y42 build --select source:intercom+
+      cron: 0 * * * *

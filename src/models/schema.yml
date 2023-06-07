@@ -1,16 +1,6 @@
 version: 2
 models:
   - name: my_first_dbt_model
-    columns:
-      - name: fdfddcxcxddccccccccccccc
-        type: INTEGER
-        tags: &a1
-          - hai_test
-        description: cccc
-      - name: fdfddcxcxddccccccccccccc
-        type: INTEGER
-        tags: *a1
-        description: cccc
     config:
       tags:
         - hai_test

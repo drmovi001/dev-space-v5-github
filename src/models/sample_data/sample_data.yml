@@ -1,27 +1,2 @@
 version: 2
-models:
-  - name: hai_customers
-    columns:
-      - name: customerid
-        tests:
-          - not_null
-          - unique
-          - dbt_utils.sequential_values:
-              interval: 1
-        data_type: NUMBER
-      - name: country
-        tests:
-          - accepted_values:
-              values:
-                - A
-                - B
-                - C
-  - name: hai_orders
-    tests:
-      - dbt_utils.equal_rowcount:
-          compare_model: ref('hai_orders_refactored')
-      - dbt_utils.fewer_rows_than:
-          compare_model: ref('hai_employees')
-      - dbt_utils.equality:
-          compare_model: ref('hai_customers')
-  - name: hai_employees
+models: []

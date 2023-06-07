@@ -3,7 +3,30 @@ models:
   - name: my_first_dbt_model
     columns:
       - name: id
+        data_type: NUMBER
+        tests:
+          - unique
     config:
       tags:
         - hai_test
+    description: this is my first dbt model
+    meta:
+      experts:
+        users:
+          - aliaksei.bahamazau@y42.com
+          - johannes.pittgens@y42.com
+        teams: []
+  - name: date_spine
+    columns:
+      - name: DATE_DAY
+        data_type: DATE
+        description: auto-generated dates
+    meta:
+      experts:
+        users:
+          - hai.bui@y42.com
+        teams: []
+    config:
+      tags:
+        - static
 sources: []

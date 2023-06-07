@@ -1,11 +1,12 @@
 version: 2
 
 sources:
-  - name: testviewmanager
+  - name: airbyte_bigquery
     meta:
       config:
         type: source-bigquery
         connection: btt_bigquery
+      asset_status: verified
     tables:
       - name: repeated_record
         meta:
@@ -20,18 +21,18 @@ sources:
                 repeated_record:
                   type: object
             group: playground
+            _datos_write_settings:
+              max_flatten_depth: 0
+              decimals: false
             supported_sync_modes:
               - full_refresh
               - incremental
             default_cursor_field: []
             source_defined_cursor: null
             source_defined_primary_key: []
-  - name: viewmanagertestbranch0001
-    meta:
-      config:
-        type: source-bigquery
-        connection: btt_bigquery
-    tables:
+        columns:
+          - name: amazing
+            description: amazing description
       - name: from_eu_playground
         meta:
           source_config:
@@ -51,3 +52,210 @@ sources:
             default_cursor_field: []
             source_defined_cursor: null
             source_defined_primary_key: []
+      - name: cereal
+        meta:
+          source_config:
+            import: cereal
+            columns:
+              - Cereal_Name
+              - Protein__g_
+              - Display_Shelf
+              - Calories
+              - Type
+              - Cups_per_Serving
+              - Sodium
+              - Vitamins_and_Minerals
+              - Manufacturer
+              - Fat
+              - Carbs
+              - Serving_Size_Weight
+              - Dietary_Fiber
+              - Potassium
+              - Sugars
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                Cereal_Name:
+                  type: string
+                Protein__g_:
+                  type: number
+                  airbyte_type: integer
+                Display_Shelf:
+                  type: number
+                  airbyte_type: integer
+                Calories:
+                  type: number
+                  airbyte_type: integer
+                Type:
+                  type: string
+                Cups_per_Serving:
+                  type: number
+                Sodium:
+                  type: number
+                  airbyte_type: integer
+                Vitamins_and_Minerals:
+                  type: number
+                  airbyte_type: integer
+                Manufacturer:
+                  type: string
+                Fat:
+                  type: number
+                  airbyte_type: integer
+                Carbs:
+                  type: number
+                Serving_Size_Weight:
+                  type: number
+                Dietary_Fiber:
+                  type: number
+                Potassium:
+                  type: number
+                  airbyte_type: integer
+                Sugars:
+                  type: number
+                  airbyte_type: integer
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+    description: ""
+  - name: airbyte_file_import
+    meta:
+      config:
+        type: source-file
+        connection: Files_Cereal
+      asset_status: verified
+    tables:
+      - name: cereal
+        meta:
+          source_config:
+            import: cereal
+            columns:
+              - Cereal Name
+              - Manufacturer
+              - Type
+              - Calories
+              - Protein (g)
+              - Fat
+              - Sodium
+              - Dietary Fiber
+              - Carbs
+              - Sugars
+              - Display Shelf
+              - Potassium
+              - Vitamins and Minerals
+              - Serving Size Weight
+              - Cups per Serving
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                Cereal Name:
+                  type:
+                    - string
+                    - "null"
+                Manufacturer:
+                  type:
+                    - string
+                    - "null"
+                Type:
+                  type:
+                    - string
+                    - "null"
+                Calories:
+                  type:
+                    - number
+                    - "null"
+                Protein (g):
+                  type:
+                    - number
+                    - "null"
+                Fat:
+                  type:
+                    - number
+                    - "null"
+                Sodium:
+                  type:
+                    - number
+                    - "null"
+                Dietary Fiber:
+                  type:
+                    - number
+                    - "null"
+                Carbs:
+                  type:
+                    - number
+                    - "null"
+                Sugars:
+                  type:
+                    - number
+                    - "null"
+                Display Shelf:
+                  type:
+                    - number
+                    - "null"
+                Potassium:
+                  type:
+                    - number
+                    - "null"
+                Vitamins and Minerals:
+                  type:
+                    - number
+                    - "null"
+                Serving Size Weight:
+                  type:
+                    - number
+                    - "null"
+                Cups per Serving:
+                  type:
+                    - number
+                    - "null"
+            group: null
+            supported_sync_modes:
+              - full_refresh
+            default_cursor_field: null
+            source_defined_cursor: null
+            source_defined_primary_key: null
+  - name: intercom
+    meta:
+      config:
+        type: intercom
+        connection: test_connection_3_2
+      asset_status: verified
+    tables:
+      - name: admins
+        meta:
+          source_config:
+            import: admins
+            columns:
+              - type
+              - email
+              - id
+              - name
+              - away_mode_enabled
+              - away_mode_reassign
+              - has_inbox_seat
+              - team_ids
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                type:
+                  type: string
+                email:
+                  type: string
+                id:
+                  type: string
+                name:
+                  type: string
+                away_mode_enabled:
+                  type: boolean
+                away_mode_reassign:
+                  type: boolean
+                has_inbox_seat:
+                  type: boolean
+                team_ids:
+                  type: array

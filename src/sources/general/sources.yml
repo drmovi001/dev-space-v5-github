@@ -1,11 +1,2 @@
 version: 2
-sources:
-  [
-    {
-        tables:
-          {
-            ? {key: name, value: repeated_record}
-            : {meta: {asset_status: deprecated}}
-          }
-      }
-  ]
+sources: []

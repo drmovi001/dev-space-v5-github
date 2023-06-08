@@ -290,3 +290,7 @@ sources:
                   inclusion: automatic
                   type: object
             group: PUBLIC
+  - name: viewmangertestsoruce
+    meta:
+      config:
+        type: source-amazon-ads

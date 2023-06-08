@@ -35,5 +35,4 @@ models:
         - static
         - sadfsd
   - name: staging_cereal
-sources:
-  - name: nat
+sources: []

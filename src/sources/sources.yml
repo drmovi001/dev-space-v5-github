@@ -260,3 +260,4 @@ sources:
                   type: boolean
                 team_ids:
                   type: array
+  - name: nat

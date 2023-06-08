@@ -294,21 +294,46 @@ sources:
     meta:
       config:
         type: source-bigquery
-        connection: btt_bigquery
+        connection: BQ playground GCP
     tables:
-      - name: repeated_record
+      - name: Integrations_MySQL_airbyte_2_0_data_type_test_table
         meta:
           source_config:
-            import: repeated_record
+            import: Integrations_MySQL_airbyte_2_0_data_type_test_table
             columns:
-              - repeated_record
+              - time_column
+              - datetime_column
             schema:
               $schema: http://json-schema.org/draft-07/schema#
               type: object
               properties:
-                repeated_record:
-                  type: object
-            group: playground
+                time_column:
+                  type: string
+                datetime_column:
+                  type: string
+            group: ydemo_public_proplaygroundgcpnondbt_main
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+      - name: Integrations_airbyte_2_0_Postgres_char_types_small
+        meta:
+          source_config:
+            import: Integrations_airbyte_2_0_Postgres_char_types_small
+            columns:
+              - varchar5000_type
+              - varchar_unspecified_type
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                varchar5000_type:
+                  type: string
+                varchar_unspecified_type:
+                  type: string
+            group: ydemo_public_proplaygroundgcpnondbt_main
             supported_sync_modes:
               - full_refresh
               - incremental

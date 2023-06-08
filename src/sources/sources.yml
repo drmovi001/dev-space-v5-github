@@ -5,7 +5,7 @@ sources:
     meta:
       config:
         type: source-bigquery
-        connection: btt_bigquery
+        connection: bigquery_bathien_usplayground
       asset_status: verified
     tables:
       - name: repeated_record

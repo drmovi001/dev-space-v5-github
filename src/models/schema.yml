@@ -35,4 +35,8 @@ models:
         - static
         - sadfsd
   - name: staging_cereal
-sources: []
+sources:
+  - name: viewmangertestsoruce
+    meta:
+      config:
+        type: source-amazon-ads

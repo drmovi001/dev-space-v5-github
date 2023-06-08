@@ -1,0 +1,99 @@
+version: 2
+
+sources:
+  - name: viewmanager003
+    meta:
+      config:
+        type: source-file
+        connection: cereal_file
+    tables:
+      - name: cereal
+        meta:
+          source_config:
+            import: cereal
+            columns:
+              - Cereal Name
+              - Manufacturer
+              - Type
+              - Calories
+              - Protein (g)
+              - Fat
+              - Sodium
+              - Dietary Fiber
+              - Carbs
+              - Sugars
+              - Display Shelf
+              - Potassium
+              - Vitamins and Minerals
+              - Serving Size Weight
+              - Cups per Serving
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                Cereal Name:
+                  type:
+                    - string
+                    - "null"
+                Manufacturer:
+                  type:
+                    - string
+                    - "null"
+                Type:
+                  type:
+                    - string
+                    - "null"
+                Calories:
+                  type:
+                    - number
+                    - "null"
+                Protein (g):
+                  type:
+                    - number
+                    - "null"
+                Fat:
+                  type:
+                    - number
+                    - "null"
+                Sodium:
+                  type:
+                    - number
+                    - "null"
+                Dietary Fiber:
+                  type:
+                    - number
+                    - "null"
+                Carbs:
+                  type:
+                    - number
+                    - "null"
+                Sugars:
+                  type:
+                    - number
+                    - "null"
+                Display Shelf:
+                  type:
+                    - number
+                    - "null"
+                Potassium:
+                  type:
+                    - number
+                    - "null"
+                Vitamins and Minerals:
+                  type:
+                    - number
+                    - "null"
+                Serving Size Weight:
+                  type:
+                    - number
+                    - "null"
+                Cups per Serving:
+                  type:
+                    - number
+                    - "null"
+            group: null
+            supported_sync_modes:
+              - full_refresh
+            default_cursor_field: null
+            source_defined_cursor: null
+            source_defined_primary_key: null

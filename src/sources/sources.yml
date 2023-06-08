@@ -127,7 +127,7 @@ sources:
     meta:
       config:
         type: source-file
-        connection: Files_Cereal
+        connection: cereal_file
       asset_status: verified
     tables:
       - name: cereal

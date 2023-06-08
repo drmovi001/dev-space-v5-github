@@ -224,7 +224,7 @@ sources:
     meta:
       config:
         type: intercom
-        connection: test_connection_3_2
+        connection: intercom
       asset_status: verified
     tables:
       - name: admins

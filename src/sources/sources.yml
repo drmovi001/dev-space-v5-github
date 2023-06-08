@@ -290,7 +290,34 @@ sources:
                   inclusion: automatic
                   type: object
             group: PUBLIC
-  - name: viewmangertestsoruce
+  - name: viewmanagertestbigquery
     meta:
       config:
-        type: source-amazon-ads
+        type: source-bigquery
+        connection: btt_bigquery
+    tables:
+      - name: 20230314_gads
+        meta:
+          source_config:
+            import: 20230314_gads
+            columns:
+              - campaign
+              - metrics
+              - segments
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                campaign:
+                  type: object
+                metrics:
+                  type: object
+                segments:
+                  type: object
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []

@@ -290,3 +290,5 @@ sources:
                   inclusion: automatic
                   type: object
             group: PUBLIC
+    database: null
+    schema: PUBLIC

@@ -1,28 +1,74 @@
-WITH fake_data AS (
-  SELECT
-      ARRAY['Value 1', 'Value 2', 'Value 3'] AS hai_array,
-      BOOL(JSON 'true') as hai_bool,
-      CAST(b'123' AS BYTES) AS hai_bytes,
-      CAST('2023-06-15' AS DATE) AS hai_date,
-      CAST('2023-06-15 12:34:56' AS DATETIME) AS hai_datetime,
-      ST_GEOGPOINT(1, 2) AS hai_geography,
-      CAST('1-2 3 10:20:30.456' AS INTERVAL) AS hai_interval,
-      PARSE_JSON('{"key": "value"}') AS hai_json,
-      STRUCT('John' as name, 30 as age) AS hai_struct,
-      'Hello' AS hai_string,
-      CAST('12:34:56' AS TIME) AS hai_time,
-      CAST('2023-06-15 12:34:56' AS TIMESTAMP) AS hai_timestamp,
-      3.14 AS hai_float,
-      123 AS hai_int,
-      78 AS hai_smallint,
-      1234567890 AS hai_bigint,
-      1 AS hai_tinyint,
-      0 AS hai_byteint,
-      3.14159 AS hai_numeric,
-      12.345 AS hai_decimal,
-      parse_bignumeric("1000000000000") AS hai_bignumeric,
-      PARSE_BIGNUMERIC("12345678901234567890") AS hai_bigdecimal,
-)
 
-SELECT *
-FROM fake_data
+  WITH FAKE_DATA AS (
+    SELECT
+      -- Number
+      123 AS HAI_NUMBER_COLUMN_STUFF,
+      -- Decimal
+      12.345 AS HAI_DECIMAL_COLUMN_STUFF,
+      -- Numeric
+      3.14159 AS HAI_NUMERIC_COLUMN_STUFF,
+      -- Int
+      123 AS HAI_INT_COLUMN_STUFF,
+      -- Integer
+      987654321 AS HAI_INTEGER_COLUMN_STUFF,
+      -- Bigint
+      1234567890 AS HAI_BIGINT_COLUMN_STUFF,
+      -- Smallint
+      78 AS HAI_SMALLINT_COLUMN_STUFF,
+      -- Tinyint
+      1 AS HAI_TINYINT_COLUMN_STUFF,
+      -- Byteint
+      0 AS HAI_BYTEINT_COLUMN_STUFF,
+      -- Float
+      3.14 AS HAI_FLOAT_COLUMN_STUFF,
+      -- Float4
+      3.14 AS HAI_FLOAT4_COLUMN_STUFF,
+      -- Float8
+      3.14 AS HAI_FLOAT8_COLUMN_STUFF,
+      -- Double
+      3.14 AS HAI_DOUBLE_COLUMN_STUFF,
+      -- Double Precision
+      3.14 AS HAI_DOUBLE_PRECISION_COLUMN_STUFF,
+      -- Real
+      3.14 AS HAI_REAL_COLUMN_STUFF,
+      -- Varchar
+      'Hello' AS HAI_VARCHAR_COLUMN_STUFF,
+      -- Char
+      'A' AS HAI_CHAR_COLUMN_STUFF,
+      -- Character
+      'B' AS HAI_CHARACTER_COLUMN_STUFF,
+      -- String
+      'Hello' AS HAI_STRING_COLUMN_STUFF,
+      -- Text
+      'Lorem ipsum' AS HAI_TEXT_COLUMN_STUFF,
+      -- Binary
+      BINARY_ENCODE('Hello') AS HAI_BINARY_COLUMN_STUFF,
+      -- Varbinary
+      VARBINARY_ENCODE('Hello') AS HAI_VARBINARY_COLUMN_STUFF,
+      -- Boolean
+      TRUE AS HAI_BOOLEAN_COLUMN_STUFF,
+      -- Date
+      CURRENT_DATE() AS HAI_DATE_COLUMN_STUFF,
+      -- Datetime
+      CURRENT_TIMESTAMP() AS HAI_DATETIME_COLUMN_STUFF,
+      -- Time
+      CURRENT_TIME() AS HAI_TIME_COLUMN_STUFF,
+      -- Timestamp
+      CURRENT_TIMESTAMP() AS HAI_TIMESTAMP_COLUMN_STUFF,
+      -- TimestampLtz
+      CURRENT_TIMESTAMP() AS HAI_TIMESTAMP_LTZ_COLUMN_STUFF,
+      -- TimestampNtz
+      CURRENT_TIMESTAMP() AS HAI_TIMESTAMP_NTZ_COLUMN_STUFF,
+      -- TimestampTz
+      CURRENT_TIMESTAMP() AS HAI_TIMESTAMP_TZ_COLUMN_STUFF,
+      -- Variant
+      PARSE_JSON('{'key': 'value'}') AS HAI_VARIANT_COLUMN_STUFF,
+      -- Object
+      PARSE_JSON('{'key': 'value'}') AS HAI_OBJECT_COLUMN_STUFF,
+      -- Array
+      ARRAY['Value 1', 'Value 2', 'Value 3'] AS HAI_ARRAY_COLUMN_STUFF,
+      -- Geography
+      ST_GEOGPOINT(1, 2) AS HAI_GEOGRAPHY_COLUMN_STUFF
+  )
+  SELECT *
+  FROM FAKE_DATA

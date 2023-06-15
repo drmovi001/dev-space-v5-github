@@ -1,23 +1,48 @@
-SELECT
-      null AS hai_array,
-      null as hai_bool,
-      null AS hai_bytes,
-      null AS hai_date,
-      null AS hai_datetime,
-      null AS hai_geography,
-      null AS hai_interval,
-      null AS hai_json,
-      null AS hai_struct,
-      null AS hai_string,
-      null AS hai_time,
-      null AS hai_timestamp,
-      null AS hai_float,
-      null AS hai_int,
-      null AS hai_smallint,
-      null AS hai_bigint,
-      null AS hai_tinyint,
-      null AS hai_byteint,
-      null AS hai_numeric,
-      null AS hai_decimal,
-      null AS hai_bignumeric,
-      null AS hai_bigdecimal,
+
+  WITH FAKE_DATA AS (
+    SELECT
+      null AS HAI_NUMBER_COLUMN_STUFF,
+      null AS HAI_DECIMAL_COLUMN_STUFF,
+      null AS HAI_NUMERIC_COLUMN_STUFF,
+      null AS HAI_INT_COLUMN_STUFF,
+      null AS HAI_INTEGER_COLUMN_STUFF,
+      null AS HAI_BIGINT_COLUMN_STUFF,
+      null AS HAI_SMALLINT_COLUMN_STUFF,
+      null AS HAI_TINYINT_COLUMN_STUFF,
+      null AS HAI_BYTEINT_COLUMN_STUFF,
+      null AS HAI_FLOAT_COLUMN_STUFF,
+      null AS HAI_FLOAT4_COLUMN_STUFF,
+      null AS HAI_FLOAT8_COLUMN_STUFF,
+      null AS HAI_DOUBLE_COLUMN_STUFF,
+      null AS HAI_DOUBLE_PRECISION_COLUMN_STUFF,
+      null AS HAI_REAL_COLUMN_STUFF,
+      null AS HAI_VARCHAR_COLUMN_STUFF,
+      null AS HAI_CHAR_COLUMN_STUFF,
+      null AS HAI_CHARACTER_COLUMN_STUFF,
+      null AS HAI_STRING_COLUMN_STUFF,
+      null AS HAI_TEXT_COLUMN_STUFF,
+      null AS HAI_BINARY_COLUMN_STUFF,
+      null AS HAI_VARBINARY_COLUMN_STUFF,
+      null AS HAI_BOOLEAN_COLUMN_STUFF,
+      null AS HAI_DATE_COLUMN_STUFF,
+
+      null AS HAI_DATETIME_COLUMN_STUFF,
+
+      null AS HAI_TIME_COLUMN_STUFF,
+
+      null AS HAI_TIMESTAMP_COLUMN_STUFF,
+
+      null AS HAI_TIMESTAMP_LTZ_COLUMN_STUFF,
+
+      null AS HAI_TIMESTAMP_NTZ_COLUMN_STUFF,
+
+      null AS HAI_TIMESTAMP_TZ_COLUMN_STUFF,
+
+      null AS HAI_VARIANT_COLUMN_STUFF,
+
+      Null AS HAI_OBJECT_COLUMN_STUFF,
+      ARRAY[] AS HAI_ARRAY_COLUMN_STUFF,
+      Null AS HAI_GEOGRAPHY_COLUMN_STUFF
+  )
+  SELECT *
+  FROM FAKE_DATA

@@ -22,9 +22,9 @@ WITH fake_data AS (
       12.345 AS hai_decimal,
       parse_bignumeric("1000000000000") AS hai_bignumeric,
       PARSE_BIGNUMERIC("12345678901234567890") AS hai_bigdecimal union all
-      select
-      ARRAY[null, 'Value 2', 'Value 3'] AS hai_array,
-      null as vacancy,
+      SELECT
+      null AS hai_array,
+      null as hai_bool,
       null AS hai_bytes,
       null AS hai_date,
       null AS hai_datetime,
@@ -45,13 +45,13 @@ WITH fake_data AS (
       null AS hai_decimal,
       null AS hai_bignumeric,
       null AS hai_bigdecimal union all
-      select
-      ARRAY['Value 1', 1234, 'Value 3'] AS hai_array,
+      SELECT
+      ARRAY['Value 1', "asfhdkjd", 'Value 3'] AS hai_array,
       BOOL(JSON 'false') as vacancy,
       CAST(b'123' AS BYTES) AS hai_bytes,
       CAST('2023-06-15' AS DATE) AS hai_date,
       CAST('2023-06-15 12:34:56' AS DATETIME) AS hai_datetime,
-      ST_GEOGPOINT(0, 332) AS hai_geography,
+      ST_GEOGPOINT(-20, 32) AS hai_geography,
       CAST('1-2 3 10:20:30.456' AS INTERVAL) AS hai_interval,
       PARSE_JSON('{"key": "value"}') AS hai_json,
       STRUCT('John' as name, 30 as age) AS hai_struct,

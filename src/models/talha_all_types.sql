@@ -21,7 +21,7 @@ WITH fake_data AS (
       3.14159 AS hai_numeric,
       12.345 AS hai_decimal,
       parse_bignumeric("1000000000000") AS hai_bignumeric,
-      PARSE_BIGNUMERIC("12345678901234567890") AS hai_bigdecimal 
+      PARSE_BIGNUMERIC("12345678901234567890") AS hai_bigdecimal,
 )
 
 SELECT *

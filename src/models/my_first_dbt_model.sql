@@ -2,7 +2,7 @@
 
 with source_data as (
 
-    select "1" as id, 2 as another_col
+    select '1' as id, 2 as another_col
     union all
     select null as id, 3 as another_col
 

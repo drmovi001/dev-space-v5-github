@@ -20,4 +20,4 @@ SELECT
       null AS hai_numeric,
       null AS hai_decimal,
       null AS hai_bignumeric,
-      null AS hai_bigdecimal
+      null AS hai_bigdecimal,

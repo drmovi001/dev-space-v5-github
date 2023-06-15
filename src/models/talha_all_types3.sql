@@ -1,5 +1,5 @@
-SELECT
-      ARRAY['Value 1', 'HELLO', 'Value 3'] AS hai_array,
+with something as (SELECT
+      ARRAY['Value 1', 'HELLO', 'hello'] AS hai_array,
       BOOL(JSON 'false') as hai_bool,
       CAST(b'123' AS BYTES) AS hai_bytes,
       CAST('2023-06-15' AS DATE) AS hai_date,
@@ -20,4 +20,7 @@ SELECT
       3.14159 AS hai_numeric,
       12.345 AS hai_decimal,
       parse_bignumeric("1000000000000") AS hai_bignumeric,
-      PARSE_BIGNUMERIC("12345678901234567890") AS hai_bigdecimal
+      PARSE_BIGNUMERIC("12345678901234567890") AS hai_bigdecimal,
+      )
+
+select * from something

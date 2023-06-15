@@ -1,7 +1,7 @@
 WITH fake_data AS (
   SELECT
       ARRAY['Value 1', 'Value 2', 'Value 3'] AS hai_array,
-      BOOL(JSON 'true') as vacancy,
+      BOOL(JSON 'true') as hai_bool,
       CAST(b'123' AS BYTES) AS hai_bytes,
       CAST('2023-06-15' AS DATE) AS hai_date,
       CAST('2023-06-15 12:34:56' AS DATETIME) AS hai_datetime,
@@ -47,7 +47,7 @@ WITH fake_data AS (
       null AS hai_bigdecimal union all
       SELECT
       ARRAY['Value 1', "asfhdkjd", 'Value 3'] AS hai_array,
-      BOOL(JSON 'false') as vacancy,
+      BOOL(JSON 'false') as hai_bool,
       CAST(b'123' AS BYTES) AS hai_bytes,
       CAST('2023-06-15' AS DATE) AS hai_date,
       CAST('2023-06-15 12:34:56' AS DATETIME) AS hai_datetime,

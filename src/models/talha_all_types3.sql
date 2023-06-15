@@ -46,7 +46,7 @@
       -- Varbinary
       TO_BINARY('F0A5') AS HAI_VARBINARY_COLUMN_STUFF,
       -- Boolean
-      TRUE AS HAI_BOOLEAN_COLUMN_STUFF,
+      FALSE AS HAI_BOOLEAN_COLUMN_STUFF,
       -- Date
       CURRENT_DATE() AS HAI_DATE_COLUMN_STUFF,
       -- Datetime

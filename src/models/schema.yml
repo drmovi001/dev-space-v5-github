@@ -29,9 +29,8 @@ models:
         - static
   - name: my_second_dbt_model
     columns:
-      - name: id
-        tests:
-          - unique
+      - name: ID
+        data_type: FLOAT
     config:
       tags:
         - hai_test

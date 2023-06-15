@@ -62,9 +62,9 @@
       -- TimestampTz
       CURRENT_TIMESTAMP() AS HAI_TIMESTAMP_TZ_COLUMN_STUFF,
       -- Variant
-      PARSE_JSON('{'key': 'value'}') AS HAI_VARIANT_COLUMN_STUFF,
+      PARSE_JSON({"pi": 3.14, "e": 2.71}) AS HAI_VARIANT_COLUMN_STUFF,
       -- Object
-      PARSE_JSON('{'key': 'value'}') AS HAI_OBJECT_COLUMN_STUFF,
+      PARSE_JSON({'key': 'value'}) AS HAI_OBJECT_COLUMN_STUFF,
       -- Array
       ARRAY['Value 1', 'Value 2', 'Value 3'] AS HAI_ARRAY_COLUMN_STUFF,
       -- Geography

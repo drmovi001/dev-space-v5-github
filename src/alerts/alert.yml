@@ -31,18 +31,3 @@ alerts:
         email:
           email_addresses:
             - hai.bui@y42.com
-  - name: gabi
-    config:
-      enabled: false
-      trigger:
-        type: orchestration_status
-        triggered_on:
-          - invalid
-          - ready
-          - partially_ready
-        orchestrations:
-          - test_hai
-      destinations:
-        email:
-          email_addresses:
-            - hai.bui@y42.com

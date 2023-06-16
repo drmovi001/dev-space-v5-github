@@ -16,8 +16,3 @@ orchestrations:
       enabled: true
       command: y42 build -s my_first_dbt_model
       cron: "*/5 * * * *"
-  - name: test_every_one_hour
-    config:
-      enabled: true
-      command: y42 build --resource-type source --full-refresh --fail-fast
-      cron: 0 * * * *

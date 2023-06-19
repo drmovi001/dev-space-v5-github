@@ -14,6 +14,8 @@ models:
     columns:
       - name: ID
         data_type: FLOAT
+        tests:
+          - unique
   - name: date_spine
     columns:
       - name: DATE_DAY

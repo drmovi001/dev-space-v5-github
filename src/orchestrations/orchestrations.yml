@@ -18,6 +18,6 @@ orchestrations:
       cron: "*/5 * * * *"
   - name: test_every_five_minute_off
     config:
-      enabled: true
+      enabled: false
       command: y42 build -s my_first_dbt_model
       cron: "*/5 * * * *"

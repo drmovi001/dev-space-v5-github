@@ -16,4 +16,4 @@ from source_data
 */
 
 -- where id is not null
-{{non_existing_macro() }}
+

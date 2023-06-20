@@ -16,6 +16,10 @@ models:
         data_type: FLOAT
         tests:
           - unique
+      - name: ANOTHER_COL
+        data_type: TEXT
+        tests:
+          - unique
   - name: date_spine
     columns:
       - name: DATE_DAY

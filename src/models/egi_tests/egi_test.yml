@@ -8,7 +8,8 @@ models:
       - name: customerid
         tests:
           - unique
-          - not_null
+        data_type: STRING
+      - name: name
   - name: egi_test_fail
     meta:
       asset_status: verified

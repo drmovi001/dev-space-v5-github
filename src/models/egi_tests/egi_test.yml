@@ -4,19 +4,6 @@ models:
   - name: egi_test_pass
     meta:
       asset_status: verified
-    columns:
-      - name: customerid
-        tests:
-          - unique
-        data_type: STRING
-      - name: name
   - name: egi_test_fail
     meta:
       asset_status: verified
-    columns:
-      - name: country
-        tests:
-          - accepted_values:
-              values:
-                - A
-                - B

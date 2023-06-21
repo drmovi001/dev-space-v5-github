@@ -2,9 +2,9 @@
 
 with source_data as (
 
-    select '1' as id, 2 as another_col
+    select 1 as id, 2 as another_column
     union all
-    select null as id, 3 as another_col
+    select null as id, 3 as another_column
 
 )
 
@@ -16,4 +16,3 @@ from source_data
 */
 
 -- where id is not null
-

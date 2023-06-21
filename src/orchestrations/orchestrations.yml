@@ -16,7 +16,7 @@ orchestrations:
       enabled: true
       command: y42 build -s my_first_dbt_model
       cron: "*/5 * * * *"
-  - name: test_every_five_minute_copy
+  - name: test_every_five_minute_test
     config:
       enabled: true
       command: y42 build -s my_first_dbt_model

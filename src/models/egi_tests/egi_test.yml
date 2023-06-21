@@ -12,10 +12,21 @@ models:
           - not_null
       - name: ADDRESS
         data_type: STRING
+        tests:
+          - unique
       - name: CUSTOMERID
         data_type: FLOAT
+        tests:
+          - unique
       - name: COUNTRY
         data_type: STRING
+        tests:
+          - accepted_values:
+              values:
+                - A
+                - B
+                - C
+                - D
   - name: egi_test_fail
     meta:
       asset_status: verified

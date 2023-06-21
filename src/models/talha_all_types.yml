@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: talha_all_types
+    columns:
+      - name: column
+        data_type: OBJECT
+        description: much text much textmuch textmuch textmuch textmuch textmuch
+          textmuch textmuch textmuch textmuch textmuch textmuch textmuch
+          textmuch textmuch textmuch textmuch textmuch textmuch textmuch
+          textmuch textm
+      - name: column 1
+        data_type: TINYINT
+      - name: column 2
+      - name: column 3
+      - name: column 4
+      - name: column 5
+      - name: column 5
+    config:
+      tags:
+        - static

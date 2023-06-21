@@ -1,6 +1,9 @@
 version: 2
 
 models:
+  - name: egi_test_fail
+    meta:
+      asset_status: verified
   - name: egi_test_pass
     meta:
       asset_status: verified
@@ -27,6 +30,3 @@ models:
                 - B
                 - C
                 - D
-  - name: egi_test_fail
-    meta:
-      asset_status: verified

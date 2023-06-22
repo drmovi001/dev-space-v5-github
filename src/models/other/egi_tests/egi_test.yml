@@ -4,6 +4,15 @@ models:
   - name: egi_test_fail
     meta:
       asset_status: verified
+    columns:
+      - name: NAME
+        data_type: STRING
+      - name: ADDRESS_changed_name
+        data_type: STRING
+      - name: COUNTRY
+        data_type: STRING
+      - name: CUSTOMERID
+        data_type: FLOAT
   - name: egi_test_pass
     meta:
       asset_status: verified

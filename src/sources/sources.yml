@@ -1,5 +1,4 @@
 version: 2
-
 sources:
   - name: airbyte_bigquery
     meta:
@@ -7,6 +6,10 @@ sources:
         type: source-bigquery
         connection: bigquery_bathien_usplayground
       asset_status: verified
+      experts:
+        users:
+          - alexander.ciesielski@y42.com
+        teams: []
     tables:
       - name: repeated_record
         meta:

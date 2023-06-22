@@ -122,7 +122,7 @@ sources:
             default_cursor_field: []
             source_defined_cursor: null
             source_defined_primary_key: []
-        description: test
+        description: test2
     description: ""
   - name: airbyte_file_import
     meta:

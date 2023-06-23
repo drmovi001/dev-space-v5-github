@@ -31,3 +31,5 @@ sources:
                   inclusion: automatic
                   type: object
             group: DBT_EGJETA_SF
+    database: ""
+    schema: ""

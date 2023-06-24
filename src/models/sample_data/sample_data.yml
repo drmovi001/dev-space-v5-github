@@ -1,6 +1,7 @@
 version: 2
+
 models:
-  - name: prices
+  - name: hai_prices
     tests:
       - dbt_utils.expression_is_true:
           expression: "col_a + col_b = total"

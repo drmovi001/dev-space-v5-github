@@ -1,10 +1,10 @@
 version: 2
 models:
   - name: my_first_dbt_model
-    config:  
+    config:
       y42:
         publish_view: true ## this is the property you need to listen to
-    description: this is my first dbt model
+    description: this is my first dbt modelss
     meta:
       experts:
         users:

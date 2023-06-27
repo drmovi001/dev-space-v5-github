@@ -16,8 +16,8 @@ orchestrations:
       enabled: true
       command: y42 build -s my_first_dbt_model
       cron: "*/5 * * * *"
-  - name: test_every_five_minute_full
+  - name: test_every_1_hour_full
     config:
       enabled: true
       command: y42 build --exclude source:intercom* --exclude source:airbyte_bigquery*
-      cron: "*/5 * * * *"
+      cron: "0 * * * *"

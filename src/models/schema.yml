@@ -1,9 +1,9 @@
 version: 2
 models:
   - name: my_first_dbt_model
-    config:
-      tags:
-        - hai_test
+    config:  
+      y42:
+        enable_view: true ## this is the property you need to listen to
     description: this is my first dbt model
     meta:
       experts:

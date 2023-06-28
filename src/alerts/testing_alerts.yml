@@ -1,0 +1,17 @@
+version: 2
+
+alerts:
+  - name: testing_alerts
+    config:
+      trigger:
+        type: orchestration_status
+        orchestrations:
+          - hai_test_alert
+        triggered_on:
+          - ready
+          - partially_ready
+          - invalid
+      destinations:
+        email:
+          email_addresses:
+            - hai.bui@y42.com

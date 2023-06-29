@@ -224,6 +224,7 @@ sources:
             default_cursor_field: null
             source_defined_cursor: null
             source_defined_primary_key: null
+        description: some dsecription
   - name: intercom
     meta:
       config:

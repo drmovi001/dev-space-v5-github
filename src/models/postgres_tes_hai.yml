@@ -1,0 +1,78 @@
+version: 2
+
+sources:
+  - name: postgres_tes_hai
+    meta:
+      config:
+        type: source-postgres
+        connection: postgres-playground
+    tables:
+      - name: _airbyte_public_issue_comments_stg
+        meta:
+          source_config:
+            import: issue_comments_stg
+            columns:
+              - _airbyte_issue_comments_hashid
+              - visibility
+              - author
+              - created
+              - _airbyte_normalized_at
+              - body
+              - jsdpublic
+              - renderedbody
+              - _airbyte_ab_id
+              - updateauthor
+              - self
+              - id
+              - updated
+              - _airbyte_emitted_at
+              - properties
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                _airbyte_issue_comments_hashid:
+                  type: string
+                visibility:
+                  type: string
+                author:
+                  type: string
+                created:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                _airbyte_normalized_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                body:
+                  type: string
+                jsdpublic:
+                  type: boolean
+                renderedbody:
+                  type: string
+                _airbyte_ab_id:
+                  type: string
+                updateauthor:
+                  type: string
+                self:
+                  type: string
+                id:
+                  type: string
+                updated:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                _airbyte_emitted_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                properties:
+                  type: string
+            group: _airbyte_public
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []

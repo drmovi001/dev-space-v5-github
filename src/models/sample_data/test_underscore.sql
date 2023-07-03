@@ -1,1 +1,1 @@
-SELECT * from {{ source('airbyte_file_import', 'cereal_bla') }}
+SELECT * FROM {{ source('test_hai', 'public_project_versions') }}

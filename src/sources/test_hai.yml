@@ -1,0 +1,271 @@
+version: 2
+
+sources:
+  - name: test_hai
+    meta:
+      config:
+        type: source-postgres
+        connection: postgres-playground
+    tables:
+      - name: public_workflow_schemes_las__user_applicationroles
+        meta:
+          source_config:
+            import: workflow_schemes_las__user_applicationroles
+            columns:
+              - _airbyte_ab_id
+              - size
+              - max-results
+              - pagingcallback
+              - _airbyte_normalized_at
+              - _airbyte_lastmodifieduser_hashid
+              - callback
+              - _airbyte_applicationroles_hashid
+              - items
+              - _airbyte_emitted_at
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                _airbyte_ab_id:
+                  type: string
+                size:
+                  type: number
+                  airbyte_type: integer
+                max-results:
+                  type: number
+                  airbyte_type: integer
+                pagingcallback:
+                  type: string
+                _airbyte_normalized_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                _airbyte_lastmodifieduser_hashid:
+                  type: string
+                callback:
+                  type: string
+                _airbyte_applicationroles_hashid:
+                  type: string
+                items:
+                  type: string
+                _airbyte_emitted_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+            group: public
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+      - name: public_dashboards_sharepermiss_451_projectcategory
+        meta:
+          source_config:
+            import: dashboards_sharepermiss_451_projectcategory
+            columns:
+              - _airbyte_ab_id
+              - _airbyte_project_hashid
+              - _airbyte_normalized_at
+              - name
+              - self
+              - description
+              - id
+              - _airbyte_emitted_at
+              - _airbyte_projectcategory_hashid
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                _airbyte_ab_id:
+                  type: string
+                _airbyte_project_hashid:
+                  type: string
+                _airbyte_normalized_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                name:
+                  type: string
+                self:
+                  type: string
+                description:
+                  type: string
+                id:
+                  type: string
+                _airbyte_emitted_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                _airbyte_projectcategory_hashid:
+                  type: string
+            group: public
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+      - name: public_permission_schemes_permissions_holder
+        meta:
+          source_config:
+            import: permission_schemes_permissions_holder
+            columns:
+              - _airbyte_ab_id
+              - expand
+              - _airbyte_permissions_hashid
+              - _airbyte_holder_hashid
+              - parameter
+              - _airbyte_normalized_at
+              - type
+              - _airbyte_emitted_at
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                _airbyte_ab_id:
+                  type: string
+                expand:
+                  type: string
+                _airbyte_permissions_hashid:
+                  type: string
+                _airbyte_holder_hashid:
+                  type: string
+                parameter:
+                  type: string
+                _airbyte_normalized_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                type:
+                  type: string
+                _airbyte_emitted_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+            group: public
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+      - name: public_project_versions
+        meta:
+          source_config:
+            import: project_versions
+            columns:
+              - issuesstatusforfixversion
+              - _airbyte_project_versions_hashid
+              - moveunfixedissuesto
+              - _airbyte_normalized_at
+              - project
+              - description
+              - releasedate
+              - startdate
+              - archived
+              - _airbyte_ab_id
+              - expand
+              - operations
+              - overdue
+              - name
+              - self
+              - id
+              - projectid
+              - _airbyte_emitted_at
+              - released
+              - userreleasedate
+              - userstartdate
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                issuesstatusforfixversion:
+                  type: string
+                _airbyte_project_versions_hashid:
+                  type: string
+                moveunfixedissuesto:
+                  type: string
+                _airbyte_normalized_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                project:
+                  type: string
+                description:
+                  type: string
+                releasedate:
+                  type: string
+                  format: date
+                startdate:
+                  type: string
+                  format: date
+                archived:
+                  type: boolean
+                _airbyte_ab_id:
+                  type: string
+                expand:
+                  type: string
+                operations:
+                  type: string
+                overdue:
+                  type: boolean
+                name:
+                  type: string
+                self:
+                  type: string
+                id:
+                  type: string
+                projectid:
+                  type: number
+                  airbyte_type: integer
+                _airbyte_emitted_at:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_with_timezone
+                released:
+                  type: boolean
+                userreleasedate:
+                  type: string
+                userstartdate:
+                  type: string
+            group: public
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+      - name: public_postgres_toni
+        meta:
+          source_config:
+            import: postgres_toni
+            columns:
+              - nulldate
+              - vorname
+              - id
+              - nulldatetime
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                nulldate:
+                  type: string
+                  format: date
+                vorname:
+                  type: string
+                id:
+                  type: number
+                  airbyte_type: integer
+                nulldatetime:
+                  type: string
+                  format: date-time
+                  airbyte_type: timestamp_without_timezone
+            group: public
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key:
+              - - id

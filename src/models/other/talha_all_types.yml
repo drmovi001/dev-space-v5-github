@@ -19,4 +19,4 @@ models:
     config:
       tags:
         - static
-    description: test
+    description: test2

@@ -175,7 +175,7 @@ WITH FAKE_DATA AS (
       -- Variant
       PARSE_JSON('{"pi":44.14,"e":67.71}') AS HAI_VARIANT_COLUMN_STUFF,
       -- Object
-      OBJECT_CONSTRUCT('b',2,'b','CCC', 'c',null) AS HAI_OBJECT_COLUMN_STUFF,
+      OBJECT_CONSTRUCT('b',2, 'c',null) AS HAI_OBJECT_COLUMN_STUFF,
       -- Array
       ARRAY_CONSTRUCT(22, 44, 30) AS HAI_ARRAY_COLUMN_STUFF,
       -- Geography

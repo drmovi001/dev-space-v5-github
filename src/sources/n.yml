@@ -4,10 +4,11 @@ sources:
   - name: n
     tables:
       - name: EGI_EGI_TEST_2_DATATEST123
+        config:
+          y42:
+            publish_view: true
         meta:
           source_config:
-            y42:
-              publish_view: true
             import: EGI_EGI_TEST:EGI_EGI_TEST_2:DATATEST123
             columns:
               - auto_detect

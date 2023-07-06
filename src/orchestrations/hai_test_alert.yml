@@ -6,7 +6,3 @@ orchestrations:
       enabled: true
       command: y42 build -s refactored_customers
       cron: 0/15 * 1/1 * *
-      timeout:
-        hours: 4
-      retries:
-        max: 0

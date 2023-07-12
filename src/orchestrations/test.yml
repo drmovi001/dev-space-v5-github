@@ -4,5 +4,5 @@ orchestrations:
   - name: test
     config:
       enabled: true
-      command: y42 build -s refactored_customers
-      cron: 0/15 * 1/1 * *
+      command: y42 build --exclude source:intercom* --exclude source:airbyte_bigquery*
+      cron: 0 1 * * MON

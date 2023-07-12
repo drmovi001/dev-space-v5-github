@@ -4,7 +4,7 @@ sources:
     meta:
       config:
         type: source-bigquery
-        connection: bigquery_bathien_usplayground
+        connection: btt_bigquery
       asset_status: verified
       experts:
         users:
@@ -122,7 +122,8 @@ sources:
             supported_sync_modes:
               - full_refresh
               - incremental
-            default_cursor_field: []
+            default_cursor_field:
+              - Cereal_Name
             source_defined_cursor: null
             source_defined_primary_key: []
         description: test2

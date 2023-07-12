@@ -1,8 +1,0 @@
-version: 2
-
-orchestrations:
-  - name: test
-    config:
-      enabled: true
-      command: y42 build -s refactored_customers
-      cron: 0/15 * 1/1 * *

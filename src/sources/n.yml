@@ -1,5 +1,4 @@
 version: 2
-
 sources:
   - name: n
     tables:
@@ -9,7 +8,7 @@ sources:
             publish_view: true
         meta:
           source_config:
-            import: EGI_EGI_TEST:EGI_EGI_TEST_2:DATATEST123
+            import: EGI_TEST_DATABASE:DBT_EGJETA_SF:MY_SECOND_DBT_MODEL
             columns:
               - auto_detect
             schema:
@@ -19,4 +18,18 @@ sources:
                 auto_detect:
                   inclusion: automatic
                   type: object
-            group: EGI_EGI_TEST_2
+            group: DBT_EGJETA_SF
+      - name: DBT_EGJETA_SF_MY_FIRST_DBT_MODEL
+        meta:
+          source_config:
+            import: EGI_TEST_DATABASE:DBT_EGJETA_SF:MY_FIRST_DBT_MODEL
+            columns:
+              - auto_detect
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                auto_detect:
+                  inclusion: automatic
+                  type: object
+            group: DBT_EGJETA_SF

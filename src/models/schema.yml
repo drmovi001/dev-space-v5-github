@@ -26,5 +26,5 @@ models:
         - hai_test
         - static
         - sadfsd
-    description: this is a test descriptionss
+    description: this is a test description
 sources: []

@@ -1,0 +1,8 @@
+version: 2
+
+orchestrations:
+  - name: alexz_test
+    config:
+      enabled: true
+      command: y42 build -s my_first_dbt_model+
+      cron: 0/30 * 1/1 * *

@@ -1,8 +1,0 @@
-version: 2
-
-orchestrations:
-  - name: alexz
-    config:
-      enabled: true
-      command: y42 build
-      cron: 0/30 * 1/1 * *

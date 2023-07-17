@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - meta:
+      config:
+        type: fivetran
+        connection: ""
+    name: fff

@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - meta:
+      config:
+        type: fivetran
+        connection: fivetran
+    name: fiveT
+    database: ADRIAN_TEST_DB
+    schema: PUBLIC

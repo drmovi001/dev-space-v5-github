@@ -2,12 +2,18 @@ version: 2
 
 sources:
   - name: postgres_tes_hai
+    config:
+      y42:
+        type: source-postgres
     meta:
       config:
         type: source-postgres
         connection: postgres-playground
     tables:
       - name: _airbyte_public_issue_comments_stg
+        config:
+          y42:
+            publish_view: false
         meta:
           source_config:
             import: issue_comments_stg

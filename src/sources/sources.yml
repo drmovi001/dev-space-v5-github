@@ -292,33 +292,7 @@ sources:
                   type: array
   - name: nat
     tables:
-      - name: DATATEST
-        meta:
-          source_config:
-            import: DEMO_DB:PUBLIC:DATATEST
-            columns:
-              - auto_detect
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                auto_detect:
-                  inclusion: automatic
-                  type: object
-            group: PUBLIC
-      - name: LINECOPY
-        meta:
-          source_config:
-            import: DEMO_DB:PUBLIC:LINECOPY
-            columns:
-              - auto_detect
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                auto_detect:
-                  inclusion: automatic
-                  type: object
-            group: PUBLIC
-    database: null
+      - name: PUBLIC_TEST_TABLE
+        identifier: TEST_TABLE
+    database: ADRIAN_TEST_DB
     schema: PUBLIC

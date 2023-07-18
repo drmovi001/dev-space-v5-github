@@ -1,0 +1,8 @@
+version: 2
+
+orchestrations:
+  - name: test_to_remove_minute
+    config:
+      enabled: true
+      command: y42 build -s my_first_dbt_model
+      cron: "*/1 * * * *"

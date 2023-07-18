@@ -17,6 +17,7 @@ models:
         data_type: FLOAT
         tests:
           - unique
+          - not_null
   - name: my_second_dbt_model
     columns:
       - name: ID

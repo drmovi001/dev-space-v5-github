@@ -2,9 +2,9 @@ version: 2
 models:
   - name: my_first_dbt_model
     config:
-      tags:
-        - hai_test
-    description: this is my first dbt model
+      y42:
+        publish_view: true
+    description: this is my first dbt modelssss
     meta:
       experts:
         users:
@@ -20,6 +20,7 @@ models:
         data_type: FLOAT
         tests:
           - unique
+          - not_null
   - name: my_second_dbt_model
     columns:
       - name: ID
@@ -29,4 +30,5 @@ models:
         - hai_test
         - static
         - sadfsd
+    description: this is a test description
 sources: []

@@ -4,7 +4,7 @@ sources:
     meta:
       config:
         type: source-bigquery
-        connection: bigquery_bathien_usplayground
+        connection: btt_bigquery
       asset_status: verified
       experts:
         users:
@@ -122,11 +122,37 @@ sources:
             supported_sync_modes:
               - full_refresh
               - incremental
-            default_cursor_field: []
+            default_cursor_field:
+              - Cereal_Name
             source_defined_cursor: null
             source_defined_primary_key: []
         description: test2
-    description: ""
+      - meta:
+          source_config:
+            import: 20230314_gads
+            columns:
+              - campaign
+              - metrics
+              - segments
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                campaign:
+                  type: object
+                metrics:
+                  type: object
+                segments:
+                  type: object
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+        name: playground_20230314_gads
+    description: "some test "
   - name: airbyte_file_import
     meta:
       config:
@@ -134,7 +160,7 @@ sources:
         connection: cereal_file
       asset_status: verified
     tables:
-      - name: cereal
+      - name: cereal_bla
         meta:
           source_config:
             import: cereal
@@ -266,33 +292,7 @@ sources:
                   type: array
   - name: nat
     tables:
-      - name: DATATEST
-        meta:
-          source_config:
-            import: DEMO_DB:PUBLIC:DATATEST
-            columns:
-              - auto_detect
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                auto_detect:
-                  inclusion: automatic
-                  type: object
-            group: PUBLIC
-      - name: LINECOPY
-        meta:
-          source_config:
-            import: DEMO_DB:PUBLIC:LINECOPY
-            columns:
-              - auto_detect
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                auto_detect:
-                  inclusion: automatic
-                  type: object
-            group: PUBLIC
-    database: null
+      - name: PUBLIC_TEST_TABLE
+        identifier: TEST_TABLE
+    database: ADRIAN_TEST_DB
     schema: PUBLIC

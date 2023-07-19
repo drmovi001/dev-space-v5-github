@@ -1,13 +1,8 @@
 version: 2
 
 orchestrations:
-  - name: import_intercom_every_hour
-    config:
-      enabled: true
-      command: y42 build --select source:intercom+
-      cron: 0 * * * *
   - name: import_intercom_every_six_hours
     config:
       enabled: true
       command: y42 build --select source:intercom+ --full-refresh --fail-fast
-      cron: 0 */6 * * *
+      cron: 0 */6 1 * *

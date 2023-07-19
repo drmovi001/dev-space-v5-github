@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: underscore_model
+    columns:
+      - name: vorname
+        data_type: STRING
+      - name: nulldate
+        data_type: DATE
+      - name: nulldatetime
+        data_type: TIMESTAMP
+      - name: id
+        data_type: FLOAT

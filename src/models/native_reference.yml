@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: native_reference
     database: Y42_DB
-    schema: " ADRIAN_TEST_DB"
+    schema: ADRIAN_TEST_DB
     tables:
       - name: ADRIAN_TEST_DB_SOURCE_TABLE
         identifier: SOURCE_TABLE

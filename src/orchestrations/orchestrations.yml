@@ -8,7 +8,7 @@ orchestrations:
       cron: "*/5 * * * *"
   - name: test_hai
     config:
-      enabled: true
+      enabled: false
       command: y42 build -s my_second_dbt_model+
       cron: "*/5 * * * *"
   - name: test_every_five_minute

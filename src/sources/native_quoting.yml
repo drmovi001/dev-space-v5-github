@@ -5,5 +5,11 @@ sources:
     database: ANALYTICS_HAI
     schema: DBT_HAI_BUI
     tables:
-      - name: DBT_HAI_BUI_NATIVE_MODEL
-        identifier: NATIVE_MODEL
+      - name: DBT_HAI_BUI_NATIVE_MODEL_QUOTED_UPPERCASE
+        identifier: NATIVE_MODEL_QUOTED_UPPERCASE
+      - name: DBT_HAI_BUI_NATIVE_MODEL_QUOTED_LOWERCASE
+        identifier: NATIVE_MODEL_QUOTED_LOWERCASE
+      - name: DBT_HAI_BUI_NATIVE_MODEL_LOWERCASE
+        identifier: NATIVE_MODEL_LOWERCASE
+      - name: DBT_HAI_BUI_NATIVE_MODEL_UPPERCASE
+        identifier: NATIVE_MODEL_UPPERCASE

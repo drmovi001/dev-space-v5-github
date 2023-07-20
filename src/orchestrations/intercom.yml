@@ -1,7 +1,7 @@
 version: 2
 
 orchestrations:
-  - name: import_intercom_every_six_hours
+  - name: import_intercom_every_hours
     config:
       enabled: true
       command: y42 build --select source:intercom+ --full-refresh --fail-fast

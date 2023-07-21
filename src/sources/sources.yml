@@ -140,8 +140,8 @@ sources:
       asset_status: verified
     tables:
       - name: cereal_bla
-        meta:
-          source_config:
+        config:
+          y42:
             import: cereal
             columns:
               - Cereal Name
@@ -229,6 +229,7 @@ sources:
             default_cursor_field: null
             source_defined_cursor: null
             source_defined_primary_key: null
+          
   - name: intercom
     meta:
       config:

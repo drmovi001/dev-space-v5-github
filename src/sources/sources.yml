@@ -134,9 +134,6 @@ sources:
           type: source-file
           connection: cereal_file
     meta:        
-      config:
-        type: source-file
-        connection: cereal_file
       asset_status: verified
     tables:
       - name: cereal_bla
@@ -229,7 +226,6 @@ sources:
             default_cursor_field: null
             source_defined_cursor: null
             source_defined_primary_key: null
-          
   - name: intercom
     meta:
       config:

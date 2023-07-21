@@ -129,7 +129,11 @@ sources:
         description: test2
     description: "some test "
   - name: airbyte_file_import
-    meta:
+    config:
+        y42:
+          type: source-file
+          connection: cereal_file
+    meta:        
       config:
         type: source-file
         connection: cereal_file

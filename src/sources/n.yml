@@ -6,8 +6,6 @@ sources:
         config:
           y42:
             publish_view: true
-        meta:
-          source_config:
             import: EGI_TEST_DATABASE:DBT_EGJETA_SF:MY_SECOND_DBT_MODEL
             columns:
               - auto_detect
@@ -20,8 +18,8 @@ sources:
                   type: object
             group: DBT_EGJETA_SF
       - name: DBT_EGJETA_SF_MY_FIRST_DBT_MODEL
-        meta:
-          source_config:
+        config:
+          y42: 
             import: EGI_TEST_DATABASE:DBT_EGJETA_SF:MY_FIRST_DBT_MODEL
             columns:
               - auto_detect
@@ -33,3 +31,4 @@ sources:
                   inclusion: automatic
                   type: object
             group: DBT_EGJETA_SF
+          

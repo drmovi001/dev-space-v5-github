@@ -138,3 +138,22 @@ sources:
             default_cursor_field: []
             source_defined_cursor: null
             source_defined_primary_key: []
+      - name: playground_from_eu_playground
+        config:
+          y42:
+            import: from_eu_playground
+            columns:
+              - id
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                id:
+                  type: string
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []

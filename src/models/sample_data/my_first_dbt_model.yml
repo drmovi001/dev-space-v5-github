@@ -16,9 +16,6 @@ models:
       - name: ID
         description: amaizng
         data_type: STRING
-      - name: ANOTHER_COL
-        description: ""
-        data_type: FLOAT
         tests:
           - unique
           - not_null

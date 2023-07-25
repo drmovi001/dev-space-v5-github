@@ -1,8 +1,8 @@
 version: 2
 
 orchestrations:
-  - name: hai_test_alert
+  - name: test_15_minutes
     config:
       enabled: true
-      command: y42 build -s refactored_customers
+      command: y42 build -s talha_all_types2
       cron: 0/15 * 1/1 * *

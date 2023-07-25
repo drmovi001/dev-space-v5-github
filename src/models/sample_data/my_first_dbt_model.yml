@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    config:
+      y42:
+        publish_view: true
+    description: this is my first dbt modelsssss
+    meta:
+      experts:
+        users:
+          - aliaksei.bahamazau@y42.com
+          - johannes.pittgens@y42.com
+        teams: []
+    columns:
+      - name: ID
+        description: amaizng
+        data_type: STRING
+      - name: ANOTHER_COL
+        description: ""
+        data_type: FLOAT
+        tests:
+          - unique
+          - not_null

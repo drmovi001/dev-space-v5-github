@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: native_quoting
+    database: ANALYTICS_HAI
+    schema: DBT_HAI_BUI
+    tables:
+      - name: DBT_HAI_BUI_NATIVE_MODEL_QUOTED_UPPERCASE
+        identifier: NATIVE_MODEL_QUOTED_UPPERCASE
+        columns:
+          - name: SOME_LONG_NAME
+            data_type: FLOAT
+      - name: DBT_HAI_BUI_NATIVE_MODEL_QUOTED_LOWERCASE
+        identifier: NATIVE_MODEL_QUOTED_LOWERCASE
+        columns:
+          - name: some_LONG_NAME
+            data_type: FLOAT
+      - name: DBT_HAI_BUI_NATIVE_MODEL_LOWERCASE
+        identifier: NATIVE_MODEL_LOWERCASE
+        columns:
+          - name: SOME_LONG_NAME
+            data_type: FLOAT
+      - name: DBT_HAI_BUI_NATIVE_MODEL_UPPERCASE
+        identifier: NATIVE_MODEL_UPPERCASE
+        columns:
+          - name: SOME_LONG_NAME
+            data_type: FLOAT

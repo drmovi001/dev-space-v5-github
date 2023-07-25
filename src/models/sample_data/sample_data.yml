@@ -5,3 +5,10 @@ models:
     tests:
       - dbt_utils.expression_is_true:
           expression: "col_a + col_b = total"
+    columns:
+      - name: COL_B
+        data_type: FLOAT
+      - name: COL_A
+        data_type: FLOAT
+      - name: TOTAL
+        data_type: FLOAT

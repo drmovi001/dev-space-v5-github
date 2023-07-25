@@ -4,7 +4,7 @@ sources:
     meta:
       config:
         type: source-bigquery
-        connection: bigquery_bathien_usplayground
+        connection: btt_bigquery
       asset_status: verified
       experts:
         users:
@@ -122,22 +122,88 @@ sources:
             supported_sync_modes:
               - full_refresh
               - incremental
-            default_cursor_field: []
+            default_cursor_field:
+              - Cereal_Name
             source_defined_cursor: null
             source_defined_primary_key: []
         description: test2
+      - name: playground_all_data_types
+        meta:
+          source_config:
+            import: all_data_types
+            columns:
+              - float_field
+              - json_field
+              - record_field
+              - integer_field
+              - timestamp_field
+              - datetime_field
+              - string_field
+              - date_field
+              - array_field
+              - time_field
+              - geography_field
+              - bytes_field
+              - numeric_field
+              - bignumeric_field
+              - boolean_field
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                float_field:
+                  type: number
+                json_field:
+                  type: string
+                record_field:
+                  type: object
+                integer_field:
+                  type: number
+                  airbyte_type: integer
+                timestamp_field:
+                  type: string
+                datetime_field:
+                  type: string
+                string_field:
+                  type: string
+                date_field:
+                  type: string
+                array_field:
+                  type: string
+                time_field:
+                  type: string
+                geography_field:
+                  type: string
+                bytes_field:
+                  type: string
+                numeric_field:
+                  type: number
+                bignumeric_field:
+                  type: number
+                boolean_field:
+                  type: boolean
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
     description: "some test "
   - name: airbyte_file_import
-    meta:
-      config:
+    config:
+      y42:
         type: source-file
         connection: cereal_file
+    meta:
       asset_status: verified
     tables:
       - name: cereal_bla
-        meta:
-          source_config:
+        config:
+          y42:
+            type: source-file
             import: cereal
+            connection: cereal_file
             columns:
               - Cereal Name
               - Manufacturer
@@ -266,33 +332,7 @@ sources:
                   type: array
   - name: nat
     tables:
-      - name: DATATEST
-        meta:
-          source_config:
-            import: DEMO_DB:PUBLIC:DATATEST
-            columns:
-              - auto_detect
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                auto_detect:
-                  inclusion: automatic
-                  type: object
-            group: PUBLIC
-      - name: LINECOPY
-        meta:
-          source_config:
-            import: DEMO_DB:PUBLIC:LINECOPY
-            columns:
-              - auto_detect
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                auto_detect:
-                  inclusion: automatic
-                  type: object
-            group: PUBLIC
-    database: null
+      - name: PUBLIC_TEST_TABLE
+        identifier: TEST_TABLE
+    database: ADRIAN_TEST_DB
     schema: PUBLIC

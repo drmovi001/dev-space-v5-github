@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: my_second_dbt_model
+    columns:
+      - name: ID
+        data_type: FLOAT
+    config:
+      tags:
+        - hai_test
+        - static
+        - sadfsd
+    description: this is a test description

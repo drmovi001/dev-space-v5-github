@@ -4,20 +4,70 @@ orchestrations:
   - name: another_orch_from_ui
     config:
       enabled: true
-      command: y42 build -s my_first_dbt_model
-      cron: 0/30 * 1/1 * *
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
   - name: test_hai
     config:
       enabled: false
       command: y42 build -s my_first_dbt_model+
-      cron: 0/30 * 1/1 * *
+      cron: "*/5 * * * *"
   - name: test_every_five_minute
     config:
       enabled: true
-      command: y42 build -s my_first_dbt_model
+      command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: test_every_hour_full
     config:
-      enabled: true
+      enabled: false
       command: y42 build --exclude source:intercom* --exclude source:airbyte_bigquery*
-      cron: "0 * * * *"
+      cron: 0 * * * *
+  - name: my_second_dbt_model_1
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
+  - name: my_second_dbt_model_2
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
+  - name: my_second_dbt_model_3
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
+  - name: my_second_dbt_model_4
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
+  - name: my_second_dbt_model_5
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
+  - name: my_second_dbt_model_6
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
+  - name: my_second_dbt_model_7
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
+  - name: my_second_dbt_model_8
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
+  - name: my_second_dbt_model_9
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"
+  - name: my_second_dbt_model_10
+    config:
+      enabled: true
+      command: y42 build -s my_second_dbt_model
+      cron: "*/5 * * * *"

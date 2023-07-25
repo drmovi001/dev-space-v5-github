@@ -330,6 +330,25 @@ sources:
                   type: boolean
                 team_ids:
                   type: array
+        columns:
+          - name: email
+            data_type: STRING
+          - name: away_mode_enabled
+            data_type: BOOLEAN
+          - name: id
+            data_type: STRING
+            tests:
+              - unique
+          - name: team_ids
+            data_type: STRING
+          - name: away_mode_reassign
+            data_type: BOOLEAN
+          - name: has_inbox_seat
+            data_type: BOOLEAN
+          - name: type
+            data_type: STRING
+          - name: name
+            data_type: STRING
   - name: nat
     tables:
       - name: PUBLIC_TEST_TABLE

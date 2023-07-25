@@ -2,3 +2,106 @@ version: 2
 
 models:
   - name: all_types_lower
+    columns:
+      - name: hai_binary_column_stuff
+        description: ""
+        data_type: BINARY
+      - name: hai_datetime_column_stuff
+        description: ""
+        data_type: TIMESTAMP_LTZ
+      - name: hai_timestamp_tz_column_stuff
+        description: ""
+        data_type: TIMESTAMP_TZ
+      - name: hai_float8_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_char_column_stuff
+        description: ""
+        data_type: STRING
+      - name: hai_boolean_column_stuff
+        description: ""
+        data_type: BOOLEAN
+      - name: hai_double_precision_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_bigint_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_numeric_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_geography_column_stuff
+        description: ""
+        data_type: GEOGRAPHY
+      - name: hai_double_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_time_column_stuff
+        description: ""
+        data_type: TIME
+      - name: hai_tinyint_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_character_column_stuff
+        description: ""
+        data_type: STRING
+      - name: hai_varbinary_column_stuff
+        description: ""
+        data_type: BINARY
+      - name: hai_float4_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_number_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_date_column_stuff
+        description: ""
+        data_type: DATE
+      - name: hai_text_column_stuff
+        description: ""
+        data_type: STRING
+      - name: hai_timestamp_column_stuff
+        description: ""
+        data_type: TIMESTAMP_LTZ
+      - name: hai_object_column_stuff
+        description: ""
+        data_type: OBJECT
+      - name: hai_int_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_smallint_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_timestamp_ntz_column_stuff
+        description: ""
+        data_type: TIMESTAMP
+      - name: hai_integer_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_array_column_stuff
+        description: ""
+        data_type: ARRAY
+      - name: hai_string_column_stuff
+        description: ""
+        data_type: STRING
+      - name: hai_timestamp_ltz_column_stuff
+        description: ""
+        data_type: TIMESTAMP_LTZ
+      - name: hai_float_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_variant_column_stuff
+        description: ""
+        data_type: VARIANT
+      - name: hai_byteint_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_real_column_stuff
+        description: ""
+        data_type: FLOAT
+      - name: hai_varchar_column_stuff
+        description: ""
+        data_type: STRING
+      - name: hai_decimal_column_stuff
+        description: ""
+        data_type: FLOAT

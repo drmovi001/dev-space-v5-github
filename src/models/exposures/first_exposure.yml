@@ -16,7 +16,7 @@ exposures:
       Did someone say "exponential growth"?
 
     depends_on:
-      - ref('date_spine') 
+      - ref('date_spine')
       - ref('hai_orders')
       - source('airbyte_bigquery', 'repeated_record')
 

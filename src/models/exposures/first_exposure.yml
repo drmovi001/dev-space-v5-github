@@ -1,0 +1,25 @@
+version: 2
+
+exposures:
+
+  - name: weekly_jaffle_metrics
+    label: Jaffles by the Week
+    meta:
+      asset_status: verified
+      experts:
+        users: []
+        teams: []
+    type: dashboard
+    maturity: high
+    url: https://bi.tool/dashboards/1
+    description: >
+      Did someone say "exponential growth"?
+
+    depends_on:
+      - ref('date_spine')
+      - ref('hai_orders')
+      - source('airbyte_bigquery', 'repeated_record')
+
+    owner:
+      name: Simon Jornet
+      email: simon.jornet@y42.com

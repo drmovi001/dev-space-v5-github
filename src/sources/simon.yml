@@ -1,8 +1,0 @@
-version: 2
-sources:
-  - name: simon_lala
-    meta:
-      config:
-        type: intercom
-        connection: intercom
-      asset_status: verified

@@ -1,3 +1,3 @@
 {{ config(materialized='table') }}
 
-SELECT * FROM {{ source('airbyte_bigquery', 'cereal') }}
+SELECT * FROM {{ source('airbyte_bigquery_old', 'cereal') }}

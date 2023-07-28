@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: new_structure
+  - name: airbyte_bigquery
     config:
       y42_source:
         type: source-bigquery

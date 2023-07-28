@@ -18,7 +18,7 @@ exposures:
     depends_on:
       - ref('date_spine')
       - ref('hai_orders')
-      - source('airbyte_bigquery', 'repeated_record')
+      - source('airbyte_bigquery_old', 'repeated_record')
 
     owner:
       name: Simon Jornet

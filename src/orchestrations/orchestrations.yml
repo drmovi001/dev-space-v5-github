@@ -19,7 +19,7 @@ orchestrations:
   - name: test_every_hour_full
     config:
       enabled: false
-      command: y42 build --exclude source:intercom* --exclude source:airbyte_bigquery*
+      command: y42 build --exclude source:intercom* --exclude source:airbyte_bigquery_old*
       cron: 0 * * * *
   - name: my_second_dbt_model_1
     config:

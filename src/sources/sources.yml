@@ -1,6 +1,6 @@
 version: 2
 sources:
-  - name: airbyte_bigquery
+  - name: airbyte_bigquery_old
     meta:
       config:
         type: source-bigquery

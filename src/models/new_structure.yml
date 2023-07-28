@@ -5,7 +5,7 @@ sources:
     config:
       y42_source:
         type: source-bigquery
-        connection: "some name"
+        connection: "btt_bigquery"
     tables:
       - name: playground_all_data_types
         config:

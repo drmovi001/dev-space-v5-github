@@ -1,8 +1,8 @@
 version: 2
 sources:
   - name: airbyte_bigquery_old
-    meta:
-      config:
+    config:
+      y42_source:
         type: source-bigquery
         connection: btt_bigquery
       asset_status: verified
@@ -12,8 +12,8 @@ sources:
         teams: []
     tables:
       - name: repeated_record
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: repeated_record
             columns:
               - repeated_record
@@ -38,8 +38,8 @@ sources:
           - name: amazing
             description: amazing description
       - name: from_eu_playground
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: from_eu_playground
             columns:
               - id
@@ -57,8 +57,8 @@ sources:
             source_defined_cursor: null
             source_defined_primary_key: []
       - name: cereal
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: cereal
             columns:
               - Cereal_Name
@@ -128,8 +128,8 @@ sources:
             source_defined_primary_key: []
         description: test2
       - name: playground_all_data_types
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: all_data_types
             columns:
               - float_field
@@ -192,7 +192,7 @@ sources:
     description: "some test "
   - name: airbyte_file_import
     config:
-      y42:
+      y42_source:
         type: source-file
         connection: cereal_file
     meta:
@@ -291,15 +291,15 @@ sources:
             source_defined_cursor: null
             source_defined_primary_key: null
   - name: intercom
-    meta:
-      config:
+    config:
+      y42_source:
         type: intercom
         connection: intercom
       asset_status: verified
     tables:
       - name: admins
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: admins
             columns:
               - type

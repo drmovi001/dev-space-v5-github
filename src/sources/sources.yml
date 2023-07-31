@@ -192,7 +192,7 @@ sources:
     description: "some test "
   - name: airbyte_file_import
     config:
-      y42:
+      y42_source:
         type: source-file
         connection: cereal_file
     meta:
@@ -200,7 +200,7 @@ sources:
     tables:
       - name: cereal_bla
         config:
-          y42:
+          y42_table:
             type: source-file
             import: cereal
             connection: cereal_file

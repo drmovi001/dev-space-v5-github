@@ -9,3 +9,5 @@ sources:
         identifier: SECOND_LEVEL
       - name: ADRIAN_TEST_DB_SOURCE_TABLE
         identifier: SOURCE_TABLE
+      - name: ADRIAN_TEST_DB_FIRST_LEVEL
+        identifier: FIRST_LEVEL

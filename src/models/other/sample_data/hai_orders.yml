@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: hai_orders
+    columns:
+      - name: CUSTOMERID
+        data_type: NUMBER
+      - name: PRICE
+        data_type: NUMBER
+      - name: EMPLOYEEID
+        data_type: NUMBER
+      - name: ORDERID
+        data_type: NUMBER
+      - name: ORDERDATE
+        data_type: DATE

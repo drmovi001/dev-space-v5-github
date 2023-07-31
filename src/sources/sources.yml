@@ -192,7 +192,7 @@ sources:
     description: "some test "
   - name: airbyte_file_import
     config:
-      y42_source:
+      y42:
         type: source-file
         connection: cereal_file
     meta:

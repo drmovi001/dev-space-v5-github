@@ -2,14 +2,14 @@ version: 2
 
 sources:
   - name: test_hai
-    meta:
-      config:
+    config:
+      y42_source:
         type: source-postgres
         connection: postgres-playground
     tables:
       - name: public_workflow_schemes_las__user_applicationroles
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: workflow_schemes_las__user_applicationroles
             columns:
               - _airbyte_ab_id
@@ -60,8 +60,8 @@ sources:
             source_defined_cursor: null
             source_defined_primary_key: []
       - name: public_dashboards_sharepermiss_451_projectcategory
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: dashboards_sharepermiss_451_projectcategory
             columns:
               - _airbyte_ab_id
@@ -107,8 +107,8 @@ sources:
             source_defined_cursor: null
             source_defined_primary_key: []
       - name: public_permission_schemes_permissions_holder
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: permission_schemes_permissions_holder
             columns:
               - _airbyte_ab_id
@@ -151,8 +151,8 @@ sources:
             source_defined_cursor: null
             source_defined_primary_key: []
       - name: public_project_versions
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: project_versions
             columns:
               - issuesstatusforfixversion
@@ -237,8 +237,8 @@ sources:
             source_defined_cursor: null
             source_defined_primary_key: []
       - name: public_postgres_toni
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: postgres_toni
             columns:
               - nulldate
@@ -270,8 +270,8 @@ sources:
             source_defined_primary_key:
               - - id
       - name: _airbyte_public_issue_comments_stg
-        meta:
-          source_config:
+        config:
+          y42_table:
             import: issue_comments_stg
             columns:
               - _airbyte_issue_comments_hashid

@@ -3,12 +3,12 @@ version: 2
 orchestrations:
   - name: another_orch_from_ui
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: test_hai
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_first_dbt_model+
       cron: "*/5 * * * *"
   - name: test_every_five_minute
@@ -24,51 +24,51 @@ orchestrations:
       cron: 0 * * * *
   - name: my_second_dbt_model_1
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: my_second_dbt_model_2
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: my_second_dbt_model_3
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: my_second_dbt_model_4
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: my_second_dbt_model_5
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: my_second_dbt_model_6
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: my_second_dbt_model_7
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: my_second_dbt_model_8
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: my_second_dbt_model_9
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"
   - name: my_second_dbt_model_10
     config:
-      enabled: false
+      enabled: true
       command: y42 build -s my_second_dbt_model
       cron: "*/5 * * * *"

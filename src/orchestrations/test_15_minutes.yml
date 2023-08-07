@@ -3,6 +3,6 @@ version: 2
 orchestrations:
   - name: test_15_minutes
     config:
-      enabled: true
+      enabled: false
       command: y42 build -s talha_all_types2
       cron: 0/15 * 1/1 * *

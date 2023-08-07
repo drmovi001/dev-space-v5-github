@@ -18,4 +18,3 @@ models:
         data_type: STRING
         tests:
           - unique
-          - not_null

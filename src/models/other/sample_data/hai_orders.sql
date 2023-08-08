@@ -8,13 +8,6 @@ with orders as (
     union all
     select
         2 as orderid,
-        1 as customerid,
-        1 as employeeid,
-        cast('2022-01-01' as date) as orderdate,
-        3.99 as price
-    union all
-    select
-        2 as orderid,
         2 as customerid,
         2 as employeeid,
         cast('2022-01-02' as date) as orderdate,

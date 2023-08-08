@@ -1,33 +1,9 @@
 with customers as (
-    select
-        1 as customerid,
-        'Customer A' as name,
-        'Address A' as address,
-        'A' as country
-    union all
-    select
-        2 as customerid,
-        'Customer B' as name,
-        'Address B' as address,
-        'B' as country
-    union all
-    select
-        3 as customerid,
-        'Customer C' as name,
-        'Address C' as address,
-        'C' as country
-    union all
-    select
-        4 as customerid,
-        'Customer D' as name,
-        'Address D' as address,
-        'B' as country
-    union all
-    select
-        5 as customerid,
-        'Customer E' as name,
-        'Address E' as address,
-        'A' as country
+    SELECT 1 AS customerid, 'Customer A' AS name, 'Address A' AS address, 'A' as country UNION ALL
+    SELECT 2 AS customerid, 'Customer B' AS name, 'Address B' AS address, 'B' as country UNION ALL
+    SELECT 3 AS customerid, 'Customer C' AS name, 'Address C' AS address, 'C' as country UNION ALL
+    SELECT 4 AS customerid, 'Customer D' AS name, 'Address D' AS address, 'B' as country UNION ALL
+    SELECT 5 AS customerid, 'Customer E' AS name, 'Address E' AS address, 'A' as country
 )
 
-select * from customers
+select * FROM customers

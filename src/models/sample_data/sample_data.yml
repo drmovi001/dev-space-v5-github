@@ -7,8 +7,12 @@ models:
           expression: "col_a + col_b = total"
     columns:
       - name: COL_B
-        data_type: FLOAT
+        description: ""
+        data_type: NUMBER
       - name: COL_A
-        data_type: FLOAT
+        description: ""
+        data_type: NUMBER
       - name: TOTAL
-        data_type: FLOAT
+        description: ""
+        data_type: NUMBER
+      - name: col_c

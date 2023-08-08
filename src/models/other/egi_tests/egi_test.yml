@@ -16,6 +16,8 @@ models:
       - name: CUSTOMERID
         data_type: FLOAT
       - name: column_no_idea
+    config:
+      tags: []
   - name: egi_test_pass
     meta:
       asset_status: verified

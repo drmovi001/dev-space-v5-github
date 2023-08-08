@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: test1
+    config:
+      tags:
+        - hai_test

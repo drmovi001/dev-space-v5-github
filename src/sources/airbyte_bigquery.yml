@@ -5,7 +5,7 @@ sources:
     config:
       y42_source:
         type: source-bigquery
-        connection: "bigquery_bathien-us-playground_aaasas"
+        connection: "bigquery_bathien-us-playground"
     tables:
       - name: playground_all_data_types
         config:

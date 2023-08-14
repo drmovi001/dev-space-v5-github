@@ -1,0 +1,8 @@
+version: 2
+
+orchestrations:
+  - name: test_egi
+    config:
+      enabled: true
+      command: y42 build -s cereal
+      cron: 0 0/1 1/1 * *

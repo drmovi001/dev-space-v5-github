@@ -4,7 +4,7 @@ sources:
     config:
       y42_source:
         type: source-bigquery
-        connection: bigquery_bathien-us-playground_test_to_fail
+        connection: bigquery_bathien-us-playground
       asset_status: verified
       experts:
         users:

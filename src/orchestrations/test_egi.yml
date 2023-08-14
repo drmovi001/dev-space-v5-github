@@ -4,5 +4,5 @@ orchestrations:
   - name: test_egi
     config:
       enabled: true
-      command: y42 build -s cereal
+      command: y42 build --select source:airbyte_bigquery_old --full-refresh --fail-fast
       cron: 0 0/1 1/1 * *

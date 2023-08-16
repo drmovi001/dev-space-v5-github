@@ -69,6 +69,7 @@ sources:
             default_cursor_field: []
             source_defined_cursor: null
             source_defined_primary_key: []
+        description: test1234567
       - name: playground_cereal
         config:
           y42_table:

@@ -19,4 +19,5 @@ models:
     config:
       tags:
         - static
-    description: test2
+    description: |
+      test

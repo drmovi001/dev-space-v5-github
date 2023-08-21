@@ -1,0 +1,9 @@
+version: 2
+
+exposures:
+  - name: fresh_exposure
+    depends_on: []
+    owner:
+      name: Simon Jornet
+      email: simon.jornet@y42.com
+    type: dashboard

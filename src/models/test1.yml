@@ -5,3 +5,5 @@ models:
     config:
       tags:
         - hai_test
+    meta:
+      asset_status: deprecated

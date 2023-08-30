@@ -127,6 +127,41 @@ sources:
             source_defined_cursor: null
             source_defined_primary_key: []
         description: test2
+        columns:
+          - name: Sodium
+            data_type: FLOAT
+            tests:
+              - not_null
+          - name: Display_Shelf
+            data_type: FLOAT
+            tests:
+              - not_null
+          - name: Potassium
+            data_type: FLOAT
+          - name: Cereal_Name
+            data_type: TEXT
+          - name: Serving_Size_Weight
+            data_type: FLOAT
+          - name: Fat
+            data_type: FLOAT
+          - name: Dietary_Fiber
+            data_type: FLOAT
+          - name: Manufacturer
+            data_type: TEXT
+          - name: Type
+            data_type: TEXT
+          - name: Calories
+            data_type: FLOAT
+          - name: Sugars
+            data_type: FLOAT
+          - name: Carbs
+            data_type: FLOAT
+          - name: Cups_per_Serving
+            data_type: FLOAT
+          - name: Vitamins_and_Minerals
+            data_type: FLOAT
+          - name: Protein_g_
+            data_type: FLOAT
       - name: playground_all_data_types
         config:
           y42_table:

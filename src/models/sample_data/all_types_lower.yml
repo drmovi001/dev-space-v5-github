@@ -111,3 +111,4 @@ models:
       experts:
         users: []
         teams: []
+      tier: tier 3

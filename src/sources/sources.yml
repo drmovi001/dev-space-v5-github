@@ -336,7 +336,7 @@ sources:
     config:
       y42_source:
         type: intercom
-        connection: intercom
+        connection: ""
       asset_status: verified
     tables:
       - name: admins

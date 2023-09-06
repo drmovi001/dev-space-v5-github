@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: model_with_tests
+    columns:
+      - name: first_column
+        tests:
+          - unique
+          - not_null
+      - name: second_column
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "false"
+      - dbt_utils.recency:
+          datepart: week
+          field: first_column
+          interval: 1

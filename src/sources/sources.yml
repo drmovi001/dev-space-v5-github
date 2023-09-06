@@ -388,19 +388,13 @@ sources:
     tables:
       - name: PUBLIC_TEST_TABLE
         identifier: TEST_TABLE
-        description: test description
-        tags:
-          - static
-          - hai_test
+        description: ""
+        tags: []
         meta:
           experts:
-            users:
-              - simon.jornet@y42.com
-              - jascha.beste@y42.com
-              - busguy@varaunited.in
-            teams:
-              - dff
-          asset_status: draft
-          tier: tier 3
+            users: []
+            teams: []
+          asset_status: no status
+          tier: no tier
     database: ADRIAN_TEST_DB
     schema: PUBLIC

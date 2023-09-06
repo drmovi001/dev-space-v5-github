@@ -403,5 +403,24 @@ sources:
             teams: []
           asset_status: no status
           tier: no tier
+        columns:
+          - name: COLUMN_1
+            data_type: NUMBER
+            tests:
+              - not_null
+              - relationships:
+                  to: repeated_record
+                  field: amazing
+          - name: COLUMN_2
+            data_type: TEXT
+            tests:
+              - unique
+        tests:
+          - dbt_utils.mutually_exclusive_ranges:
+              lower_bound_column: COLUMN_1
+              upper_bound_column: COLUMN_2
+              partition_by: ""
+              gaps: allowed
+              zero_length_range_allowed: true
     database: ADRIAN_TEST_DB
     schema: PUBLIC

@@ -388,18 +388,12 @@ sources:
     tables:
       - name: PUBLIC_TEST_TABLE
         identifier: TEST_TABLE
-        description: "trying to add description again"
-        tags:
-          - hai_test
-          - sadfsd
+        description: ""
+        tags: []
         meta:
           experts:
-            users:
-              - maria.rusakova@y42.com
-              - lyubov.yunash@y42.com
-              - a.bogomazov@gmail.com
-            teams:
-              - acmt1
+            users: []
+            teams: []
           asset_status: verified
           tier: tier 1
     database: ADRIAN_TEST_DB

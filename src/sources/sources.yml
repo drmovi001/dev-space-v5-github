@@ -392,7 +392,6 @@ sources:
         tags:
           - static
           - hai_test
-          - sadfsd
         meta:
           experts:
             users:

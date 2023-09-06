@@ -394,7 +394,7 @@ sources:
           experts:
             users: []
             teams: []
-          asset_status: verified
-          tier: tier 1
+          asset_status: no status
+          tier: no tier
     database: ADRIAN_TEST_DB
     schema: PUBLIC

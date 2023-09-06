@@ -395,10 +395,10 @@ sources:
         meta:
           experts:
             users:
-              - simran.arora@y42.com
-              - simon.jornet@y42.com
+              - maria.rusakova@y42.com
+              - lyubov.yunash@y42.com
             teams:
-              - Data Engineers
+              - some_team
           asset_status: verified
           tier: tier 1
     database: ADRIAN_TEST_DB

@@ -397,8 +397,9 @@ sources:
             users:
               - maria.rusakova@y42.com
               - lyubov.yunash@y42.com
+              - a.bogomazov@gmail.com
             teams:
-              - some_team
+              - acmt1
           asset_status: verified
           tier: tier 1
     database: ADRIAN_TEST_DB

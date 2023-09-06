@@ -162,6 +162,18 @@ sources:
             data_type: FLOAT
           - name: Protein_g_
             data_type: FLOAT
+        tags:
+          - static
+          - hai_test
+        meta:
+          experts:
+            users:
+              - brgraul@gmail.com
+              - maria.rusakova@y42.com
+            teams:
+              - team_en
+          asset_status: verified
+          tier: tier 1
       - name: playground_all_data_types
         config:
           y42_table:

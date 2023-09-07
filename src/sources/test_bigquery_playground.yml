@@ -1,0 +1,178 @@
+version: 2
+
+sources:
+  - name: test_bigquery_playground
+    config:
+      y42_source:
+        type: source-bigquery
+        connection: bigquery_bathien-us-playground
+    tables:
+      - name: playground_all_data_types
+        config:
+          y42_table:
+            import: all_data_types
+            columns:
+              - float_field
+              - json_field
+              - record_field
+              - integer_field
+              - timestamp_field
+              - datetime_field
+              - string_field
+              - date_field
+              - array_field
+              - time_field
+              - geography_field
+              - bytes_field
+              - numeric_field
+              - bignumeric_field
+              - boolean_field
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                float_field:
+                  type: number
+                json_field:
+                  type: string
+                record_field:
+                  type: object
+                integer_field:
+                  type: number
+                  airbyte_type: integer
+                timestamp_field:
+                  type: string
+                datetime_field:
+                  type: string
+                string_field:
+                  type: string
+                date_field:
+                  type: string
+                array_field:
+                  type: string
+                time_field:
+                  type: string
+                geography_field:
+                  type: string
+                bytes_field:
+                  type: string
+                numeric_field:
+                  type: number
+                bignumeric_field:
+                  type: number
+                boolean_field:
+                  type: boolean
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+      - name: playground_cereal
+        config:
+          y42_table:
+            import: cereal
+            columns:
+              - Cereal_Name
+              - Protein__g_
+              - Display_Shelf
+              - Calories
+              - Type
+              - Cups_per_Serving
+              - Sodium
+              - Vitamins_and_Minerals
+              - Manufacturer
+              - Fat
+              - Carbs
+              - Serving_Size_Weight
+              - Dietary_Fiber
+              - Potassium
+              - Sugars
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                Cereal_Name:
+                  type: string
+                Protein__g_:
+                  type: number
+                  airbyte_type: integer
+                Display_Shelf:
+                  type: number
+                  airbyte_type: integer
+                Calories:
+                  type: number
+                  airbyte_type: integer
+                Type:
+                  type: string
+                Cups_per_Serving:
+                  type: number
+                Sodium:
+                  type: number
+                  airbyte_type: integer
+                Vitamins_and_Minerals:
+                  type: number
+                  airbyte_type: integer
+                Manufacturer:
+                  type: string
+                Fat:
+                  type: number
+                  airbyte_type: integer
+                Carbs:
+                  type: number
+                Serving_Size_Weight:
+                  type: number
+                Dietary_Fiber:
+                  type: number
+                Potassium:
+                  type: number
+                  airbyte_type: integer
+                Sugars:
+                  type: number
+                  airbyte_type: integer
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+      - name: playground_from_eu_playground
+        config:
+          y42_table:
+            import: from_eu_playground
+            columns:
+              - id
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                id:
+                  type: string
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []
+      - name: playground_repeated_record
+        config:
+          y42_table:
+            import: repeated_record
+            columns:
+              - repeated_record
+            schema:
+              $schema: http://json-schema.org/draft-07/schema#
+              type: object
+              properties:
+                repeated_record:
+                  type: object
+            group: playground
+            supported_sync_modes:
+              - full_refresh
+              - incremental
+            default_cursor_field: []
+            source_defined_cursor: null
+            source_defined_primary_key: []

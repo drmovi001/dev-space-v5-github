@@ -169,6 +169,15 @@ sources:
             data_type: TEXT
           - name: Vitamins_and_Minerals
             data_type: FLOAT
+        description: This is a description
+        meta:
+          experts:
+            users:
+              - simon.jornet@y42.com
+            teams:
+              - some_team
+        tags:
+          - static
       - name: playground_from_eu_playground
         config:
           y42_table:
@@ -210,3 +219,11 @@ sources:
         columns:
           - name: repeated_record
             data_type: TEXT
+        tags:
+          - hai_test
+        meta:
+          experts:
+            users:
+              - simon.jornet@y42.com
+            teams: []
+        description: ""

@@ -138,6 +138,37 @@ sources:
             default_cursor_field: []
             source_defined_cursor: null
             source_defined_primary_key: []
+        columns:
+          - name: Cups_per_Serving
+            data_type: FLOAT
+          - name: Fat
+            data_type: FLOAT
+          - name: Dietary_Fiber
+            data_type: FLOAT
+          - name: Serving_Size_Weight
+            data_type: FLOAT
+          - name: Sugars
+            data_type: FLOAT
+          - name: Carbs
+            data_type: FLOAT
+          - name: Manufacturer
+            data_type: TEXT
+          - name: Type
+            data_type: TEXT
+          - name: Display_Shelf
+            data_type: FLOAT
+          - name: Potassium
+            data_type: FLOAT
+          - name: Calories
+            data_type: FLOAT
+          - name: Sodium
+            data_type: FLOAT
+          - name: Protein_g_
+            data_type: FLOAT
+          - name: Cereal_Name
+            data_type: TEXT
+          - name: Vitamins_and_Minerals
+            data_type: FLOAT
       - name: playground_from_eu_playground
         config:
           y42_table:
@@ -176,3 +207,6 @@ sources:
             default_cursor_field: []
             source_defined_cursor: null
             source_defined_primary_key: []
+        columns:
+          - name: repeated_record
+            data_type: TEXT

@@ -143,12 +143,20 @@ sources:
             data_type: FLOAT
           - name: Fat
             data_type: FLOAT
+            tests:
+              - not_null
+              - unique
           - name: Dietary_Fiber
             data_type: FLOAT
           - name: Serving_Size_Weight
             data_type: FLOAT
           - name: Sugars
             data_type: FLOAT
+            tests:
+              - accepted_values:
+                  values:
+                    - honey
+                    - syrup
           - name: Carbs
             data_type: FLOAT
           - name: Manufacturer
@@ -176,8 +184,13 @@ sources:
               - simon.jornet@y42.com
             teams:
               - some_team
+          asset_status: verified
+          tier: tier 3
         tags:
           - static
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "false"
       - name: playground_from_eu_playground
         config:
           y42_table:

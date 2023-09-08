@@ -3,7 +3,6 @@ version: 2
 alerts:
   - name: testing_alerts
     config:
-      enabled: true
       trigger:
         type: orchestration_status
         orchestrations:

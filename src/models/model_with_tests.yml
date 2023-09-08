@@ -7,7 +7,7 @@ models:
         tests:
           - unique
           - not_null
-      - name: second_column
+        data_type: DECIMAL
     tests:
       - dbt_utils.expression_is_true:
           expression: "false"

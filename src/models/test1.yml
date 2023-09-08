@@ -7,3 +7,6 @@ models:
         - hai_test
     meta:
       asset_status: deprecated
+    columns:
+      - name: SOME_LONG_NAME
+        data_type: NUMBER

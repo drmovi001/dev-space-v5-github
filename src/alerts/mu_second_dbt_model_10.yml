@@ -3,6 +3,7 @@ version: 2
 alerts:
   - name: mu_second_dbt_model_10
     config:
+      enabled: true
       trigger:
         type: orchestration_status
         orchestrations:

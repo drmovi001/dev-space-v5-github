@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: egi_freshness
+    database: ANALYTICS_HAI
+    schema: DBT_HAI_BUI
+    tables:
+      - name: DBT_HAI_BUI_FRESHNESS_TEST
+        identifier: FRESHNESS_TEST

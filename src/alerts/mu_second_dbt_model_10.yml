@@ -15,3 +15,4 @@ alerts:
         email:
           email_addresses:
             - denys.pishchenko@y42.com
+      enabled: false

@@ -16,3 +16,4 @@ models:
         description: ""
         data_type: NUMBER
       - name: col_c
+    description: tet

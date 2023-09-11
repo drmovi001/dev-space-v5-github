@@ -8,6 +8,6 @@ sources:
       - name: DBT_HAI_BUI_FRESHNESS_TEST
         identifier: FRESHNESS_TEST
         freshness:
-          warn_after:
+          error_after:
             count: 2
             period: day

@@ -4,13 +4,13 @@ sources:
   - name: egi_freshness
     database: ANALYTICS_HAI
     schema: DBT_HAI_BUI
+    freshness:
+      error_after:
+        count: 2
+        period: day
+      warn_after:
+        count: 2
+        period: day
     tables:
       - name: DBT_HAI_BUI_FRESHNESS_TEST
         identifier: FRESHNESS_TEST
-        freshness:
-          error_after:
-            count: 2
-            period: day
-          warn_after:
-            count: 2
-            period: day

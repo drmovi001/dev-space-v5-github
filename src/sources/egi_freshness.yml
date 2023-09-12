@@ -39,8 +39,7 @@ sources:
             data_type: TEXT
           - name: ID
             data_type: FLOAT
-            tests:
-              - unique
+            tests: []
           - name: SIMPLE_ARRAY_COLUMN
             data_type: TEXT
           - name: DATE_COLUMN

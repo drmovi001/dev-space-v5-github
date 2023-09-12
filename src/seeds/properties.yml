@@ -14,3 +14,14 @@ seeds:
           - simon.jornet@y42.com
         teams:
           - really adrian only
+  - name: my_third_seed
+    description: some description 3333
+    config:
+      tags:
+        - static
+        - some_new_tag
+    meta:
+      experts:
+        users:
+          - aliaksei.bahamazau@y42.com
+          - alexander.ciesielski@y42.com

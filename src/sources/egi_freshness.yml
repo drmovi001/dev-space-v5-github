@@ -5,46 +5,10 @@ sources:
     database: ANALYTICS_HAI
     schema: DBT_HAI_BUI
     freshness:
-      error_after:
-        count: 2
-        period: day
       warn_after:
         count: 2
         period: day
-    loaded_at_field: DATETIME_COLUMN
+    loaded_at_field:
     tables:
       - name: DBT_HAI_BUI_FRESHNESS_TEST
         identifier: FRESHNESS_TEST
-        config:
-          y42_table:
-            import: ANALYTICS_HAI:DBT_HAI_BUI:FRESHNESS_TEST
-            columns:
-              - auto_detect
-            schema:
-              $schema: http://json-schema.org/draft-07/schema#
-              type: object
-              properties:
-                auto_detect:
-                  inclusion: automatic
-                  type: object
-            group: DBT_HAI_BUI
-        columns:
-          - name: NUMBER_COLUMN
-            data_type: FLOAT
-          - name: DATETIME_COLUMN
-            data_type: TIMESTAMP_NTZ
-          - name: BOOLEAN_COLUMN
-            data_type: BOOLEAN
-          - name: OBJECT_ARRAY_COLUMN
-            data_type: TEXT
-          - name: ID
-            data_type: FLOAT
-            tests: []
-          - name: SIMPLE_ARRAY_COLUMN
-            data_type: TEXT
-          - name: DATE_COLUMN
-            data_type: DATE
-          - name: INTEGER_COLUMN
-            data_type: NUMBER
-          - name: OBJECT_COLUMN
-            data_type: TEXT

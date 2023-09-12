@@ -8,7 +8,7 @@ sources:
       warn_after:
         count: 2
         period: day
-    loaded_at_field:
+    loaded_at_field: DATETIME_COLUMN
     tables:
       - name: DBT_HAI_BUI_FRESHNESS_TEST
         identifier: FRESHNESS_TEST

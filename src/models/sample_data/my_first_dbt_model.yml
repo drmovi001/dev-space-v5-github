@@ -5,7 +5,7 @@ models:
     config:
       y42:
         publish_view: true
-    description: this is my first dbt modelsssss
+    description: this is my first dbt modelsssss asda
     meta:
       experts:
         users:

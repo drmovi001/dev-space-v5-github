@@ -1,0 +1,16 @@
+version: 2
+
+seeds:
+  - name: my_second_seed
+    description: some description 2222
+    config:
+      tags:
+        - static
+        - some_new_tag
+    meta:
+      experts:
+        users:
+          - aliaksei.bahamazau@y42.com
+          - simon.jornet@y42.com
+        teams:
+          - really adrian only

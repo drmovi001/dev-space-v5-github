@@ -140,3 +140,16 @@ sources:
             source_defined_cursor: null
             source_defined_primary_key: []
         description: test
+        tags:
+          - hai_test
+          - static
+          - sadfsd
+        meta:
+          experts:
+            users:
+              - simon.jornet@y42.com
+              - philipp.dowling@y42.com
+            teams:
+              - some_new_team
+          asset_status: issue
+          tier: tier 1

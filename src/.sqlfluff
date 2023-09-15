@@ -1,8 +1,3 @@
-# https://docs.sqlfluff.com/en/stable/rules.html#rule-index
-# [sqlfluff]
-# rules = RF02
-# exclude_rules = CP01, LT12
-
 [sqlfluff:rules]
 allow_scalar = True
 single_table_references = consistent

@@ -10,3 +10,5 @@ models:
     columns:
       - name: SOME_LONG_NAME
         data_type: NUMBER
+        tests:
+          - unique

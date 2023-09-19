@@ -29,3 +29,5 @@ models:
           - aliaksei.bahamazau@y42.com
         teams:
           - dff
+      asset_status: verified
+      tier: tier 1

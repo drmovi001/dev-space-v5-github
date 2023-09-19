@@ -16,4 +16,16 @@ models:
         description: ""
         data_type: NUMBER
       - name: col_c
-    description: tet
+    description: |
+      this is a description
+    config:
+      tags:
+        - some_new_tag
+        - hai_test
+    meta:
+      experts:
+        users:
+          - simon.jornet@y42.com
+          - aliaksei.bahamazau@y42.com
+        teams:
+          - dff

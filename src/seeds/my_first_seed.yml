@@ -17,7 +17,15 @@ seeds:
     columns:
       - name: ID
         data_type: TEXT
+        description: "asdasdasdas das das "
+        tests:
+          - unique
+          - not_null
+        tags:
+          - hai_test
       - name: FIRST_NAME
         data_type: TEXT
       - name: LAST_NAME
         data_type: TEXT
+        tests:
+          - unique

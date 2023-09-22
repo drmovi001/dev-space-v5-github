@@ -15,3 +15,10 @@ models:
           datepart: week
           field: first_column
           interval: 1
+    description: this is a eedef
+    meta:
+      asset_status: verified
+    config:
+      tags:
+        - some_new_tag
+        - sadfsd

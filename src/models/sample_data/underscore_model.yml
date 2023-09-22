@@ -11,3 +11,5 @@ models:
         data_type: TIMESTAMP
       - name: id
         data_type: FLOAT
+    docs:
+      show: false

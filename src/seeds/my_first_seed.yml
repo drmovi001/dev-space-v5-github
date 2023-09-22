@@ -14,3 +14,10 @@ seeds:
           - simon.jornet@y42.com
         teams:
           - really adrian only
+    columns:
+      - name: ID
+        data_type: TEXT
+      - name: FIRST_NAME
+        data_type: TEXT
+      - name: LAST_NAME
+        data_type: TEXT

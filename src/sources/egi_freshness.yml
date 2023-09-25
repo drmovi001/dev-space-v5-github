@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: egi_freshness
+  - name: egi
     database: ANALYTICS_HAI
     schema: DBT_HAI_BUI
     freshness:

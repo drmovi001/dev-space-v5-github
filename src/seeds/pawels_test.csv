@@ -1,6 +1,6 @@
-seed_new_column,seed_sample_col
-1,1
-2,2
-3,3
-4,4
-5,5
+seed_new_column,seed_new_column,seed_new_column,seed_new_column,seed_sample_col
+11,1,1,ABC,1
+22,2,2,DEF,2
+33,3,,GHI,3
+44,4,,JKL,4
+55,5,,MNO,5

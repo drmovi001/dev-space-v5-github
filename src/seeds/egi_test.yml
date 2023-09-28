@@ -2,3 +2,5 @@ version: 2
 
 seeds:
   - name: egi_test
+    config:
+      quote_columns: null

@@ -13,3 +13,4 @@ models:
         data_type: NUMBER
         tests:
           - unique
+    description: Test

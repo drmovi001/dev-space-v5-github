@@ -16,16 +16,25 @@ sources:
           y42_table:
             import: cities
             columns:
-              - ' "State"'
-              - ' "City"'
-              - ' "EW"'
-              - ' "LonS"'
               - ' "LonM"'
+              - ' "LonS"'
+              - ' "EW"'
+              - ' "City"'
+              - ' "State"'
+              - ' "LonD"'
             schema:
               $schema: http://json-schema.org/draft-07/schema#
               type: object
               properties:
-                ' "State"':
+                ' "LonM"':
+                  type:
+                    - number
+                    - "null"
+                ' "LonS"':
+                  type:
+                    - number
+                    - "null"
+                ' "EW"':
                   type:
                     - string
                     - "null"
@@ -33,15 +42,11 @@ sources:
                   type:
                     - string
                     - "null"
-                ' "EW"':
+                ' "State"':
                   type:
                     - string
                     - "null"
-                ' "LonS"':
-                  type:
-                    - number
-                    - "null"
-                ' "LonM"':
+                ' "LonD"':
                   type:
                     - number
                     - "null"

@@ -16,6 +16,7 @@ sources:
           y42_table:
             import: cities
             columns:
+              - ' "LonS"'
               - ' "EW"'
               - ' "City"'
               - ' "State"'
@@ -23,6 +24,10 @@ sources:
               $schema: http://json-schema.org/draft-07/schema#
               type: object
               properties:
+                ' "LonS"':
+                  type:
+                    - number
+                    - "null"
                 ' "EW"':
                   type:
                     - string

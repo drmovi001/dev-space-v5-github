@@ -18,6 +18,7 @@ sources:
             columns:
               - ' "State"'
               - ' "City"'
+              - ' "EW"'
             schema:
               $schema: http://json-schema.org/draft-07/schema#
               type: object
@@ -27,6 +28,10 @@ sources:
                     - string
                     - "null"
                 ' "City"':
+                  type:
+                    - string
+                    - "null"
+                ' "EW"':
                   type:
                     - string
                     - "null"

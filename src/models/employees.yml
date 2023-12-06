@@ -15,3 +15,5 @@ models:
           data_type: STRING
         - name: updated_at
           data_type: STRING
+    meta:
+      asset_status: verified

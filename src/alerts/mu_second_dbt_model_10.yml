@@ -1,0 +1,18 @@
+version: 2
+
+alerts:
+  - name: mu_second_dbt_model_10
+    config:
+      trigger:
+        type: orchestration_status
+        orchestrations:
+          - my_second_dbt_model_10
+        triggered_on:
+          - ready
+          - partially_ready
+          - invalid
+      destinations:
+        email:
+          email_addresses:
+            - denys.pishchenko@y42.com
+      enabled: false

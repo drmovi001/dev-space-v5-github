@@ -1,0 +1,33 @@
+version: 2
+
+alerts:
+  - name: my_first_alert
+    config:
+      enabled: true
+      trigger:
+        type: orchestration_status
+        triggered_on:
+          - invalid
+          - ready
+          - partially_ready
+        orchestrations:
+          - another_orch_from_ui
+      destinations:
+        email:
+          email_addresses:
+            - adrian.barfuss@y42.com
+  - name: my_second_alert
+    config:
+      enabled: false
+      trigger:
+        type: orchestration_status
+        triggered_on:
+          - invalid
+          - ready
+          - partially_ready
+        orchestrations:
+          - test_hai
+      destinations:
+        email:
+          email_addresses:
+            - hai.bui@y42.com

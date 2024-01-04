@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: test_underscore
+    columns:
+      - name: issuesstatusforfixversion
+        data_type: TEXT
+      - name: operations
+        data_type: TEXT
+      - name: self
+        data_type: TEXT
+      - name: overdue
+        data_type: BOOLEAN
+      - name: _airbyte_emitted_at
+        data_type: TIMESTAMP_NTZ
+      - name: expand
+        data_type: TEXT
+      - name: startdate
+        data_type: DATE
+      - name: _airbyte_normalized_at
+        data_type: TIMESTAMP_NTZ
+      - name: id
+        data_type: TEXT
+      - name: name
+        data_type: TEXT
+      - name: releasedate
+        data_type: DATE
+      - name: _airbyte_ab_id
+        data_type: TEXT
+      - name: _airbyte_project_versions_hashid
+        data_type: TEXT
+      - name: userstartdate
+        data_type: TEXT
+      - name: userreleasedate
+        data_type: TEXT
+      - name: projectid
+        data_type: FLOAT
+      - name: project
+        data_type: TEXT
+      - name: archived
+        data_type: BOOLEAN
+      - name: moveunfixedissuesto
+        data_type: TEXT
+      - name: released
+        data_type: BOOLEAN
+      - name: description
+        data_type: TEXT

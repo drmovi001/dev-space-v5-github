@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: test1
+    config:
+      tags:
+        - hai_test
+    meta:
+      asset_status: deprecated
+      tier: tier 1
+    columns:
+      - name: SOME_LONG_NAME
+        data_type: NUMBER
+        tests:
+          - unique

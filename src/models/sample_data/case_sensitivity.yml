@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: case_sensitivity
+    columns:
+      - name: some_long_NAME

@@ -1,0 +1,7 @@
+[sqlfluff:rules]
+allow_scalar = True
+single_table_references = consistent
+unquoted_identifiers_policy = all
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = upper

@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: refactored_customers
+    columns:
+      - name: THE_ANSWER
+        data_type: FLOAT

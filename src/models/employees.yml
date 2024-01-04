@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: employees
+    columns:
+        - name: employeeid
+          data_type: INT64
+        - name: name
+          data_type: STRING
+          tests:
+            - accepted_values:
+                values:
+                  - Larry
+        - name: birthdate
+          data_type: STRING
+        - name: updated_at
+          data_type: STRING
+    meta:
+      asset_status: verified

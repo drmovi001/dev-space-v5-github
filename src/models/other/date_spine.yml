@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: date_spine
+    columns:
+      - name: DATE_DAY
+        data_type: DATE
+        description: auto-generated dates
+    meta:
+      experts:
+        users:
+          - hai.bui@y42.com
+        teams: []
+    config:
+      tags:
+        - static
+    description: hh

@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: new_native
+    database: Y42_DB
+    schema: ADRIAN_TEST_DB
+    tables:
+      - name: ADRIAN_TEST_DB_SOURCE_TABLE
+        identifier: SOURCE_TABLE
+      - name: ADRIAN_TEST_DB_SECOND_LEVEL
+        identifier: SECOND_LEVEL
+      - name: ADRIAN_TEST_DB_FIRST_LEVEL
+        identifier: FIRST_LEVEL

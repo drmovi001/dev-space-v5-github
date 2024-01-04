@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: hai_prices
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "col_a + col_b = total"
+    columns:
+      - name: COL_B
+        description: ""
+        data_type: NUMBER
+      - name: COL_A
+        description: ""
+        data_type: NUMBER
+      - name: TOTAL
+        description: ""
+        data_type: NUMBER
+      - name: col_c
+    description: |
+      this is a description
+    config:
+      tags:
+        - some_new_tag
+        - hai_test
+    meta:
+      experts:
+        users:
+          - simon.jornet@y42.com
+          - aliaksei.bahamazau@y42.com
+        teams:
+          - dff
+      asset_status: verified
+      tier: tier 1

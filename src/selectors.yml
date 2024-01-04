@@ -1,0 +1,32 @@
+selectors:
+  - name: nightly_diet_snowplow
+    description: "this selector works with the existing assets in v5"
+    definition:
+      union:
+        - method: tag
+          value: test_hai
+        - method: path
+          value: models/staging
+        - method: path
+          value: models/test_hai2
+        - exclude:
+            - union:
+                - method: tag
+                  value: test_dont_run
+                - method: source
+                  value: jaffle_shop
+                  children: true
+            
+  - name: test
+    definition:
+      'tag:nightly'
+  - name: "hello"
+    definition:
+      union:
+      - method: tag
+        value: something
+      - exclude:
+          - method: tag
+            value: fdd
+
+

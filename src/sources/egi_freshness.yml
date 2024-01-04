@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: egi
+    database: ANALYTICS_HAI
+    schema: DBT_HAI_BUI
+    freshness:
+      warn_after:
+        count: 2
+        period: day
+    loaded_at_field: DATETIME_COLUMN
+    tables:
+      - name: DBT_HAI_BUI_FRESHNESS_TEST
+        identifier: FRESHNESS_TEST

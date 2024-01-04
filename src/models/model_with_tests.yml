@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: model_with_tests
+    columns:
+      - name: first_column
+        tests:
+          - unique
+          - not_null
+        data_type: DECIMAL
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "false"
+      - dbt_utils.recency:
+          datepart: week
+          field: first_column
+          interval: 1
+    description: this is a eedef
+    meta:
+      asset_status: verified
+    config:
+      tags:
+        - some_new_tag
+        - sadfsd

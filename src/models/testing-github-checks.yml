@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: testing-github-checks
+    meta:
+      experts:
+        users:
+          - mohamed.ibrahim@y42.com
